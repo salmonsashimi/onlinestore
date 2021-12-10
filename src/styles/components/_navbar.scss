@@ -1,0 +1,18 @@
+.navbar {
+    background-color: $dark-blue;
+    color: white
+}
+
+.navbar__content {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.navbar__logo {
+    margin: 0;
+}
+
+.navbar__logo:hover {
+    cursor: pointer;
+}
+
