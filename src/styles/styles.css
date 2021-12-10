@@ -1,0 +1,29 @@
+.container {
+    margin: 0 7rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;    
+        
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar h1:hover {
+    cursor: pointer;
+}
+
+.navbar-background {
+    background-color: #2E4C6D;
+    color: white
+}
+
+
+/* colours
+#2E4C6D
+#396EB0
+#DADDFC
+#FC997C */
