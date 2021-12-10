@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import TextInput from './TextInput';
+import SearchBar from './SearchBar';
 import Icons from './Icons';
 
 const Navbar = () => {
@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className='navbar'>
             <div className='container navbar__content'>
                 <Link href='/'><h1 className='navbar__logo'>Logo</h1></Link>
-                <TextInput />
+                <SearchBar />
                 <Icons />
             </div>
         </div>

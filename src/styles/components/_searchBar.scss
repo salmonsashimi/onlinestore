@@ -1,0 +1,24 @@
+.searchBar {
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+}
+
+
+.searchBar__input {
+    border: none;
+    padding: $s-size;
+    min-width: 80%;
+}
+
+.searchBar__input:focus {
+    outline-width: 0;
+
+}
+
+.searchBar__button {
+    background-color: $orange;
+    border: none;
+    padding: $xs-size $m-size;
+    color: white
+}
