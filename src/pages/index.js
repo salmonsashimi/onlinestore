@@ -1,8 +1,8 @@
-import Navbar from '../components/Navbar';
+import IndexMainBanner from '../components/IndexMainBanner'
 
 const Index = () => (
-    <div>
-        <h1>hello</h1>
+    <div className='container'>
+        <IndexMainBanner />
     </div>
 );
 
