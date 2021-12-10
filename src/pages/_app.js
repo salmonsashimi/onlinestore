@@ -1,7 +1,7 @@
 // import App from 'next/app'
 import Navbar from '../components/Navbar'
 import 'normalize.css'
-import '../styles/styles.css';
+import '../styles/styles.scss';
 
 function MyApp({ Component, pageProps }) {
     return (

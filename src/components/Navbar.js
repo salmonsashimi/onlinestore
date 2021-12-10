@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import TextInput from './TextInput';
+import Icons from './Icons';
 
 const Navbar = () => {
 
-
     return (
-        <div className='navbar-background'>
-            <div className='container navbar'>
-                <Link href='/'><h1 className='navbar-logo'>Logo</h1></Link>
+        <div className='navbar'>
+            <div className='container navbar__content'>
+                <Link href='/'><h1 className='navbar__logo'>Logo</h1></Link>
                 <TextInput />
-                <Link href='/user'><h1>User page</h1></Link>
+                <Icons />
             </div>
         </div>
     )
