@@ -8,7 +8,6 @@ const Index = () => (
         <IndexMainBanner />
         <IndexPromosBanner />
         <IndexCategories />
-
     </div>
 );
 

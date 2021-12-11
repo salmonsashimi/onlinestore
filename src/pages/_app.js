@@ -1,6 +1,7 @@
 // import App from 'next/app'
-import Navbar from '../components/Navbar'
-import 'normalize.css'
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import 'normalize.css';
 import '../styles/styles.scss';
 
 function MyApp({ Component, pageProps }) {
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }) {
         <>
             <Navbar />
             <Component {...pageProps} />
+            <Footer />
         </>
     )
 
