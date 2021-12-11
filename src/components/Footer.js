@@ -1,4 +1,5 @@
 import FooterSection from './FooterSection';
+import FooterSocialMedia from './FooterSocialMedia';
 import FooterBar from './FooterBar';
 
 const Footer = (props) => (
@@ -7,6 +8,7 @@ const Footer = (props) => (
             {props.sections.map((section) => (
                 <FooterSection sectionName={section.name} sectionLinks={section.links} />
             ))}
+            <FooterSocialMedia />
         </div>
         <FooterBar />
     </div>
