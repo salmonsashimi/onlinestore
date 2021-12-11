@@ -1,10 +1,14 @@
 import FooterSection from './FooterSection';
+import FooterBar from './FooterBar';
 
 const Footer = (props) => (
     <div className='footer'>
-        {props.sections.map((section) => (
-            <FooterSection sectionName={section.name} sectionLinks={section.links} />
-        ))}
+        <div className='container footer__container'>
+            {props.sections.map((section) => (
+                <FooterSection sectionName={section.name} sectionLinks={section.links} />
+            ))}
+        </div>
+        <FooterBar />
     </div>
 )
 
