@@ -1,0 +1,13 @@
+.footerSection__name {
+    color: $dark-blue;
+}
+
+.footerSection__link {
+    font-size: $s-size;
+    color: gray;
+    text-decoration: underline;
+}
+
+.footerSection__link:hover {
+    cursor: pointer;
+}
