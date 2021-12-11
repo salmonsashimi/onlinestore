@@ -1,12 +1,13 @@
 import IndexMainBanner from '../components/IndexMainBanner'
 import IndexPromosBanner from '../components/IndexPromosBanner'
-// import IndexCategoryBanner from '../components/IndexCategoryBanner'
+import IndexCategories from '../components/IndexCategories'
 
 
 const Index = () => (
     <div className='container'>
         <IndexMainBanner />
         <IndexPromosBanner />
+        <IndexCategories />
 
     </div>
 );
