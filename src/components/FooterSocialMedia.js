@@ -6,3 +6,5 @@ const FooterSocialMedia = () => (
         <p>Download mobile app here</p>
     </div>
 )
+
+export default FooterSocialMedia;

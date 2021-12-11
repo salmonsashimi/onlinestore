@@ -1,7 +1,7 @@
-const AboutPage = () => (
+const UserPage = () => (
     <div>
         about Page
     </div>
 )
 
-export default AboutPage;
+export default UserPage;
