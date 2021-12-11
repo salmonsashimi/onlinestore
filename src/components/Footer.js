@@ -33,6 +33,14 @@ Footer.defaultProps = {
                 'Corporate Responsibility',
                 'Terms & Conditions'
             ]
+        },
+        {
+            name: 'Follow Us',
+            links: [
+                'Facebook',
+                'Instagram',
+                'Youtube'
+            ]
         }
     ]
 }
