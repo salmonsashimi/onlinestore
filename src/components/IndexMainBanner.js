@@ -1,5 +1,5 @@
 const IndexMainBanner = () => (
-    <div className='indexBanner'>
+    <div className='indexMainBanner'>
         hello
     </div>
 )
