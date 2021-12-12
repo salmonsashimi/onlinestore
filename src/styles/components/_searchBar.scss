@@ -1,7 +1,7 @@
 .searchBar {
     display: flex;
-    flex-grow: 2;
     justify-content: center;
+    min-width: 80%;
 }
 
 
@@ -17,8 +17,12 @@
 }
 
 .searchBar__button {
-    background-color: $off-white;
+    background-color: $blue;
     border: none;
     padding: $xs-size $m-size;
-    color: white
+    color: white;
+    &:hover {
+        cursor: pointer;
+    }
 }
+

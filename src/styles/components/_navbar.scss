@@ -5,16 +5,16 @@
 
 .navbar__content {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-evenly;    
     align-items:center
 }
 
 .navbar__logo {
     margin: 0;
-    font-weight: 200;
-    padding: 5px;
+    font-weight: 300;
+    padding: 5px 12px;
     border: 2px solid white;
-    border-radius: 20%;
+    border-radius: 25%;
 }
 
 .navbar__logo:hover {
