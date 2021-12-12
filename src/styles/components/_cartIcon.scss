@@ -1,0 +1,37 @@
+/* Dropdown Button */
+.cartIcon__button {
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.cartIcon {
+  position: relative;
+  display: inline-block;
+}
+
+.cartIcon__dropdown {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  z-index: 1;
+  a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  a:hover {
+    background-color: #ddd;
+    }
+}
+
+.cartIcon:hover {
+    cursor:pointer;
+
+    .cartIcon__dropdown {
+        display: block;
+    }
+}
