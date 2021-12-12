@@ -1,0 +1,23 @@
+.signInBar {
+    background-color: black;
+    
+}
+.signInBar__content {
+    display: flex;
+    padding: 5px 0 ;
+    justify-content: flex-end;
+}
+
+.signInBar__link {
+    color: white;
+    font-size: $s-size;
+    margin: 0;
+    border-left: 1px solid white;
+    padding: 0 10px;    
+    &:hover {
+        cursor: pointer
+    }
+    &:first-child {
+        border-left: none;
+    }
+}
