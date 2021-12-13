@@ -1,0 +1,11 @@
+.headerCategoryButton {
+    margin: 0;
+    padding: 16px;
+    font-weight: 300;
+    cursor: pointer; 
+    
+    &:hover {
+        background-color: $blue;
+        color: white;
+    }
+}

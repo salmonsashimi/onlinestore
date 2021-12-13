@@ -11,7 +11,7 @@
 }
 
 .cartIcon__dropdown {
-  display: none;
+  visibility: hidden;
   position: absolute;
   background-color: #fff;
   min-width: 150px;
@@ -34,6 +34,7 @@
     cursor:pointer;
 
     .cartIcon__dropdown {
-        display: block;
+      transition-delay: 0.5s;
+      visibility: visible;
     }
 }
