@@ -1,10 +1,20 @@
 .signInBar {
     background-color: black;
-    
 }
+
 .signInBar__content {
     display: flex;
+    justify-content: space-between;
     padding: 5px 0 ;
+}
+
+.signInBar__left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.signInBar__right {
+    display: flex;
     justify-content: flex-end;
 }
 
