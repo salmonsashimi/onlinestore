@@ -3,7 +3,7 @@ import SignInBar from './SignInBar';
 import HeaderCategoriesBar from './HeaderCategoriesBar';
 
 const Header = () => (
-    <div>
+    <div className='header'>
         <SignInBar />
         <NavBar />
         <HeaderCategoriesBar />
