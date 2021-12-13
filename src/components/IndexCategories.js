@@ -12,16 +12,19 @@ IndexCategories.defaultProps = {
     categories: [
         {
             name: 'Spring',
-            img: 'hello'
+            img: 'https://picsum.photos/id/468/280/280'
         },
         {
-            name: 'Summer'
+            name: 'Summer',
+            img: 'https://picsum.photos/id/199/280/280'
         },
         {
-            name: 'Autumn'
+            name: 'Autumn',
+            img: 'https://picsum.photos/id/413/280/280'
         },
         {
-            name: 'Winter'
+            name: 'Winter',
+            img: 'https://picsum.photos/id/260/280/280'
         }
     ]
 }
