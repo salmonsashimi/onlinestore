@@ -1,11 +1,13 @@
 .footerSection__name {
     color: $dark-blue;
+    margin: $s-size 0;
 }
 
 .footerSection__link {
     font-size: $s-size;
     color: gray;
     text-decoration: underline;
+    margin: $s-size 0 ;
 }
 
 .footerSection__link:hover {
