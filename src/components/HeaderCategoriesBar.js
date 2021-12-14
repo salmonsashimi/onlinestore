@@ -19,23 +19,23 @@ HeaderCategoriesBar.defaultProps = {
         ,
         {
             name: 'Latest',
-            dropdown: ['aisdfjioajsf,asdfasf', 'asdfasdfds']
+            dropdown: ['aisdfjioajsf', 'asdfasf', 'asdfasdfds']
         },
         {
             name: 'Clothing',
-            dropdown: ['aisdfjioajsf,asdfasf']
+            dropdown: ['aisdfjioajsf', 'asdfasf']
         },
         {
             name: 'Shoes',
-            dropdown: ['aisdfjioajsf,asdfasf']
+            dropdown: ['aisdfjioajsf', 'asdfasf']
         },
         {
             name: 'Accessories',
-            dropdown: ['aisdfjioajsf,asdfasf']
+            dropdown: ['aisdfjioajsf', 'asdfasf']
         },
         {
             name: 'Sportswear',
-            dropdown: ['aisdfjioajsf,asdfasf']
+            dropdown: ['aisdfjioajsf', 'asdfasf']
         },
     ]
 }
