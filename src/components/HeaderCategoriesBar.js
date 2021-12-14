@@ -19,7 +19,7 @@ HeaderCategoriesBar.defaultProps = {
         ,
         {
             name: 'Latest',
-            dropdown: ['aisdfjioajsf,asdfasf']
+            dropdown: ['aisdfjioajsf,asdfasf', 'asdfasdfds']
         },
         {
             name: 'Clothing',

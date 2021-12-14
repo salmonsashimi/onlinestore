@@ -1,5 +1,7 @@
 const HeaderCategoryButton = (props) => (
-    <p className='headerCategoryButton'>{props.category.name}</p>
+    <div className='headerCategoryButton'>
+        <p className='headerCategoryButton__button'>{props.category.name}</p>
+    </div>
 )
 
 export default HeaderCategoryButton;
