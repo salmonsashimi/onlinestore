@@ -1,6 +1,6 @@
 export default (props) => (
     <div className='promo'>
-        {props.promo.icon}
-        {props.promo.name}
+        <h3>{props.promo.name}</h3>
+        <p>{props.promo.icon}</p>
     </div>
 )
