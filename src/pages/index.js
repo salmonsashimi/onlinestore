@@ -4,11 +4,11 @@ import IndexCategories from '../components/IndexCategories'
 
 
 const Index = () => (
-    <div className='container'>
+    <div>
         <IndexMainBanner />
         <IndexPromosBanner />
         <IndexCategories />
-    </div>
+    </div >
 );
 
 export default Index;

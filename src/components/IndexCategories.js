@@ -4,7 +4,7 @@ import IndexCategoriesBanner from './IndexCategoriesBanner';
 const IndexCategories = (props) => (
     <div>
         <IndexCategoriesBanner />
-        <div className='indexCategories'>
+        <div className='indexCategories container'>
             {props.categories.map((category) =>
                 <IndexCategory category={category} key={category.name} />
             )}
