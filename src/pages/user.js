@@ -1,6 +1,6 @@
 const UserPage = () => (
     <div>
-        about Page
+        user page
     </div>
 )
 
