@@ -4,8 +4,6 @@
     position: relative;
 }
 
-
-
 .indexCategory__name {
     background: rgba(0,0,0,0.2);
     color: white;
@@ -23,6 +21,7 @@
     
     &:hover {
         background: rgba(0,0,0,0.4);
+        font-size: 3.5rem;
     }
 }
 
