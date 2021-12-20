@@ -1,15 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 class IndexMainBanner extends React.Component {
     constructor(props) {
         super(props)
 
+        this.carouselRef = React.createRef();
+        this.rotateCarousel = this.rotateCarousel.bind(this);
+
+    }
+
+
+    rotateCarousel() {
+        console.log('hello')
+        console.log(this.carouselRef)
+    }
+
+    componentDidMount() {
+        this.rotateCarousel();
     }
 
 
     render() {
         return (
             <div className='indexMainBanner container'>
-                <div className='carousel'>
+                <div className='carousel' ref={this.carouselRef}>
                     {this.props.banners.map(banner => (
                         <div className='carouselDisplay'>
                             <img src={banner.imgSrc} />
