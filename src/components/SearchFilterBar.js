@@ -6,7 +6,7 @@ const SearchFilterBar = () => (
                 <option>Latest</option>
                 <option>Popularity</option>
                 <option>Price high to low</option>
-                <option>Price high to low</option>
+                <option>Price low to low</option>
             </select>
         </div>
     </div>
