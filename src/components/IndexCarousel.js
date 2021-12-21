@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-class IndexMainBanner extends React.Component {
+class IndexCarousel extends React.Component {
     constructor(props) {
         super(props)
 
@@ -64,7 +64,7 @@ class IndexMainBanner extends React.Component {
 //     // }
 
 
-IndexMainBanner.defaultProps = {
+IndexCarousel.defaultProps = {
     banners:
         [
             {
@@ -79,4 +79,4 @@ IndexMainBanner.defaultProps = {
 
             }]
 }
-export default IndexMainBanner;
+export default IndexCarousel;

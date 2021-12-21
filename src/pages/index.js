@@ -1,11 +1,11 @@
-import IndexMainBanner from '../components/IndexMainBanner'
-import IndexPromosBanner from '../components/IndexPromosBanner'
-import IndexCategories from '../components/IndexCategories'
+import IndexCarousel from '../components/IndexCarousel';
+import IndexPromosBanner from '../components/IndexPromosBanner';
+import IndexCategories from '../components/IndexCategories';
 
 
 const Index = () => (
     <div>
-        <IndexMainBanner />
+        <IndexCarousel />
         <IndexPromosBanner />
         <IndexCategories />
     </div >
