@@ -10,15 +10,19 @@ class IndexMainBanner extends React.Component {
 
 
     rotateCarousel() {
-        console.log('hello')
         let totalDisplays = this.carouselRef.current.childNodes.length;
-
+        let displayIndex = 0;
         for (let i = 0; i < totalDisplays; i++) {
             this.carouselRef.current.childNodes[i].style.display = 'none';
         }
-        console.log(this.carouselRef.current.childNodes[0])
-        console.log(this.carouselRef.current.childNodes[1])
-        this.carouselRef.current.childNodes[2].style.display = 'none';
+        displayIndex++;
+        if (displayIndex >= totalDisplays) {
+            displayIndex = 0;
+        }
+
+        this.carouselRef.current.childNodes[displayIndex].style.display = 'block';
+        setTimeout(this.rotateCarousel, 2000);
+
     }
 
     componentDidMount() {
@@ -44,22 +48,6 @@ class IndexMainBanner extends React.Component {
 
 //     const [banner, setBanner] = useState(0);
 
-
-//     const rotateCarousel = () => {
-//         console.log('hello')
-//         const totalBanners = props.banners;
-//         // const slides = document.getElementsByClassName('carouselDisplay')
-//         console.log(slides);
-
-//         for (let i = 0; i < totalBanners.length; i++) {
-//             console.log('thisistotalbanners', totalBanners);
-//         }
-
-//     };
-
-
-//     rotateCarousel();
-
 //     // var slideIndex = 0;
 //     // showSlides();
 
@@ -74,25 +62,6 @@ class IndexMainBanner extends React.Component {
 //     //     slides[slideIndex - 1].style.display = "block";
 //     //     setTimeout(showSlides, 2000); // Change image every 2 seconds
 //     // }
-
-
-
-//     // return (
-//     //     <div className='indexMainBanner container'>
-//     //         <div className='carousel'>
-
-//     //             {props.banners.map(banner => (
-//     //                 <div className='carouselDisplay'>
-//     //                     <img src={banner.imgSrc} />
-//     //                 </div>
-//     //             ))}
-
-//     //             <a className='carouselPreviousButton'>prev</a>
-//     //             <a className='carouselNextButton'>next</a>
-//     //         </div>
-//     //     </div>
-//     // )
-// }
 
 
 IndexMainBanner.defaultProps = {
