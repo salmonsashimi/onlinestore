@@ -11,7 +11,10 @@ class IndexMainBanner extends React.Component {
 
     rotateCarousel() {
         console.log('hello')
-        console.log(this.carouselRef)
+        console.log(this.carouselRef.current)
+        console.log(this.carouselRef.current.childNodes[0])
+        console.log(this.carouselRef.current.childNodes[1])
+        this.carouselRef.current.childNodes[0].style.display = 'none';
     }
 
     componentDidMount() {
