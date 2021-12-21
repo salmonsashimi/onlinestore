@@ -1,6 +1,6 @@
 // import App from 'next/app'
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/headerComponents/Header';
+import Footer from '../components/footerComponents/Footer';
 import 'normalize.css';
 import '../styles/styles.scss';
 
