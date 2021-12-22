@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const IndexCarouselItem = (props) => (
     <div className='indexCarouselItem'>
@@ -10,28 +10,32 @@ const IndexCarouselItem = (props) => (
 
 const IndexCarousel = (props) => {
 
-    const [activeItem, setActiveItem] = useState(0);
+    const [activeBanner, setActiveBanner] = useState(0);
 
-    const updateItem = (newItem) => {
-        if (newItem < 0) {
-            newItem = 0;
-        } else if (newItem >= React.Children.count(children)) {
-            newItem = React.Children.count(children) - 1;
+    const updateBanner = (newBanner) => {
+        if (newBanner < 0) {
+            newBanner = 0;
+        } else if (newBanner >= props.banners.length) {
+            newBanner = props.banners.length - 1;
         }
 
-        setActiveItem(newItem)
+        setActiveBanner(newBanner)
     }
 
     return (
         <div className='indexCarousel'>
-            <div className='indexCarousel__inner' style={{ transform: `translate(-${activeItem * 100}%)` }}>
+            <div className='indexCarousel__inner' style={{ transform: `translate(-${activeBanner * 100}%)` }}>
                 {props.banners.map((banner) => (
-                    <IndexCarouselItem img={banner.imgSrc} />
+                    <IndexCarouselItem img={banner.imgSrc} key={banner.imgSrc} />
                 ))}
 
             </div>
+            <div>
+                <button onClick={() => { updateBanner(activeBanner - 1) }}>prev </button>
+                <button onClick={() => { updateBanner(activeBanner + 1) }}>next </button>
+            </div >
 
-        </div>
+        </div >
     )
 }
 
