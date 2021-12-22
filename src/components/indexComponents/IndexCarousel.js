@@ -1,14 +1,30 @@
+import { useState } from 'react';
+
 const IndexCarouselItem = (props) => (
     <div className='indexCarouselItem'>
-        helo
+        <img src={props.img} />
+
     </div>
 )
 
 
 const IndexCarousel = (props) => {
+
+    const [activeItem, setActiveItem] = useState(0);
+
+    const updateItem = (newItem) => {
+        if (newItem < 0) {
+            newItem = 0;
+        } else if (newItem >= React.Children.count(children)) {
+            newItem = React.Children.count(children) - 1;
+        }
+
+        setActiveItem(newItem)
+    }
+
     return (
         <div className='indexCarousel'>
-            <div className='indexCarousel__inner' style={{ transform: 'translate(-200%' }}>
+            <div className='indexCarousel__inner' style={{ transform: `translate(-${activeItem * 100}%)` }}>
                 {props.banners.map((banner) => (
                     <IndexCarouselItem img={banner.imgSrc} />
                 ))}
