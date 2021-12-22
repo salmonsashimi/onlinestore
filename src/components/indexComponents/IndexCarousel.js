@@ -1,49 +1,73 @@
-import React, { useEffect } from 'react';
-class IndexCarousel extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.carouselRef = React.createRef();
-        this.rotateCarousel = this.rotateCarousel.bind(this);
-
-    }
+const IndexCarouselItem = (props) => (
+    <div>
+        helo
+    </div>
+)
 
 
-    rotateCarousel() {
-        let totalDisplays = this.carouselRef.current.childNodes.length;
-        let displayIndex = 0;
-        for (let i = 0; i < totalDisplays; i++) {
-            this.carouselRef.current.childNodes[i].style.display = 'none';
-        }
-        displayIndex++;
-        if (displayIndex >= totalDisplays) {
-            displayIndex = 0;
-        }
+const IndexCarousel = (props) => {
+    return (
+        <div className='indexCarousel'>
+            <div>
+                {props.banners.map((banner) => (
+                    <IndexCarouselItem img={banner.imgSrc} />
+                ))}
 
-        this.carouselRef.current.childNodes[displayIndex].style.display = 'block';
-        setTimeout(this.rotateCarousel, 2000);
-
-    }
-
-    componentDidMount() {
-        this.rotateCarousel();
-    }
-
-
-    render() {
-        return (
-            <div className='indexMainBanner container'>
-                <div className='carousel' ref={this.carouselRef}>
-                    {this.props.banners.map(banner => (
-                        <div className='carouselDisplay'>
-                            <img src={banner.imgSrc} />
-                        </div>
-                    ))}
-                </div>
             </div>
-        )
-    }
+
+        </div>
+    )
 }
+
+
+
+
+// import React, { useEffect } from 'react';
+// class IndexCarousel extends React.Component {
+//     constructor(props) {
+//         super(props)
+
+//         this.carouselRef = React.createRef();
+//         this.rotateCarousel = this.rotateCarousel.bind(this);
+
+//     }
+
+
+//     rotateCarousel() {
+//         let totalDisplays = this.carouselRef.current.childNodes.length;
+//         let displayIndex = 0;
+//         for (let i = 0; i < totalDisplays; i++) {
+//             this.carouselRef.current.childNodes[i].style.display = 'none';
+//         }
+//         displayIndex++;
+//         if (displayIndex >= totalDisplays) {
+//             displayIndex = 0;
+//         }
+
+//         this.carouselRef.current.childNodes[displayIndex].style.display = 'block';
+//         setTimeout(this.rotateCarousel, 2000);
+
+//     }
+
+//     componentDidMount() {
+//         this.rotateCarousel();
+//     }
+
+
+//     render() {
+//         return (
+//             <div className='indexMainBanner container'>
+//                 <div className='carousel' ref={this.carouselRef}>
+//                     {this.props.banners.map(banner => (
+//                         <div className='carouselDisplay'>
+//                             <img src={banner.imgSrc} />
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
 // const IndexMainBanner = (props) => {
 
 //     const [banner, setBanner] = useState(0);

@@ -3,7 +3,7 @@ const HeaderCategoryButton = (props) => (
         <p className='headerCategoryButton__button'>{props.category.name}</p>
         <div className='headerCategoryButton__dropdown'>
             {props.category.dropdown.map((item) => (
-                <a>{item}</a>
+                <a key={item}>{item}</a>
             ))}
         </div>
     </div>

@@ -4,7 +4,7 @@ const FooterSection = (props) => (
             {props.sectionName}
         </h3>
         {props.sectionLinks.map((link) => (
-            <p className='footerSection__link'>{link}</p>
+            <p className='footerSection__link' key={link}>{link}</p>
         ))}
     </div>
 )

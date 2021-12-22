@@ -4,7 +4,7 @@ const HeaderCategoriesBar = (props) => (
     <div className='headerCategoriesBar'>
         <div className='container headerCategoriesBar__content'>
             {props.categories.map((category) =>
-                <HeaderCategoryButton category={category} />
+                <HeaderCategoryButton category={category} key={category.name} />
             )}
         </div>
     </div>

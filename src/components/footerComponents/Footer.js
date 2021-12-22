@@ -6,7 +6,7 @@ const Footer = (props) => (
     <div className='footer'>
         <div className='container footer__container'>
             {props.sections.map((section) => (
-                <FooterSection sectionName={section.name} sectionLinks={section.links} />
+                <FooterSection sectionName={section.name} sectionLinks={section.links} key={section.name} />
             ))}
             <FooterSocialMedia />
         </div>
