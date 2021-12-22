@@ -23,7 +23,7 @@ const IndexCarousel = (props) => {
     }
 
     return (
-        <div className='indexCarousel'>
+        <div className='indexCarousel container'>
             <div className='indexCarousel__inner' style={{ transform: `translate(-${activeBanner * 100}%)` }}>
                 {props.banners.map((banner) => (
                     <IndexCarouselItem img={banner.imgSrc} key={banner.imgSrc} />
