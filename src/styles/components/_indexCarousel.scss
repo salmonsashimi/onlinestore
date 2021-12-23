@@ -18,13 +18,17 @@
 .indexCarousel__buttonLeft {
     position: absolute;
     display: block;
-    top: 30px;
+    top: 20px;
+    height: 96%;
+    width: 15%;
 }
 
 .indexCarousel__buttonRight {
     position: absolute;
     display: block;
-    right: 50px;
-    top: 30px;
+    right: 0px;
+    top: 20px;
+    height: 96%;
+    width: 15%;
 }
 
