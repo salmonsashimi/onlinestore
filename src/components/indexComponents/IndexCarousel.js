@@ -41,11 +41,14 @@ const IndexCarousel = (props) => {
                 {props.banners.map((banner) => (
                     <IndexCarouselItem img={banner.imgSrc} key={banner.imgSrc} />
                 ))}
-
+            </div>
+            <div className='indexCarousel__bannerButtons'>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
             </div>
             <button className='indexCarousel__buttonLeft' onClick={() => { updateBanner(activeBanner - 1) }}>&lt;</button>
             <button className='indexCarousel__buttonRight' onClick={() => { updateBanner(activeBanner + 1) }}>&gt; </button>
-
         </div>
     )
 }

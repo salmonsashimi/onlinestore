@@ -35,6 +35,11 @@
 .indexCarousel__buttonRight {
     @extend .indexCarousel__buttonLeft;
     right: 0px;
+}
 
+.indexCarousel__bannerButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
