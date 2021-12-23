@@ -1,6 +1,7 @@
 .indexCarousel {
     overflow:hidden;
     padding-top: 20px;
+    position: relative;
 }
 
 .indexCarousel__inner {
@@ -12,4 +13,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+.indexCarousel__buttons {
+    position: absolute;
+    top: 30px;
 }

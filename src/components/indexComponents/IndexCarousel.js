@@ -30,9 +30,9 @@ const IndexCarousel = (props) => {
                 ))}
 
             </div>
-            <div>
-                <button onClick={() => { updateBanner(activeBanner - 1) }}>prev </button>
-                <button onClick={() => { updateBanner(activeBanner + 1) }}>next </button>
+            <div className='indexCarousel__buttons'>
+                <button onClick={() => { updateBanner(activeBanner - 1) }}>&lt;</button>
+                <button onClick={() => { updateBanner(activeBanner + 1) }}>&gt; </button>
             </div >
 
         </div >
