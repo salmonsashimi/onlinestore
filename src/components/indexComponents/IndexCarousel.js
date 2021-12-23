@@ -32,6 +32,12 @@ const IndexCarousel = (props) => {
         const autoCycle = setInterval(() => {
             updateBanner(activeBanner + 1)
         }, 1000)
+
+        return () => {
+            if (autoCycle) {
+                clearInterval(autoCycle);
+            }
+        }
     });
 
 
