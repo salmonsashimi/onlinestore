@@ -21,14 +21,15 @@
     top: 20px;
     height: 96%;
     width: 15%;
+    border: none;
+    background: $blue;
 }
 
+
+
 .indexCarousel__buttonRight {
-    position: absolute;
-    display: block;
+    @extend .indexCarousel__buttonLeft;
     right: 0px;
-    top: 20px;
-    height: 96%;
-    width: 15%;
+
 }
 
