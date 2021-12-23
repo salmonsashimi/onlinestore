@@ -15,7 +15,16 @@
     justify-content: center;
 }
 
-.indexCarousel__buttons {
+.indexCarousel__buttonLeft {
     position: absolute;
+    display: block;
     top: 30px;
 }
+
+.indexCarousel__buttonRight {
+    position: absolute;
+    display: block;
+    right: 50px;
+    top: 30px;
+}
+
