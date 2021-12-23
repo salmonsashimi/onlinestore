@@ -20,11 +20,16 @@
     display: block;
     top: 20px;
     height: 96%;
-    width: 15%;
+    width: 10%;
     border: none;
-    background: $blue;
+    background: $black-before;
+    font-size: 5rem;
+    color: white;
+    &:hover {
+        background: $black-hover;
+        cursor: pointer;
+    }
 }
-
 
 
 .indexCarousel__buttonRight {

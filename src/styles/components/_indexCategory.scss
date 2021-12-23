@@ -5,7 +5,7 @@
 }
 
 .indexCategory__name {
-    background: rgba(0,0,0,0.2);
+    background: $black-before;
     color: white;
     cursor: pointer;
     font-weight: 100;
@@ -20,7 +20,7 @@
     transition: background 0.3s;
     
     &:hover {
-        background: rgba(0,0,0,0.4);
+        background: $black-hover;
         font-size: 3.5rem;
     }
 }
