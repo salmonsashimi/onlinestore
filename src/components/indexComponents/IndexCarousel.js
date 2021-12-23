@@ -23,9 +23,12 @@ const IndexCarousel = (props) => {
     }
 
 
-
+    const goToBanner = (bannerNum) => {
+        setActiveBanner(bannerNum - 1);
+    }
 
     const autoCycle = () => {
+        console.log('thisisclicked')
         setInterval(() => {
             updateBanner(activeBanner + 1)
         }, 4000)
@@ -44,7 +47,7 @@ const IndexCarousel = (props) => {
             </div>
             <div className='indexCarousel__bannerButtons'>
                 {props.banners.map(banner => (
-                    <button key={banner.num} num={banner.num}>{banner.num}</button>
+                    <button onClick={() => { goToBanner(banner.num) }} key={banner.num} num={banner.num}>{banner.num}</button>
                 ))}
             </div>
             <button className='indexCarousel__buttonLeft' onClick={() => { updateBanner(activeBanner - 1) }}>&lt;</button>
