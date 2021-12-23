@@ -27,15 +27,12 @@ const IndexCarousel = (props) => {
         setActiveBanner(bannerNum - 1);
     }
 
-    const autoCycle = () => {
-        console.log('thisisclicked')
-        setInterval(() => {
+
+    useEffect(() => {
+        const autoCycle = setInterval(() => {
             updateBanner(activeBanner + 1)
-        }, 4000)
-    }
-
-
-    useEffect(autoCycle)
+        }, 1000)
+    });
 
 
     return (
