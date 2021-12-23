@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const IndexCarouselItem = (props) => (
     <div className='indexCarouselItem'>
@@ -16,11 +16,26 @@ const IndexCarousel = (props) => {
         if (newBanner < 0) {
             newBanner = 0;
         } else if (newBanner >= props.banners.length) {
-            newBanner = props.banners.length - 1;
+            newBanner = 0;
         }
 
         setActiveBanner(newBanner)
     }
+
+
+    // const autoCycle = () => {
+    //     setInterval(() => {
+    //         updateBanner(activeBanner + 1)
+
+
+    //     }, 1000)
+    // }
+
+
+
+
+    // useEffect(autoCycle)
+
 
     return (
         <div className='indexCarousel container'>
