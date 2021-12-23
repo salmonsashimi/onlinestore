@@ -23,18 +23,16 @@ const IndexCarousel = (props) => {
     }
 
 
-    // const autoCycle = () => {
-    //     setInterval(() => {
-    //         updateBanner(activeBanner + 1)
 
 
-    //     }, 1000)
-    // }
+    const autoCycle = () => {
+        setInterval(() => {
+            updateBanner(activeBanner + 1)
+        }, 4000)
+    }
 
 
-
-
-    // useEffect(autoCycle)
+    useEffect(autoCycle)
 
 
     return (
