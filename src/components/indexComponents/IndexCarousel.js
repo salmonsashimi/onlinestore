@@ -39,13 +39,13 @@ const IndexCarousel = (props) => {
         <div className='indexCarousel container'>
             <div className='indexCarousel__inner' style={{ transform: `translate(-${activeBanner * 100}%)` }}>
                 {props.banners.map((banner) => (
-                    <IndexCarouselItem img={banner.imgSrc} key={banner.imgSrc} />
+                    <IndexCarouselItem img={banner.imgSrc} key={banner.num} />
                 ))}
             </div>
             <div className='indexCarousel__bannerButtons'>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
+                {props.banners.map(banner => (
+                    <button key={banner.num} num={banner.num}>{banner.num}</button>
+                ))}
             </div>
             <button className='indexCarousel__buttonLeft' onClick={() => { updateBanner(activeBanner - 1) }}>&lt;</button>
             <button className='indexCarousel__buttonRight' onClick={() => { updateBanner(activeBanner + 1) }}>&gt; </button>
@@ -59,13 +59,16 @@ IndexCarousel.defaultProps = {
     banners:
         [
             {
+                num: 1,
                 imgSrc: 'https://picsum.photos/id/1011/1200/600'
             },
             {
+                num: 2,
                 imgSrc: 'https://picsum.photos/id/590/1200/600'
 
             },
             {
+                num: 3,
                 imgSrc: 'https://picsum.photos/id/177/1200/600'
 
             }]
