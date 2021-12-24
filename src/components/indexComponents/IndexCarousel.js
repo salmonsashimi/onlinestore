@@ -12,6 +12,7 @@ const IndexCarousel = (props) => {
 
     const [activeBanner, setActiveBanner] = useState(0);
 
+
     const updateBanner = (newBanner) => {
         if (newBanner < 0) {
             newBanner = 0;
@@ -51,14 +52,14 @@ const IndexCarousel = (props) => {
             <div className='indexCarousel__bannerButtons'>
                 {props.banners.map(banner => (
                     <button
-                        className='indexCarousel__bannerButton'
+                        className={`indexCarousel__bannerButton ${activeBanner + 1 === banner.num ? "indexCarousel__bannerButton-active" : ""}`}
                         onClick={() => { goToBanner(banner.num) }} key={banner.num} num={banner.num}
                     ></button>
                 ))}
             </div>
             <button className='indexCarousel__buttonLeft' onClick={() => { updateBanner(activeBanner - 1) }}>&lt;</button>
             <button className='indexCarousel__buttonRight' onClick={() => { updateBanner(activeBanner + 1) }}>&gt; </button>
-        </div>
+        </div >
     )
 }
 

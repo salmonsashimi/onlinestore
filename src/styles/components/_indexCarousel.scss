@@ -42,15 +42,18 @@
     align-items: center;
     justify-content: space-around;
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     left: 500px;
     width: 200px;
 }
 
 .indexCarousel__bannerButton {
-    padding: 10px;
+    padding: 8px;
     border-radius: 50px;
     border: none;
     background: $off-white;
 }
 
+.indexCarousel__bannerButton-active {
+    background: red;   
+}
