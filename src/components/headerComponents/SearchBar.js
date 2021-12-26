@@ -15,7 +15,7 @@ const SearchBar = () => {
             <input
                 className='searchBar__input'
                 value={text}
-                onChange={(e) => setText(e.target.value)}
+                onChange={setText}
                 placeholder='Seach for items and brands'
             />
             <button className='searchBar__button' ><FiSearch size='1.5em' /></button>
