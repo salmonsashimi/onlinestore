@@ -4,7 +4,7 @@ const useTextInput = (initialVal = '') => {
     const [text, setText] = useState(initialVal);
 
     const updateText = (e) => {
-        setText(e.target.value)
+        setText(e)
     }
 
     return [text, updateText]
