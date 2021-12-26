@@ -1,6 +1,5 @@
 import useTextInput from '../hooks/useFormState';
 
-
 const FooterSocialMedia = () => {
     const [text, setText] = useTextInput();
 
@@ -10,7 +9,7 @@ const FooterSocialMedia = () => {
 
             <h3 className='footerSection__name'>Subscribe to our mailing list</h3>
             <form>
-                <input onChange={(e) => { setText(e.target.value) }} value={text}></input>
+                <input onChange={setText} value={text}></input>
                 <button>Subscribe</button>
             </form>
         </div>
