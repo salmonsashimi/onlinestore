@@ -22,16 +22,20 @@ Footer.defaultProps = {
                 'Help Center',
                 'Track Order',
                 'Delivery Returns',
-                'Contact Us'
+                'Payment Methods',
+                'Contact Us',
+                'FAQ'
             ]
         },
         {
             name: 'About Us',
             links: [
                 'About Us',
+                'Affiliate Program',
                 'Careers',
                 'Corporate Responsibility',
-                'Terms & Conditions'
+                'Terms & Conditions',
+                'Privacy Policy',
             ]
         },
         {
