@@ -12,3 +12,9 @@
 .footerSection__link:hover {
     cursor: pointer;
 }
+
+.footerSection__email-input {
+    border: none;
+    font-size: $m-size;
+    padding: 7px;
+}
