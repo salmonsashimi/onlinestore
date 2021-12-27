@@ -10,7 +10,7 @@ const FooterSocialMedia = () => {
             <h3 className='footerSection__name'>Subscribe to our mailing list</h3>
             <form>
                 <input className='footerSection__email-input' onChange={setText} value={text} placeholder='example@example.com'></input>
-                <button>+</button>
+                <button className='footerSection__email-button'>+</button>
             </form>
         </div>
     )
