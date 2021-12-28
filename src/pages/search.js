@@ -1,5 +1,5 @@
-import SearchFilterBar from '../components/SearchFilterBar';
-import ItemBox from '../components/ItemBox';
+import SearchFilterBar from '../components/searchComponents/SearchFilterBar';
+import ItemBox from '../components/searchComponents/ItemBox';
 
 const SearchPage = () => (
     <div>
