@@ -1,0 +1,28 @@
+.itemBox {
+    border: 1px solid white;
+    padding: 20px;
+    margin: 10px;
+    &:hover {
+        border: 1px solid $blue;
+        cursor: pointer;
+    }
+}
+
+.itemBox__brand {
+    margin: $s-size 0;
+    border-bottom: 1px solid black;
+    text-transform: uppercase;
+}
+
+
+.itemBox__name {
+    margin: $s-size 0;
+    font-size: $s-size;
+    color: grey;
+    font-weight: 600;
+}
+
+.itemBox__price {
+    margin: $s-size 0;
+}
+
