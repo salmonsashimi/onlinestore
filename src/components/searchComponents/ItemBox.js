@@ -1,5 +1,7 @@
 const ItemBox = () => (
     <div>
+        <img />
+
         hello
     </div>
 )
