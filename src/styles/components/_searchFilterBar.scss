@@ -2,4 +2,14 @@
     background-color: $off-white;
     display: flex;
     justify-content: flex-end;
+    padding: $s-size $l-size;
+}
+
+
+.sortBy__label {
+    margin-right: $m-size;
+}
+
+.sortBy__select {
+    padding: $s-size;
 }
