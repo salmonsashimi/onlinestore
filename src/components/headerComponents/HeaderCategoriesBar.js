@@ -14,28 +14,28 @@ HeaderCategoriesBar.defaultProps = {
     categories: [
         {
             name: 'Sale',
-            dropdown: ['hello', 'bue']
+            dropdown: ['Promotions', 'Buy 1 get 1', 'Christmas Special']
         }
         ,
         {
             name: 'Latest',
-            dropdown: ['aisdfjioajsf', 'asdfasf', 'asdfasdfds']
+            dropdown: ['New In', 'Trending now', 'Back in stock']
         },
         {
             name: 'Clothing',
-            dropdown: ['aisdfjioajsf', 'asdfasf']
+            dropdown: ['Activewear', 'Hoodies & Sweatshirts', 'Jeans', 'Joggers', 'Shirt', 'Shorts', 'T-shirts']
         },
         {
             name: 'Shoes',
-            dropdown: ['aisdfjioajsf', 'asdfasf']
+            dropdown: ['Boots', 'Loafers', 'Sandals', 'Trainers']
         },
         {
             name: 'Accessories',
-            dropdown: ['aisdfjioajsf', 'asdfasf']
+            dropdown: ['Bags', 'Belts', 'Caps & Hats', 'Gloves', 'Sunglasses', 'Wallets']
         },
         {
             name: 'Sportswear',
-            dropdown: ['aisdfjioajsf', 'asdfasf']
+            dropdown: ['Activewear', 'Joggers', 'Trainers']
         },
     ]
 }
