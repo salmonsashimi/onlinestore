@@ -1,5 +1,5 @@
-const SearchFilterBar = () => (
-    <div className='searchFilterBar container'>
+const SearchSortingBar = () => (
+    <div className='searchSortingBar container'>
         <div className='sortBy'>
             <label className='sortBy__label' for='sortBy'>Sort By</label>
             <select className='sortBy__select' name='sortBy'>
@@ -12,4 +12,4 @@ const SearchFilterBar = () => (
     </div>
 )
 
-export default SearchFilterBar;
+export default SearchSortingBar;

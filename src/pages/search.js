@@ -1,11 +1,13 @@
-import SearchFilterBar from '../components/searchComponents/SearchFilterBar';
+import SearchSortingBar from '../components/searchComponents/SearchSortingBar';
 import ItemBoxes from '../components/searchComponents/ItemBoxes';
 
 const SearchPage = () => (
-    <div>
-        <SearchFilterBar />
-        <ItemBoxes />
-    </div>
+    <>
+        <SearchSortingBar />
+        <div>
+            <ItemBoxes />
+        </div>
+    </>
 )
 
 export default SearchPage;
