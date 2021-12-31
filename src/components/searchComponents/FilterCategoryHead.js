@@ -1,5 +1,5 @@
 const FilterCategoryHead = () => (
-    <div>
+    <div className='filterCategoryHead'>
         hello
     </div>
 )
