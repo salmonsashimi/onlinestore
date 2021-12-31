@@ -1,7 +1,7 @@
 import FilterCategoryHead from './FilterCategoryHead';
 
 const SearchFilterColumn = () => (
-    <div>
+    <div className='searchFilterColumn'>
         <FilterCategoryHead />
     </div>
 )
