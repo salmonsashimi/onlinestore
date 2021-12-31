@@ -5,7 +5,7 @@ import SearchFilterColumn from '../components/searchComponents/SearchfilterColum
 const SearchPage = () => (
     <div className='container'>
         <SearchSortingBar />
-        <div>
+        <div className='search__results'>
             <SearchFilterColumn />
             <ItemBoxes />
         </div>
