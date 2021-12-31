@@ -3,7 +3,7 @@ import ItemBoxes from '../components/searchComponents/ItemBoxes';
 import SearchFilterColumn from '../components/searchComponents/SearchfilterColumn';
 
 const SearchPage = () => (
-    <div>
+    <div className='container'>
         <SearchSortingBar />
         <div>
             <SearchFilterColumn />
