@@ -1,10 +1,12 @@
-const FilterCategoryHead = () => (
-    <div className='filterCategoryHead'>
-        <button>open</button>
-        <div>
-            stuff
+const FilterCategoryHead = () => {
+    return (
+        <div className='filterCategoryHead'>
+            <button className='filterCategoryHead__button'>open</button>
+            <div className='filterCategoryHead__content'>
+                stuff
         </div>
-    </div>
-)
+        </div>
+    )
+}
 
 export default FilterCategoryHead;
