@@ -1,5 +1,6 @@
 const SearchSortingBar = () => (
     <div className='searchSortingBar'>
+        <p>searched name</p>
         <div className='sortBy'>
             <label className='sortBy__label' for='sortBy'>Sort By</label>
             <select className='sortBy__select' name='sortBy'>
