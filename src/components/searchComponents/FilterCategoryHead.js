@@ -1,6 +1,9 @@
 const FilterCategoryHead = () => (
     <div className='filterCategoryHead'>
-        Color
+        <button>open</button>
+        <div>
+            stuff
+        </div>
     </div>
 )
 
