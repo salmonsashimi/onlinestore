@@ -1,5 +1,15 @@
 .searchFilterColumn {
     margin-top: 30px;
     background-color: grey;
-    min-width: 10em;
+    min-width: 12em;
+}
+
+.searchFilterColumn__header {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-size: $m-size;
+    margin: 0;
+    padding: $xs-size;
+    text-transform: uppercase;
 }

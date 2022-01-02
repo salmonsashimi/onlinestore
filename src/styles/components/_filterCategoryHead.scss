@@ -1,6 +1,7 @@
 .filterCategoryHead {
-    border: 1px solid black;
+    border: 1px solid white;
 }
+
 
 .filterCategoryHead__content {
     display: none;
@@ -11,8 +12,10 @@
     border: none;
     background-color: black;
     color: white;
-    font-size: $l-size;
+    font-size: $m-size;
+    font-weight: 300;
     text-align: left;
+    padding: $xs-size;
     width: 100%;
 }
 
