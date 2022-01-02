@@ -4,11 +4,16 @@
 
 .filterCategoryHead__content {
     display: none;
-
+    
 }
 
 .filterCategoryHead__button {
-    background:blue
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: $m-size;
+    text-align: left;
+    width: 100%;
 }
 
 .filterCategoryHead__contentShow {
