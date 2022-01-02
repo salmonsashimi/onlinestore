@@ -1,7 +1,7 @@
 import ItemBox from './ItemBox';
 
 const ItemBoxes = () => (
-    <div className='itemBoxes container'>
+    <div className='itemBoxes'>
         <ItemBox />
         <ItemBox />
         <ItemBox />
