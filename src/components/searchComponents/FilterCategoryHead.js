@@ -10,8 +10,8 @@ const FilterCategoryHead = (props) => {
             <div className={
                 `filterCategoryHead__content ${isOpen ? 'filterCategoryHead__contentShow' : null}`
             } >
-                stuff
-        </div>
+                {props.categories}
+            </div>
         </div>
     )
 }
