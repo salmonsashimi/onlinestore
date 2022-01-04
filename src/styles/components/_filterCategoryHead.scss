@@ -2,6 +2,12 @@
     border: 1px solid white;
 }
 
+.filterCategoryHead p {
+    border: 1px solid black;
+    padding: $xs-size;
+    margin: 0;
+}
+
 
 .filterCategoryHead__content {
     display: none;
@@ -12,6 +18,7 @@
     border: none;
     background-color: black;
     color: white;
+    cursor: pointer;
     font-size: $m-size;
     font-weight: 300;
     text-align: left;
