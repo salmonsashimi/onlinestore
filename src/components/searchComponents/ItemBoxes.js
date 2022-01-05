@@ -11,6 +11,8 @@ const ItemBoxes = () => {
             <ItemBox />
             <ItemBox />
             <ItemBox />
+            <ItemBox />
+            <ItemBox />
         </div>
     )
 }
