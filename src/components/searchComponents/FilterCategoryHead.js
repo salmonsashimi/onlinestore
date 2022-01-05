@@ -7,7 +7,16 @@ const FilterCategoryHead = (props) => {
 
     return (
         <div className='filterCategoryHead'>
-            <button className='filterCategoryHead__button' onClick={() => setIsOpen(!isOpen)}>{props.category.name}</button>
+            <button
+                className='filterCategoryHead__button'
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                {props.category.name}
+                <span>
+                    {isOpen ? '\u25B2' : '\u25BC'}
+                </span>
+            </button>
+
             <div className={
                 `filterCategoryHead__content ${isOpen ? 'filterCategoryHead__contentShow' : null}`
             } >

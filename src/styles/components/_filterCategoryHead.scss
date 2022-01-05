@@ -15,9 +15,10 @@
     cursor: pointer;
     font-size: $m-size;
     font-weight: 300;
-    text-align: left;
     padding: $xs-size;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .filterCategoryHead__contentShow {
