@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import FilterCateogryItem from './FilterCategoryItem';
 
 const FilterCategoryHead = (props) => {
 
@@ -11,7 +12,7 @@ const FilterCategoryHead = (props) => {
                 `filterCategoryHead__content ${isOpen ? 'filterCategoryHead__contentShow' : null}`
             } >
                 {props.category.dropdown.map(item => (
-                    <p>{item}</p>
+                    <FilterCateogryItem item={item} />
                 ))}
             </div>
         </div>
