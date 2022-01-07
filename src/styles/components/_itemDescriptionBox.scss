@@ -1,3 +1,26 @@
 .itemDescriptionBox {
-    max-width: 30%;
+    margin: $m-size;
+    max-width: 20em;
+
+}
+
+.itemDescriptionBox__brand {
+    font-size: $l-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.itemDescriptionBox__itemName {
+    font-size: $l-size;
+    font-weight: 300;
+}
+
+.itemDescriptionBox__price {
+    font-size: $l-size;
+    font-weight: 300;
+}
+
+.itemDescriptionBox__description {
+    font-size: $l-size;
+    font-weight: 300;
 }
