@@ -24,3 +24,11 @@
     font-size: $m-size;
     font-weight: 300;
 }
+
+.itemDescriptionBox__button {
+    border: none;
+    background-color: green;
+    font-size: $m-size;
+    color: $off-white;
+    padding: $s-size $l-size;
+}
