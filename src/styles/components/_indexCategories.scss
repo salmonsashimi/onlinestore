@@ -1,8 +1,9 @@
 .indexCategories {
-    padding-bottom: 20px;
+    margin-bottom: $standard-margin;
 }
 
 .indexCategories__options {
+    margin-top: $standard-margin;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
