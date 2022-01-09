@@ -1,6 +1,6 @@
 .indexCarousel {
     overflow:hidden;
-    padding-top: 20px;
+    padding-top: 35px;
     position: relative;
 }
 
@@ -18,10 +18,11 @@
 .indexCarousel__buttonLeft {
     position: absolute;
     display: block;
-    top: 20px;
-    height: 96%;
+    top: 35px;
+    height: 93.8%;
     width: 10%;
     border: none;
+    padding: none;
     background: $black-before;
     font-size: 5rem;
     color: white;
