@@ -27,6 +27,7 @@ const addUser = async () => {
     return newUserPromise;
 }
 
+
 const findUser = async () => {
     const col = getDatabase();
 
