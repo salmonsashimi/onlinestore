@@ -1,4 +1,4 @@
-import retrieveUser from './api/user';
+import { addUser, findUser } from './api/user';
 import retrieveItem from './api/retrieveItem';
 
 export default function Movies({ movies }) {

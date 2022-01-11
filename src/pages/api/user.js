@@ -23,7 +23,6 @@ const addUser = async () => {
     // Insert a single document, wait for promise so we can read it back
     const newUserPromise = await col.insertOne(personDocument);
 
-
     return newUserPromise;
 }
 
@@ -37,4 +36,4 @@ const findUser = async () => {
 
 }
 
-export { findUser }
+export { addUser, findUser }
