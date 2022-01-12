@@ -1,6 +1,6 @@
-const ItemImageBox = () => (
+const ItemImageBox = ({ img }) => (
     <div className='itemImageBox'>
-        <img src='https://picsum.photos/id/590/400/550' />
+        <img src={img} />
     </div>
 )
 
