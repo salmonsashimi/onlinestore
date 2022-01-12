@@ -1,5 +1,3 @@
-import { addUser, findUser } from './api/user';
-import retrieveItem from './api/retrieveItem';
 
 export default function Movies({ movies }) {
     return (
@@ -16,7 +14,8 @@ export default function Movies({ movies }) {
 
 export async function getServerSideProps(context) {
     try {
-        retrieveItem();
+        // retrieveItem();
+        console.log('hello')
         // const user = retrieveUser()
         // client.db() will be the default database passed in the MONGODB_URI
         // You can change the database by calling the client.db() function and specifying a database like:
@@ -46,6 +45,7 @@ export async function getServerSideProps(context) {
         // const movies = await db.collection('users').find({}).limit(20).toArray();
 
         // console.log(movies)
+        let movies = "hello"
         return {
             props: {
                 movies: JSON.parse(JSON.stringify(movies)),

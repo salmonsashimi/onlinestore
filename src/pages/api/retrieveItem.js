@@ -1,30 +1,40 @@
 import clientPromise from '../../lib/mongodb';
+import { findUser } from './user'
 
 
 export default async () => {
     const client = await clientPromise;
+    const user = await findUser();
+
+
+
     const db = client.db('online-store');
+    const itemCol = db.collection("items");
 
-
-    const userCol = db.collection("users");
-    const userID = await userCol.findOne({ "id": 1 });
-
-    const itemCol = db.collections("items");
 
     // Construct a document            
-    for (let i = 0; i < 3; i++) {
-        let itemDocument = {
-            "id": i,
-            "user": userID,
-            "name": "Brand New Sneakers",
-            "brand": "NIKE",
-            "price": 1000,
-            "description": "lorem"
-        }
-        // Insert a single document, wait for promise so we can read it back
-        const p = await col.insertOne(itemDocument);
 
+
+    let itemDocument = {
+        "id": 1,
+        "user": user,
+        "name": "Denim Jacket",
+        "brand": "Adidas",
+        "price": 2340.21,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nulla aliquet porttitor lacus luctus accumsan tortor.",
+        "imgUrl": "https://picsum.photos/id/240/400/550"
     }
+
+
+
+    // Insert a single document, wait for promise so we can read it back
+    const p = await itemCol.insertOne(itemDocument);
+
+
+
+
+
+
 
 
 }
