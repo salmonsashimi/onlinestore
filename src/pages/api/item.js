@@ -25,7 +25,7 @@ export default async function (req, res) {
         // Process a POST request
     } else {
         // Handle any other HTTP method
-        const item = await col.findOne({ "id": 1 });
+        const item = await col.findOne({ "id": 2 });
         res.json(item)
 
     }

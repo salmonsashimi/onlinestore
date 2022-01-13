@@ -1,18 +1,11 @@
 import ItemBox from './ItemBox';
 
-const ItemBoxes = () => {
+const ItemBoxes = ({ items }) => {
     return (
         <div className='itemBoxes'>
-            <ItemBox />
-            <ItemBox />
-            <ItemBox />
-            <ItemBox />
-            <ItemBox />
-            <ItemBox />
-            <ItemBox />
-            <ItemBox />
-            <ItemBox />
-            <ItemBox />
+            {items.map(item => (
+                <ItemBox item={item} />
+            ))}
         </div>
     )
 }
