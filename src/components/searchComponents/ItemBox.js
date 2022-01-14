@@ -6,9 +6,7 @@ const ItemBox = (props) => {
     const router = useRouter();
 
     const itemClick = () => {
-        console.log(id)
         router.push(`/item/${id}`)
-
     }
 
     return (

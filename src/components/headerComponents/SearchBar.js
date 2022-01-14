@@ -8,7 +8,6 @@ const SearchBar = () => {
 
     const onSearchClick = (e) => {
         e.preventDefault();
-        console.log(e.target[0].value);
         router.push(`/search/${e.target[0].value}`);
     }
 
