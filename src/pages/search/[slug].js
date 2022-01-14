@@ -1,6 +1,6 @@
-import SearchSortingBar from '../components/searchComponents/SearchSortingBar';
-import ItemBoxes from '../components/searchComponents/ItemBoxes';
-import SearchFilterColumn from '../components/searchComponents/SearchfilterColumn';
+import SearchSortingBar from '../../components/searchComponents/SearchSortingBar';
+import ItemBoxes from '../../components/searchComponents/ItemBoxes';
+import SearchFilterColumn from '../../components/searchComponents/SearchfilterColumn';
 
 const SearchPage = (props) => {
     return (
