@@ -15,17 +15,16 @@
 import clientPromise from '../../../lib/mongodb';
 
 export default async function (req, res) {
-
     const client = await clientPromise;
     const db = client.db('online-store');
     const col = db.collection("items");
-
+    const { pid } = req.query;
 
     if (req.method === 'POST') {
         // Process a POST request
     } else {
         // Handle any other HTTP method
-        const item = await col.findOne({ "id": 2 });
+        const item = await col.findOne({ "id": parseInt(pid) });
         res.json(item)
 
     }
