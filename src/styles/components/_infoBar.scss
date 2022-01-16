@@ -1,0 +1,15 @@
+.infoBar {
+    background-color: $dark-blue;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.infoBar__text {
+    color: white;
+    margin: 0;
+    padding: $s-size;
+    flex-grow: 1;
+    text-align: center;
+    
+}
