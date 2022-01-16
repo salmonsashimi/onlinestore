@@ -1,12 +1,7 @@
-import { useRouter } from 'next/router';
 import ItemImageBox from '../../components/itemComponents/ItemImageBox';
 import ItemDescriptionBox from '../../components/itemComponents/ItemDescriptionBox';
 
 const ItemPage = ({ data }) => {
-
-    const router = useRouter();
-    const { pid } = router.query;
-
     return (
         <div className='itemPage'>
             <ItemImageBox img={data.imgUrl} />
