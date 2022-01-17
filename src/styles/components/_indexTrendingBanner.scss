@@ -1,0 +1,14 @@
+.indexTrendingBanner {
+    display: flex;
+    margin-bottom: $standard-margin;
+    justify-content: space-around;
+}
+
+.indexTrendingBanner__left {
+    background-color: $green;
+}
+
+.indexTrendingBanner__right {
+    background-color: $dark-blue;
+    color: $off-white;
+}
