@@ -1,13 +1,15 @@
 const IndexSustainabilityBanner = () => (
     <div className='container indexSustainabilityBanner'>
         <div className='indexSustainabilityBanner__left'>
-            left side
-    
+            <h3>THREAD</h3>
+            <p>by NAVY</p>
+
         </div>
         <div className='indexSustainabilityBanner__right'>
-            right side
+            <p>Sustainability fashion</p>
+            <p>Explore clothing made from recyclable materials</p>
         </div>
-        
+
     </div>
 )
 

@@ -1,13 +1,16 @@
 .indexSustainabilityBanner {
     display: flex;
+    margin-bottom: $standard-margin;
 }
 
 .indexSustainabilityBanner__left {
-    flex-grow: 1;
-    background-color: green;
+    background-color: $off-white;
+    color: $dark-blue;
+    min-width: 50%;
 }
 
 .indexSustainabilityBanner__right {
-    flex-grow: 1;
-    background-color: blue;
+    min-width: 50%;
+    background-color: $dark-blue;
+    color: $off-white;
 }
