@@ -1,0 +1,13 @@
+.indexSustainabilityBanner {
+    display: flex;
+}
+
+.indexSustainabilityBanner__left {
+    flex-grow: 1;
+    background-color: green;
+}
+
+.indexSustainabilityBanner__right {
+    flex-grow: 1;
+    background-color: blue;
+}
