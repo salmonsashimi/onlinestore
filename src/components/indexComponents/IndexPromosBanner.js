@@ -12,17 +12,18 @@ const IndexPromosBanner = (props) => (
 IndexPromosBanner.defaultProps = {
     promos: [
         {
-            name: 'New Arrivals!',
-            icon: 'yellow'
+            name: 'SHOP MEN',
+            imgUrl: ''
         },
         {
-            name: 'Buy 2 get 50% off!',
-            icon: 'blue'
+            name: 'SHOP WOMEN',
+            imgUrl: ''
         },
         {
-            name: 'Daily sales',
-            icon: 'blue'
+            name: 'SHOP KIDS',
+            imgUrl: ''
         }
     ]
 }
+
 export default IndexPromosBanner;
