@@ -1,8 +1,10 @@
 .infoBar {
     background-color: $dark-blue;
+}
+
+.infoBar__content {
     display: flex;
     justify-content: space-around;
-
 }
 
 .infoBar__text {
@@ -11,5 +13,4 @@
     padding: $s-size;
     flex-grow: 1;
     text-align: center;
-    
 }
