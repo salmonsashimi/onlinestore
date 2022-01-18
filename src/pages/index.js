@@ -9,8 +9,8 @@ const Index = () => (
     <>
         <IndexCarousel />
         <IndexPromosBanner />
-        <IndexCategories />
         <IndexTrendingBanner />
+        <IndexCategories />
         <InfoBar />
     </>
 );
