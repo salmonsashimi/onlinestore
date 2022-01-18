@@ -1,15 +1,33 @@
-.indexTrendingBanner {
+.indexTrendingBanners {
     display: flex;
     margin-bottom: $standard-margin;
     justify-content: space-around;
     text-align: center;
 }
 
-.indexTrendingBanner__left {
-    background-color: $green;
+.indexTrendingBanner {
+    font-size: $m-size;
+    cursor: pointer;
 }
 
-.indexTrendingBanner__right {
-    background-color: $dark-blue;
-    color: $off-white;
+.indexTrendingBanner__title {
+    font-size: $l-size;
+}
+
+.indexTrendingBanner__text {
+    font-size: $m-size;
+}
+
+.indexTrendingBanner__button {
+    border: 3px solid black;
+    background-color: $light-blue;
+    font-size: $m-size;
+    padding: $s-size $m-size;
+
+    &:hover {
+        transition: 0.5s;
+        background-color: $dark-blue;
+        color: white;
+        cursor: pointer;
+    }
 }

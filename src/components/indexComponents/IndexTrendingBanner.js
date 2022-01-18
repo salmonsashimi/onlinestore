@@ -1,17 +1,17 @@
 const IndexTrendingBanner = () => (
-    <div className='container indexTrendingBanner'>
-        <div className='indexTrendingBanner__left'>
+    <div className='container indexTrendingBanners'>
+        <div className='indexTrendingBanner'>
             <img src='https://picsum.photos/id/116/450/600'></img>
-            <h3>Floral</h3>
-            <p>by NAVY</p>
-            <button>shop now</button>
+            <h3 className='indexTrendingBanner__title'>BEST NAVY BRANDS</h3>
+            <p className='indexTrendingBanner__text'>Up to 70% off!</p>
+            <button className='indexTrendingBanner__button'>SHOP NOW</button>
 
         </div>
-        <div className='indexTrendingBanner__right'>
+        <div className='indexTrendingBanner'>
             <img src='https://picsum.photos/id/106/450/600'></img>
-            <h3>Sustainability fashion</h3>
-            <p>Explore clothing made from recyclable materials</p>
-            <button>shop now</button>
+            <h3 className='indexTrendingBanner__title'>FLOWER POWER</h3>
+            <p className='indexTrendingBanner__text'>Clothing made from recyclable materials</p>
+            <button className='indexTrendingBanner__button'>SHOP NOW</button>
         </div>
 
     </div>
