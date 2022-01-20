@@ -13,15 +13,15 @@ IndexPromosBanner.defaultProps = {
     promos: [
         {
             name: 'SHOP MEN',
-            imgUrl: ''
+            imgUrl: 'https://picsum.photos/id/343/350/300'
         },
         {
             name: 'SHOP WOMEN',
-            imgUrl: ''
+            imgUrl: 'https://picsum.photos/id/342/350/300'
         },
         {
             name: 'SHOP KIDS',
-            imgUrl: ''
+            imgUrl: 'https://picsum.photos/id/341/350/300'
         }
     ]
 }
