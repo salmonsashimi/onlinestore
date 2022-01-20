@@ -1,6 +1,8 @@
 .promo {
-    min-width: 25%;
+    min-width: 25%;    
+    cursor: pointer;
+}
+
+.promo__title {
     text-transform: uppercase;
-    color: $off-white;
-    border: 1px solid black;
 }

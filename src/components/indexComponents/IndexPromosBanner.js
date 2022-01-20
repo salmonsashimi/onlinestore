@@ -12,15 +12,20 @@ const IndexPromosBanner = (props) => (
 IndexPromosBanner.defaultProps = {
     promos: [
         {
-            name: 'SHOP MEN',
+            name: 'GOING OUT?',
+            text: 'Fancy plans, fancy fits!',
+            imgUrl: 'https://picsum.photos/id/342/350/300'
+
+
+        },
+        {
+            name: 'Streetwear brands',
+            text: 'Logo lovers unite!',
             imgUrl: 'https://picsum.photos/id/343/350/300'
         },
         {
-            name: 'SHOP WOMEN',
-            imgUrl: 'https://picsum.photos/id/342/350/300'
-        },
-        {
-            name: 'SHOP KIDS',
+            name: 'Bling up',
+            text: 'Style it up!',
             imgUrl: 'https://picsum.photos/id/341/350/300'
         }
     ]
