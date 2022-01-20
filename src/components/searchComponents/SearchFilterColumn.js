@@ -6,7 +6,6 @@ const SearchFilterColumn = (props) => (
         {props.categories.map((category) =>
             <FilterCategoryHead category={category} />
         )}
-
     </div>
 )
 
