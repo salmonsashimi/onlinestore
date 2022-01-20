@@ -1,7 +1,7 @@
 import Promo from './Promo';
 
 const IndexPromosBanner = (props) => (
-    <div className=' container'>
+    <div className='container'>
         <div className='indexPromosBanner'>
             {props.promos.map((promo) => <Promo key={promo.name} promo={promo} />)}
         </div>

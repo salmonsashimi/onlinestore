@@ -1,11 +1,11 @@
 .indexTrendingBanners {
     display: flex;
-    margin-bottom: $standard-margin;
     justify-content: space-around;
     text-align: center;
 }
 
 .indexTrendingBanner {
+    margin: $standard-margin 0;
     font-size: $m-size;
     cursor: pointer;
 }
