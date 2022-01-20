@@ -1,23 +1,26 @@
 .indexLargeBanner {
-    background-color: red;
+    background-color: $red;
+    border: 10px solid $orange;
     text-align: center;
-    padding: $m-size 0;
+    padding: $l-size 0;
     cursor: pointer;
 }
 
 .indexLargeBanner__title {
     color: white;
+    font-size: $l-size;
     text-transform: uppercase;
 }
 
 .indexLargeBanner__text {
     color: white;
+    font-size: $m-size;
 }
 
 .indexLargeBanner__button {
     color: white;
-    background-color: red;
-    border: 2px solid white;
+    background-color: $red;
+    border: 3px solid white;
     padding: $s-size;
     cursor: pointer;
     &:hover {
