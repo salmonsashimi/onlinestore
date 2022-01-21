@@ -30,6 +30,22 @@ export default async function (req, res) {
     }
 }
 
+// //generate more items
+// export default async function (req, res) {
+//     const client = await clientPromise;
+//     const db = client.db('online-store');
+//     const col = db.collection("items");
+
+//     if (req.method === 'POST') {
+//         // Process a POST request
+//     } else {
+//         // Handle any other HTTP method
+//         const item = await col.findOne({ "id": parseInt(pid) });
+//         res.json(item)
+
+//     }
+// }
+
 // export async function getServerSideProps(context) {
 //     try {
 //         // const user = retrieveUser()
