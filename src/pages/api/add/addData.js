@@ -9,9 +9,9 @@ export default async function (req, res) {
 
     // Construct a document                                                                                                                                                              
     let itemDocument = {
-        "id": 11,
-        "name": "Miu Miu",
-        "brand": "Black Purse",
+        "id": 12,
+        "name": "Prada",
+        "brand": "Blue Lock Purse",
         "price": "12000",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nulla aliquet porttitor lacus luctus accumsan tortor.",
         "imgUrl": "https://picsum.photos/id/002/400/550"
