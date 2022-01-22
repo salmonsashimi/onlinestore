@@ -8,20 +8,29 @@ export default async function (req, res) {
 
 
     // Construct a document                                                                                                                                                              
-    let itemDocument = {
-        "id": 13,
-        "name": "Gucci",
-        "brand": "Xbox Luggage",
-        "price": "120000",
+    let itemDocument = [{
+        "id": 14,
+        "name": "Prada",
+        "brand": "Black High Heels",
+        "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nulla aliquet porttitor lacus luctus accumsan tortor.",
         "imgUrl": "https://picsum.photos/id/005/400/550"
 
-    }
+    },
+    {
+        "id": 15,
+        "name": "Gucci",
+        "brand": "White Sneakers",
+        "price": "10000",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nulla aliquet porttitor lacus luctus accumsan tortor.",
+        "imgUrl": "https://picsum.photos/id/005/400/550"
+
+    }]
 
     console.log('this is runned');
 
     // Insert a single document, wait for promise so we can read it back
-    const p = await col.insertOne(itemDocument);
+    const p = await col.insertMany(itemDocument);
     // Find one document
     const myDoc = await col.find();
     // Print to the console
