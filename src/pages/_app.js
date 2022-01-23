@@ -1,16 +1,17 @@
 // import App from 'next/app'
 import Header from '../components/headerComponents/Header';
 import Footer from '../components/footerComponents/Footer';
+import { CartProvider } from '../contexts/CartContext';
 import 'normalize.css';
 import '../styles/styles.scss';
 
 function MyApp({ Component, pageProps }) {
     return (
-        <>
+        <CartProvider>
             <Header />
             <Component {...pageProps} />
             <Footer />
-        </>
+        </CartProvider>
     )
 
 }
