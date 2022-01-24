@@ -6,7 +6,9 @@ class CartProvider extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cart: 'empty'
+            cart: [
+                'item1', 'tem2'
+            ]
         }
     }
     render() {
