@@ -33,8 +33,12 @@
 }
 
 .cartItem__dropdown-header {
+  background-color: $off-white;
   font-size: $m-size;
   font-weight: 500;
+  margin: 0;
+  padding: $m-size;
+  width: 300px;
 }
 
 .cartItem__dropdown-itemNo{
