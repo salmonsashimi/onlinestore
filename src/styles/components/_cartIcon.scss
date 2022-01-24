@@ -17,9 +17,11 @@
   min-width: 150px;
   right: 0;
   z-index: 1;
+  color: black;
+
+
 
   a {
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -28,6 +30,15 @@
   a:hover {
     background-color: #ddd;
     }
+}
+
+.cartItem__dropdown-header {
+  font-size: $m-size;
+  font-weight: 500;
+}
+
+.cartItem__dropdown-itemNo{
+  font-weight: 300;
 }
 
 .cartIcon:hover {
