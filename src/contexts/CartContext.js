@@ -9,6 +9,7 @@ class CartProvider extends Component {
             cart: []
         }
     }
+
     render() {
         return (
             <CartContext.Provider value={{ ...this.state }}>
