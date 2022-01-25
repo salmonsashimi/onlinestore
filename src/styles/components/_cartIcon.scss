@@ -77,8 +77,10 @@
   background-color: $green;
   border: none;
   color: white;
+  
   &:hover {
     cursor: pointer;
+    opacity: 0.9;
 
   }
 }
