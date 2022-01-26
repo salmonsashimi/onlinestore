@@ -30,8 +30,8 @@ class CartIcon extends Component {
                         <h3 className='cartIcon__dropdown-price'>$00.00</h3>
                     </div>
                     <div className='cartIcon__dropdown-buttons'>
-                        <button className='cartIcon__dropdown-button'>VIEW CART</button>
-                        <button className='cartIcon__dropdown-button'>CHECKOUT</button>
+                        <button className='cartIcon__dropdown-button cartIcon__dropdown-viewCart'>VIEW CART</button>
+                        <button className='cartIcon__dropdown-button cartIcon__dropdown-checkout'>CHECKOUT</button>
                     </div>
                 </div>
             </div>
