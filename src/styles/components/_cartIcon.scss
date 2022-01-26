@@ -31,7 +31,7 @@
 }
 
 .cartIcon__dropdown-header {
-  background-color: $off-white;
+  background-color: $light-grey;
   font-size: $m-size;
   font-weight: 700;
   margin: 0;
@@ -57,7 +57,7 @@
 
 .cartIcon__priceSection {
   align-items: center;  
-  background-color: $off-white;
+  background-color: $light-grey;
   display: flex;
   justify-content: space-between;
   padding: 0 $m-size;
@@ -69,10 +69,10 @@
 }
 
 .cartIcon__dropdown-buttons {
-  padding: $m-size;
+  background-color: $light-grey;
   display: flex;
   justify-content: space-between;
-  background-color: $off-white;
+  padding: $m-size;  
 }
 
 .cartIcon__dropdown-button {
