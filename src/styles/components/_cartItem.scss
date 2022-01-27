@@ -1,3 +1,17 @@
 .cartItem {
     background-color: red;
+    padding: $l-size;
+    display: flex;
+
+}
+
+.cartItem__description{
+    flex-grow: 1;
+    padding: $m-size;
+}
+
+.cartItem__button {
+    background-color: black;
+    border: none;
+    color: white;
 }
