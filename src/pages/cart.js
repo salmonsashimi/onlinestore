@@ -1,7 +1,7 @@
 import CartItems from '../components/cartComponents/CartItems';
 
 const Cart = () => (
-    <div className='container'>
+    <div className='cart'>
         <CartItems />
 
     </div>

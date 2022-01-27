@@ -1,5 +1,5 @@
 const CartItem = () => (
-    <div>
+    <div className='cartItem'>
         cartitem
     </div>
 )
