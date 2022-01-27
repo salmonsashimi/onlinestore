@@ -1,6 +1,9 @@
+import CartItems from '../components/cartComponents/CartItems';
+
 const Cart = () => (
-    <div>
-        Cart
+    <div className='container'>
+        <CartItems />
+
     </div>
 )
 
