@@ -1,10 +1,29 @@
+import { Component } from 'react';
 import CartItems from '../components/cartComponents/CartItems';
+import { CartContext } from '../contexts/CartContext';
 
-const Cart = () => (
-    <div className='cart'>
-        <CartItems />
+class Cart extends Component {
+    constructor(props) {
+        super(props)
+    }
 
-    </div>
-)
+    render() {
+        const cartItems = this.context.cart;
+        console.log(cartItems.length);
+
+
+        return (
+            <div className='cart'>
+                <CartItems />
+
+            </div>
+        )
+    }
+
+}
+
+Cart.contextType = CartContext;
+
+
 
 export default Cart;
