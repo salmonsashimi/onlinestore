@@ -10,8 +10,8 @@ export default async function (req, res) {
     // Construct a document                                                                                                                                                              
     let itemDocument = [{
         "id": 14,
-        "name": "Prada",
-        "brand": "Black High Heels",
+        "brand": "Prada",
+        "name": "Black High Heels",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nulla aliquet porttitor lacus luctus accumsan tortor.",
         "imgUrl": "https://picsum.photos/id/005/400/550"
@@ -19,8 +19,8 @@ export default async function (req, res) {
     },
     {
         "id": 15,
-        "name": "Gucci",
-        "brand": "White Sneakers",
+        "brand": "Gucci",
+        "name": "White Sneakers",
         "price": "10000",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nulla aliquet porttitor lacus luctus accumsan tortor.",
         "imgUrl": "https://picsum.photos/id/005/400/550"
