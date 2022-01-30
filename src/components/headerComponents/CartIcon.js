@@ -2,6 +2,7 @@ import { Component } from 'react';
 import Link from 'next/link';
 import { FaShoppingCart } from 'react-icons/fa';
 import { CartContext } from '../../contexts/CartContext';
+import CartDropdownItem from './CartDropdownItem';
 
 class CartIcon extends Component {
     constructor(props) {
@@ -9,10 +10,7 @@ class CartIcon extends Component {
     }
 
     render() {
-
-        console.log(this.context.cart)
         const cartItems = this.context.cart;
-        console.log(cartItems.length)
 
         return (
             <div className='cartIcon'>
@@ -21,7 +19,7 @@ class CartIcon extends Component {
                     <h3 className='cartIcon__dropdown-header'>My Cart, <span className='cartItem__dropdown-itemNo'>{cartItems.length} item(s)</span></h3>
                     {cartItems.length !== 0 ?
                         cartItems.map(item => (
-                            <a href='#'> {item.name}</a>
+                            <CartDropdownItem item={item} />
                         ))
                         :
                         <a>Cart is empty</a>
