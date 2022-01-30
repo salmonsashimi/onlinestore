@@ -7,19 +7,16 @@ class CartItems extends Component {
         super(props)
     }
 
-
     render() {
         let items = this.context.cart;
 
         return (
             <div>
-                {items.length ?
-                    items.map(item => (
-                        <CartItem item={item} />
-                    ))
-
-                    :
-                    <p>You have no items</p>
+                {
+                    items.length ?
+                        items.map(item => <CartItem item={item} />)
+                        :
+                        <p>You have no items</p>
                 }
             </div>
         )

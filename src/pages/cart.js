@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import CartItems from '../components/cartComponents/CartItems';
+import CartSummary from '../components/cartComponents/CartSummary';
 import { CartContext } from '../contexts/CartContext';
 
 class Cart extends Component {
@@ -15,6 +16,7 @@ class Cart extends Component {
         return (
             <div className='cart'>
                 <CartItems />
+                <CartSummary />
 
             </div>
         )
