@@ -1,0 +1,30 @@
+.cartDropdownItem {
+    padding: $s-size;
+    display: flex;
+}
+
+.cartDropdownItem__img {
+    max-height: 150px;
+}
+
+.cartDropdownItem__desc {
+    padding: $s-size;
+}
+
+
+.cartDropdownItem__desc {
+    color: $grey    
+}
+
+
+
+.cartDropdownItem__desc-brand {
+    text-transform: uppercase;
+    font-weight: 700;
+
+
+}
+
+.cartDropdownItem__desc-price {
+    color: black;
+}
