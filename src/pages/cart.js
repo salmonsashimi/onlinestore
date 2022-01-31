@@ -17,7 +17,6 @@ class Cart extends Component {
             <div className='cart'>
                 <CartItems />
                 <CartSummary />
-
             </div>
         )
     }
