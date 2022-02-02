@@ -16,20 +16,6 @@
     // }
 }
 
-
-
-.headerCategoryButton:hover {
-    cursor: pointer;
-    // background-color: $light-grey;
-    // color: black;
-
-    .headerCategoryButton__dropdown {
-      transition-delay: 0.2s;
-      visibility: visible;
-    }
-}
-
-
 .headerCategoryButton__dropdown {
     background-color: $light-grey;
     left: 0;
@@ -38,6 +24,22 @@
     visibility: hidden;
     z-index: 2;
 }
+
+.headerCategoryButton:hover {
+    cursor: pointer;
+
+
+    .headerCategoryButton__dropdown {
+      transition-delay: 0.2s;
+      visibility: visible;
+    }
+}
+
+.active {
+    background-color: $light-grey;
+    color: black;
+}
+
 
 .headerCategoryButton__item {
         color: black;
