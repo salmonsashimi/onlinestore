@@ -1,18 +1,32 @@
+.headerCategoryButton {
+    position: relative;
+    display: inline-block;
+}
+
 .headerCategoryButton__button {
     margin: 0;
     padding: 8px 16px;
     font-weight: 300;
     cursor: pointer; 
+    color: $light-grey;
     
-    &:hover {
-        background-color: $blue;
-        color: white;
-    }
+    // &:hover {
+    //     background-color: inherit;
+    //     color: inherit
+    // }
 }
 
-.headerCategoryButton {
-    position: relative;
-    display: inline-block;
+
+
+.headerCategoryButton:hover {
+    cursor: pointer;
+    // background-color: $light-grey;
+    // color: black;
+
+    .headerCategoryButton__dropdown {
+      transition-delay: 0.2s;
+      visibility: visible;
+    }
 }
 
 
@@ -24,25 +38,24 @@
     left: 0;
     z-index: 2;
   
-    a {
-      color: black;
-      display: block;
-      font-weight: 300;
-      font-size: 1.4rem;
-      padding: 12px 16px;
-      text-decoration: none;
-    }
-    a:hover {
-        background-color: $blue;
-        color: $off-white;
-        }
+
 }
 
-.headerCategoryButton:hover {
-    cursor:pointer;
+.headerCategoryButton__item {
+        color: black;
+        display: block;
+        font-weight: 300;
+        font-size: 1.4rem;
+        padding: 12px 16px;
+        text-decoration: none;
+}
 
-    .headerCategoryButton__dropdown {
-      transition-delay: 0.2s;
-      visibility: visible;
+.headerCategoryButton__item:hover {
+    background-color: $off-white;
+    
+
+    .headerCategoryButton {
+        background-color: $light-grey;
+        color: black;
     }
 }
