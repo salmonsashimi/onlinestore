@@ -7,6 +7,10 @@
     font-size: $xl-size;
 }
 
-.cartSummary__delivery {
-
+.cartSummary__button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: $s-size;
+    cursor: pointer;
 }

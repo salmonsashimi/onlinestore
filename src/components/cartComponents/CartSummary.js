@@ -14,7 +14,7 @@ const CartSummary = () => (
             <input name='discount' id='discount' type='text'></input>
         </div>
         <h3>Sub-total</h3>
-        <button>CHECKOUT</button>
+        <button className='cartSummary__button'>CHECKOUT</button>
     </form>
 )
 
