@@ -1,42 +1,38 @@
-/* Dropdown Button */
-.cartIcon__button {
-  color: white;
-  padding: 10px;
-  border: none;
+.cartIcon {
+  display: inline-block;
+  position: relative;
 }
 
-.cartIcon {
-  position: relative;
-  display: inline-block;
+.cartIcon__button {
+  border: none;
+  color: white;
+  padding: 10px;
 }
 
 .cartIcon__dropdown {
-  visibility: hidden;
-  position: absolute;
-  background-color: #fff;
-  min-width: 150px;
-  right: -20px;
-  z-index: 1;
+  background-color: white;
+  border: 1px solid $silver;
   color: black;
+  min-width: 150px;
+  position: absolute;
+  right: -20px;
+  visibility: hidden;
+  z-index: 1;
 
-  a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  p {
+    padding: 0 $m-size;
   }
-
-  a:hover {
-    background-color: #ddd;
-    }
 }
 
 .cartIcon__dropdown-header {
   background-color: $light-grey;
+  border-bottom: 1px solid $silver;
   font-size: $m-size;
   font-weight: 700;
   margin: 0;
   padding: $m-size;
   width: 300px;
+
   span {
     font-weight: 500;
   }
@@ -47,7 +43,7 @@
 }
 
 .cartIcon:hover {
-    cursor:pointer;
+    cursor: pointer;
 
     .cartIcon__dropdown {
       transition-delay: 0.5s;
@@ -70,20 +66,20 @@
 
 .cartIcon__dropdown-buttons {
   background-color: $light-grey;
+  border-top: 1px solid $silver;
   display: flex;
   justify-content: space-between;
   padding: $m-size;  
 }
 
 .cartIcon__dropdown-button {
-  padding: $s-size;
   border: 2px solid $silver;
   flex-grow: 1;
+  padding: $s-size;
   
   &:hover {
     cursor: pointer;
     opacity: 0.7;
-
   }
 }
 
@@ -96,9 +92,4 @@
   background-color: $green;
   color: white;
   margin-left: 5px;
-}
-
-
-.cartIcon__border {
-  border: 1px solid $silver;
 }

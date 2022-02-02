@@ -22,7 +22,7 @@ class CartIcon extends Component {
                             <CartDropdownItem item={item} />
                         ))
                         :
-                        <a>Cart is empty</a>
+                        <p>Cart is empty</p>
                     }
                     <div className='cartIcon__priceSection'>
                         <h3 className='cartIcon__dropdown-subtotal'>Subtotal:</h3>
