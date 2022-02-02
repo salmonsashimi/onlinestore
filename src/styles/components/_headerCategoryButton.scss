@@ -31,11 +31,11 @@
 
 
 .headerCategoryButton__dropdown {
-    visibility: hidden;
-    position: absolute;
     background-color: $light-grey;
-    min-width: 150px;
     left: 0;
+    min-width: 150px;
+    position: absolute;
+    visibility: hidden;
     z-index: 2;
 }
 
@@ -50,10 +50,5 @@
 
 .headerCategoryButton__item:hover {
     background-color: $off-white;
-    
 
-    .headerCategoryButton {
-        background-color: $light-grey;
-        color: black;
-    }
 }
