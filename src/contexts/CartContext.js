@@ -26,6 +26,11 @@ class CartProvider extends Component {
             ]
         }
         this.removeItem = this.removeItem.bind(this);
+        this.addItem = this.addItem.bind(this);
+    }
+
+    addItem(item) {
+        this.setState({ cart: [...this.state.cart, item] })
     }
 
     removeItem(id) {
@@ -35,7 +40,7 @@ class CartProvider extends Component {
 
     render() {
         return (
-            <CartContext.Provider value={{ ...this.state, removeItem: this.removeItem }}>
+            <CartContext.Provider value={{ ...this.state, removeItem: this.removeItem, addItem: this.addItem }}>
                 {this.props.children}
             </CartContext.Provider>
         )
