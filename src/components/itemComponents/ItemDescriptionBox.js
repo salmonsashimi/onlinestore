@@ -15,10 +15,13 @@ const ItemDescriptionBox = (props) => {
                 <h3 className='itemDescriptionBox__itemName'>{props.data.name}</h3>
                 <h3 className='itemDescriptionBox__price'>${props.data.price}</h3>
                 <h3 className='itemDescriptionBox__description'>{props.data.description}</h3>
-                <label for='quantity'>Quantity:</label>
-                <select id='quantity' name='quantity'>
-                    <option>1</option>
-                </select>
+
+                <div>
+                    <label for='quantity'>Quantity: </label>
+                    <select id='quantity' name='quantity'>
+                        <option>1</option>
+                    </select>
+                </div>
                 <button type='submit' className='itemDescriptionBox__button'>ADD TO CART</button>
             </form>
         </div>
