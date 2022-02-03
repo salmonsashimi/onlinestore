@@ -27,12 +27,12 @@
 
 .itemDescriptionBox__button {
     border: none;
-    background-color: $green;
+    background-color: $dark-green;
     font-size: $m-size;
     color: $off-white;
     padding: $s-size $l-size;
     &:hover {
-        background-color: $dark-green;
+        background-color: $green;
         cursor: pointer;
     }
 }
