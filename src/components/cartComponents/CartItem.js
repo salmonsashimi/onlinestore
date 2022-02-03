@@ -8,7 +8,7 @@ const CartItem = (props) => {
             <img src={imgUrl} className='cartItem__img' />
             <div className='cartItem__description'>
                 <p><span className='cartItem__description-brand'>{brand}</span> {name}</p>
-                <p className='cartItem__description-price'>SGD{price}</p>
+                <p className='cartItem__description-price'>SGD${price}</p>
                 <p>Qty: {quantity}</p>
             </div>
             <button className='cartItem__button' onClick={() => { removeItem(id) }}>X</button>
