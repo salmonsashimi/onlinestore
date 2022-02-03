@@ -1,8 +1,12 @@
+.cartItems {
+    flex-grow: 2;
+}
+
 .cartItem {
     background-color: $off-white;
     padding: $l-size;
     display: flex;
-    margin: $m-size 0;
+    margin: 0 $m-size $m-size 0;
 }
 
 .cartItem__img {
@@ -10,8 +14,8 @@
 }
 
 .cartItem__description{
-    flex-grow: 1;
     padding: $m-size;
+    flex-grow: 2;
 }
 
 .cartItem__button {
@@ -20,6 +24,7 @@
     font-size: 20px;
     align-self: flex-start;
     cursor: pointer;
+
 }
 
 .cartItem__description-price {

@@ -6,7 +6,14 @@ class CartProvider extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cart: []
+            cart: [{
+                id: 1001,
+                imgUrl: 'https://picsum.photos/id/240/400/550',
+                brand: 'Gucci',
+                name: 'White Striped Sneakers',
+                price: '23412.21',
+                quantity: 1
+            }]
         }
         this.removeItem = this.removeItem.bind(this);
         this.addItem = this.addItem.bind(this);

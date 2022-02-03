@@ -12,7 +12,7 @@ class CartItems extends Component {
         let removeItem = this.context.removeItem;
 
         return (
-            <div>
+            <div className='cartItems'>
                 {
                     items.length ?
                         items.map(item => <CartItem item={item} removeItem={removeItem} />)
