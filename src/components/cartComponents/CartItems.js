@@ -9,12 +9,13 @@ class CartItems extends Component {
 
     render() {
         let items = this.context.cart;
+        let removeItem = this.context.removeItem;
 
         return (
             <div>
                 {
                     items.length ?
-                        items.map(item => <CartItem item={item} />)
+                        items.map(item => <CartItem item={item} removeItem={removeItem} />)
                         :
                         <p>You have no items</p>
                 }

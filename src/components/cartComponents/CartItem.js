@@ -1,13 +1,19 @@
-const CartItem = (props) => (
-    <div className='cartItem'>
-        <img src={props.item.imgUrl} className='cartItem__img' />
-        <div className='cartItem__description'>
-            <p><span className='cartItem__description-brand'>{props.item.brand}</span> {props.item.name}</p>
-            <p className='cartItem__description-price'>SGD{props.item.price}</p>
-            <p>Qty: {props.item.quantity}</p>
+const CartItem = (props) => {
+    const { id, imgUrl, name, brand, price, quantity } = props.item;
+
+    const removeItem = props.removeItem;
+
+    return (
+        <div className='cartItem'>
+            <img src={imgUrl} className='cartItem__img' />
+            <div className='cartItem__description'>
+                <p><span className='cartItem__description-brand'>{brand}</span> {name}</p>
+                <p className='cartItem__description-price'>SGD{price}</p>
+                <p>Qty: {quantity}</p>
+            </div>
+            <button className='cartItem__button' onClick={() => { removeItem(id) }}>X</button>
         </div>
-        <button className='cartItem__button'>X</button>
-    </div>
-)
+    )
+}
 
 export default CartItem;
