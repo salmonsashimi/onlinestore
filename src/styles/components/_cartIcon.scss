@@ -6,6 +6,7 @@
 .cartIcon__button {
   border: none;
   color: white;
+  cursor: pointer;
   padding: 10px;
 }
 
@@ -43,8 +44,6 @@
 }
 
 .cartIcon:hover {
-    cursor: pointer;
-
     .cartIcon__dropdown {
       transition-delay: 0.5s;
       visibility: visible;
