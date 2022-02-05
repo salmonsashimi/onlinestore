@@ -11,7 +11,7 @@ class CartProvider extends Component {
                 imgUrl: 'https://picsum.photos/id/240/400/550',
                 brand: 'Gucci',
                 name: 'White Striped Sneakers',
-                price: '23412.21',
+                price: 23412.21,
                 quantity: 1
             }]
         }
