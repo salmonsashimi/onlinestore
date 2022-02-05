@@ -2,6 +2,7 @@
     padding: $s-size;
     display: flex;
     border-bottom: 1px solid $silver;
+    max-height: 150px;
 
     &:hover {
         cursor: pointer;
@@ -9,23 +10,9 @@
     }
 }
 
-
 .cartDropdownItem__img {
     max-height: 150px;
 }
-
-// .cartDropdownItem__desc {
-//     padding: $s-size;
-// }
-
-
-// .cartDropdownItem__desc {
-//     color: $grey    
-// }
-
-// .cartDropdownItem__desc-name {
-//     margin: 0;
-// }
 
 .cartDropdownItem__desc-brand {
     text-transform: uppercase;

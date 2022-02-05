@@ -92,3 +92,9 @@
   color: white;
   margin-left: 5px;
 }
+
+.cartIcon__cartDropdownItems {
+  max-height: 350px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
