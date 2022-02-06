@@ -1,10 +1,12 @@
 .cartSummary {
     background-color: $off-white;
+    padding: $m-size;
 }
 
 .cartSummary__header {  
     text-transform: uppercase;
     font-size: $xl-size;
+    margin: 0;
 }
 
 .cartSummary__button {
@@ -13,4 +15,10 @@
     border: none;
     padding: $s-size;
     cursor: pointer;
+}
+
+.cartSummary__input {
+    display: flex;
+    justify-content: space-between;
+    margin: $m-size 0;
 }
