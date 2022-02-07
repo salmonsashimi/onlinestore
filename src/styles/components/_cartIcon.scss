@@ -25,6 +25,23 @@
   }
 }
 
+// .cartIcon:hover {
+//   .cartIcon__dropdown {
+//     transition-delay: 0.5s;
+//     visibility: visible;
+//   }
+// }
+
+.cartIcon__showDropdown {
+  transition-delay: 0.5s;
+  visibility: visible;
+}
+
+.cartIcon__hideDropdown {
+  transition-delay: 0.5s;
+  visibility: none;
+}
+
 .cartIcon__dropdown-header {
   background-color: $light-grey; 
   border-bottom: 1px solid $silver;
@@ -43,12 +60,7 @@
   font-weight: 300;
 }
 
-.cartIcon:hover {
-    .cartIcon__dropdown {
-      transition-delay: 0.5s;
-      visibility: visible;
-    }
-}
+
 
 .cartIcon__priceSection {
   align-items: center;  
