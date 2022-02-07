@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import Link from 'next/link';
 import { FaShoppingCart } from 'react-icons/fa';
 import { CartContext } from '../../contexts/CartContext';
@@ -8,11 +8,21 @@ import CartDropdownItem from './CartDropdownItem';
 const CartIcon = () => {
     const cartItems = useContext(CartContext).cart;
     let totalPrice = 0;
+    const [isOpen, setIsOpen] = useState(false);
 
+    console.log(isOpen);
     return (
-        <div className='cartIcon'>
-            <Link href='/cart'><FaShoppingCart size='1.5em' className='cartIcon__button' /></Link>
-            <div className={`cartIcon__dropdown cartIcon__border cartIcon__showDropdown`}>
+        <div
+            className='cartIcon'
+            onMouseOver={() => { setIsOpen(true) }}
+            onMouseLeave={() => { setIsOpen(false) }}
+        >
+
+            <Link href='/cart'>
+                <FaShoppingCart size='1.5em' className='cartIcon__button' />
+            </Link>
+
+            <div className={`cartIcon__dropdown cartIcon__border cartIcon__showDropdown ${isOpen ? 'cartIcon__shopDropdown' : 'cartIcon__hideDropdown'}`}>
                 <h3 className='cartIcon__dropdown-header'>My Cart, <span className='cartItem__dropdown-itemNo'>{cartItems.length} item(s)</span></h3>
                 <div className='cartIcon__cartDropdownItems'>
                     {cartItems.length !== 0 ?
