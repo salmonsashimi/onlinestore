@@ -10,15 +10,28 @@
 }
 
 .cartSummary__button {
-    background-color: green;
+    background-color: $dark-green;
     color: white;
     border: none;
     padding: $s-size;
     cursor: pointer;
 }
 
-.cartSummary__input {
-    display: flex;
-    justify-content: space-between;
+.cartSummary__promoCode {
     margin: $m-size 0;
+}
+
+.cartSummary__promoCode-label {
+    font-weight: 300;
+    font-size: $s-size;
+}
+.cartSummary__promoCode-input {
+    padding: $s-size;
+}
+
+.cartSummary__promoCode-button {
+    background-color: $dark-green;
+    border: none;
+    color: white;
+    padding: $s-size;
 }
