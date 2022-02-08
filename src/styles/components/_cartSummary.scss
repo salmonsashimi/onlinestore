@@ -19,19 +19,30 @@
 
 .cartSummary__promoCode {
     margin: $m-size 0;
+    display :flex;
 }
 
 .cartSummary__promoCode-label {
     font-weight: 300;
-    font-size: $s-size;
+    font-size: $m-size;
+    margin: $s-size;
 }
-.cartSummary__promoCode-input {
-    padding: $s-size;
+.cartSummary__promoCode-input {    
+    border: 2px solid $silver;
+    border-radius: 0px;
+    border-right: none;
+    font-size: $m-size;
+    max-width: 150px;
+    padding: $xs-size;
+
 }
 
 .cartSummary__promoCode-button {
     background-color: $dark-green;
     border: none;
     color: white;
-    padding: $s-size;
+    cursor: pointer;
+    font-size: $m-size;
+    padding: 10px;
+    
 }

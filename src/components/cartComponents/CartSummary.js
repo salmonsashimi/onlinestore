@@ -11,8 +11,10 @@ const CartSummary = () => {
 
             <form className='cartSummary__promoCode' onSubmit={(e) => formSubmit(e)}>
                 <h3 className='cartSummary__promoCode-label'>PROMO CODE: </h3>
-                <input className='cartSummary__promoCode-input' name='discount' id='discount' type='text' placeholder='Enter Promo Code'></input>
-                <button className='cartSummary__promoCode-button' >APPLY</button>
+                <div>
+                    <input className='cartSummary__promoCode-input' name='discount' id='discount' type='text' placeholder='Enter Promo Code'></input>
+                    <button className='cartSummary__promoCode-button' >APPLY</button>
+                </div>
             </form>
             <div className='cartSummary__input'>
                 <label for='delivery'>Delivery</label>
