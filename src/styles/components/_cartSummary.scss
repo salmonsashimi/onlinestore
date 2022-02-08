@@ -46,3 +46,17 @@
     padding: 10px;
     
 }
+.cartSummary__delivery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartSummary__delivery-label {
+    font-weight: 300;
+    font-size: $m-size;
+    margin: $s-size;
+}
+
+.cartSummary__delivery-options {
+    padding: $xs-size;
+}

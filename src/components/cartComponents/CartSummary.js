@@ -8,17 +8,14 @@ const CartSummary = () => {
     return (
         <form className='cartSummary'>
             <h1 className='cartSummary__header'>Total</h1>
-
-            <form className='cartSummary__promoCode' onSubmit={(e) => formSubmit(e)}>
+            <div className='cartSummary__promoCode'>
                 <h3 className='cartSummary__promoCode-label'>PROMO CODE: </h3>
-                <div>
-                    <input className='cartSummary__promoCode-input' name='discount' id='discount' type='text' placeholder='Enter Promo Code'></input>
-                    <button className='cartSummary__promoCode-button' >APPLY</button>
-                </div>
-            </form>
-            <div className='cartSummary__input'>
-                <label for='delivery'>Delivery</label>
-                <select name='delivery' id='delivery' >
+                <input className='cartSummary__promoCode-input' name='discount' id='discount' type='text' placeholder='Enter Promo Code'></input>
+                <button className='cartSummary__promoCode-button' >APPLY</button>
+            </div>
+            <div className='cartSummary__delivery'>
+                <label className='cartSummary__delivery-label' for='delivery'>DELIVERY:</label>
+                <select className='cartSummary__delivery-options' name='delivery' id='delivery' >
                     <option value='standard'>Standard Delivery (Free)</option>
                     <option value='express'>Express Delivery ($10.00)</option>
                 </select>
