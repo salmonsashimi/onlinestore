@@ -19,8 +19,9 @@ const CartSummary = () => {
                     <option value='express'>Express ($50.00)</option>
                 </select>
             </div>
-
-            <button className='cartSummary__button'>CHECKOUT</button>
+            <div className='cartSummary__buttonDiv'>
+                <button className='cartSummary__button'>CHECKOUT</button>
+            </div>
         </form>
     )
 }

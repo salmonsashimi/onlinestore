@@ -44,12 +44,19 @@
     width: 100%;
 }
 
+.cartSummary__buttonDiv {
+    margin: $s-size;
+}
+
 .cartSummary__button {
     background-color: $dark-green;
     color: white;
     border: none;
     padding: $s-size;
-    margin: $s-size 0;
     cursor: pointer;
     width: 100%;
+
+    &:hover {
+        background-color: $green;
+    }
 }
