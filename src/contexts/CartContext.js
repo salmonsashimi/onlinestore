@@ -13,10 +13,13 @@ class CartProvider extends Component {
                 name: 'White Striped Sneakers',
                 price: 23412.21,
                 quantity: 1
-            }]
+            }],
+            isCartVisible: false
         }
         this.removeItem = this.removeItem.bind(this);
         this.addItem = this.addItem.bind(this);
+        this.hideCart = this.hideCart.bind(this);
+        this.showCart = this.showCart.bind(this);
     }
 
     addItem(item) {
@@ -28,9 +31,17 @@ class CartProvider extends Component {
         this.setState({ cart: remainderItems })
     }
 
+    showCart() {
+        this.setState({ isCartVisible: true });
+    }
+
+    hideCart() {
+        this.setState({ isCartVisible: false });
+    }
+
     render() {
         return (
-            <CartContext.Provider value={{ ...this.state, removeItem: this.removeItem, addItem: this.addItem }}>
+            <CartContext.Provider value={{ ...this.state, removeItem: this.removeItem, addItem: this.addItem, showCart: this.showCart, hideCart: this.hideCart }}>
                 {this.props.children}
             </CartContext.Provider>
         )

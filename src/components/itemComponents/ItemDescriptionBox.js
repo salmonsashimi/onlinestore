@@ -7,6 +7,7 @@ const ItemDescriptionBox = (props) => {
     const addItem = context.addItem;
     const cart = context.cart;
 
+
     const { id, imgUrl, brand, name, price, description } = props.data;
 
     const onFormSubmit = (e) => {

@@ -6,23 +6,28 @@ import CartDropdownItem from './CartDropdownItem';
 
 
 const CartIcon = () => {
-    const cartItems = useContext(CartContext).cart;
-    let totalPrice = 0;
-    const [isOpen, setIsOpen] = useState(false);
 
-    console.log(isOpen);
+    const context = useContext(CartContext);
+    const cartItems = context.cart;
+    let totalPrice = 0;
+
+    const isCartVisible = context.isCartVisible;
+    const showCart = context.showCart;
+    const hideCart = context.hideCart;
+
+
     return (
         <div
             className='cartIcon'
-            onMouseOver={() => { setIsOpen(true) }}
-            onMouseLeave={() => { setIsOpen(false) }}
+            onMouseOver={() => { showCart() }}
+            onMouseLeave={() => { hideCart() }}
         >
 
             <Link href='/cart'>
                 <FaShoppingCart size='1.5em' className='cartIcon__button' />
             </Link>
 
-            <div className={`cartIcon__dropdown cartIcon__border cartIcon__showDropdown ${isOpen ? 'cartIcon__shopDropdown' : 'cartIcon__hideDropdown'}`}>
+            <div className={`cartIcon__dropdown cartIcon__border cartIcon__showDropdown ${isCartVisible ? 'cartIcon__shopDropdown' : 'cartIcon__hideDropdown'}`}>
                 <h3 className='cartIcon__dropdown-header'>My Cart, <span className='cartItem__dropdown-itemNo'>{cartItems.length} item(s)</span></h3>
                 <div className='cartIcon__cartDropdownItems'>
                     {cartItems.length !== 0 ?
