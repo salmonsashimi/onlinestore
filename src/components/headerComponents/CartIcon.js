@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import Link from 'next/link';
 import { FaShoppingCart } from 'react-icons/fa';
 import { CartContext } from '../../contexts/CartContext';
@@ -6,15 +6,14 @@ import CartDropdownItem from './CartDropdownItem';
 
 
 const CartIcon = () => {
-
     const context = useContext(CartContext);
+
     const cartItems = context.cart;
     let totalPrice = 0;
 
     const isCartVisible = context.isCartVisible;
     const showCart = context.showCart;
     const hideCart = context.hideCart;
-
 
     return (
         <div
