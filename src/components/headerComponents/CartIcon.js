@@ -4,16 +4,15 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { CartContext } from '../../contexts/CartContext';
 import CartDropdownItem from './CartDropdownItem';
 
-
 const CartIcon = () => {
     const context = useContext(CartContext);
 
     const cartItems = context.cart;
     let totalPrice = 0;
 
-    const isCartVisible = context.isCartVisible;
     const showCart = context.showCart;
     const hideCart = context.hideCart;
+    const removeItem = context.removeItem;
 
     return (
         <div
@@ -26,14 +25,19 @@ const CartIcon = () => {
                 <FaShoppingCart size='1.5em' className='cartIcon__button' />
             </Link>
 
-            <div className={`cartIcon__dropdown cartIcon__border cartIcon__showDropdown ${isCartVisible ? 'cartIcon__shopDropdown' : 'cartIcon__hideDropdown'}`}>
+            <div className={`
+            cartIcon__dropdown cartIcon__border 
+            cartIcon__showDropdown 
+            cartIcon__shopDropdown 
+            
+            `}>
                 <h3 className='cartIcon__dropdown-header'>My Cart, <span className='cartItem__dropdown-itemNo'>{cartItems.length} item(s)</span></h3>
                 <div className='cartIcon__cartDropdownItems'>
                     {cartItems.length !== 0 ?
                         cartItems.map(item => {
                             totalPrice += item.price;
                             return (
-                                <CartDropdownItem item={item} />
+                                <CartDropdownItem item={item} removeItem={removeItem} />
                             )
                         })
                         :
@@ -55,3 +59,5 @@ const CartIcon = () => {
 }
 
 export default CartIcon;
+
+// ${isCartVisible ? 'cartIcon__shopDropdown' : 'cartIcon__hideDropdown'}
