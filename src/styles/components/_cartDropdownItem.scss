@@ -1,7 +1,11 @@
 .cartDropdownItem {
+    border-bottom: 1px solid $silver;
+    position: relative;
+}
+
+.cartDropdownItem__item {
     padding: $s-size;
     display: flex;
-    border-bottom: 1px solid $silver;
     max-height: 150px;
 
     &:hover {
@@ -19,3 +23,10 @@
     font-weight: 700;
 }
 
+
+.cartDropdownItem__delete {
+    position: absolute;
+    right: 20px;
+    z-index: 2;
+    bottom: 12px;
+}

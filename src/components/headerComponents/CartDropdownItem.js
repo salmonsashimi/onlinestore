@@ -7,9 +7,9 @@ const CartDropdownItem = (props) => {
 
     console.log(removeItem)
     return (
-        <div>
+        <div className='cartDropdownItem'>
             <Link href={`/item/${id}`}>
-                <div className='cartDropdownItem'>
+                <div className='cartDropdownItem__item'>
                     <img src={imgUrl} className='cartDropdownItem__img' />
                     <div className='cartDropdownItem__desc'>
                         <p className='cartDropdownItem__desc-name'><span className='cartDropdownItem__desc-brand'>{brand}</span> {name}</p>
@@ -18,7 +18,8 @@ const CartDropdownItem = (props) => {
                     </div>
                 </div>
             </Link>
-            <button onClick={() => removeItem(id)}>remove</button>
+            <button className='cartDropdownItem__delete' onClick={() => removeItem(id)}>remove</button>
+
         </div>
 
     )
