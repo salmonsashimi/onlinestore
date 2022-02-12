@@ -10,6 +10,7 @@ const CartIcon = () => {
     const cartItems = context.cart;
     let totalPrice = 0;
 
+    const isCartVisible = context.isCartVisible;
     const showCart = context.showCart;
     const hideCart = context.hideCart;
     const removeItem = context.removeItem;
@@ -26,11 +27,7 @@ const CartIcon = () => {
             </Link>
 
             <div className={`
-            cartIcon__dropdown cartIcon__border 
-            cartIcon__showDropdown 
-            cartIcon__shopDropdown 
-            
-            `}>
+            cartIcon__dropdown cartIcon__border cartIcon__showDropdown ${isCartVisible ? 'cartIcon__shopDropdown' : 'cartIcon__hideDropdown'}`}>
                 <h3 className='cartIcon__dropdown-header'>My Cart, <span className='cartItem__dropdown-itemNo'>{cartItems.length} item(s)</span></h3>
                 <div className='cartIcon__cartDropdownItems'>
                     {cartItems.length !== 0 ?
@@ -49,7 +46,9 @@ const CartIcon = () => {
                     <h3 className='cartIcon__dropdown-price'>${totalPrice}</h3>
                 </div>
                 <div className='cartIcon__dropdown-buttons'>
-                    <button className='cartIcon__dropdown-button cartIcon__dropdown-viewCart'>VIEW CART</button>
+                    <Link href='/cart'>
+                        <button className='cartIcon__dropdown-button cartIcon__dropdown-viewCart'>VIEW CART</button>
+                    </Link>
                     <button className='cartIcon__dropdown-button cartIcon__dropdown-checkout'>CHECKOUT</button>
                 </div>
             </div>
@@ -59,5 +58,3 @@ const CartIcon = () => {
 }
 
 export default CartIcon;
-
-// ${isCartVisible ? 'cartIcon__shopDropdown' : 'cartIcon__hideDropdown'}
