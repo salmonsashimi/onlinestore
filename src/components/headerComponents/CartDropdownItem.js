@@ -5,7 +5,6 @@ const CartDropdownItem = (props) => {
     const { id, imgUrl, name, brand, price, quantity } = props.item;
     const removeItem = props.removeItem;
 
-    console.log(removeItem)
     return (
         <div className='cartDropdownItem'>
             <Link href={`/item/${id}`}>

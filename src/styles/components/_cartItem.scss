@@ -7,6 +7,14 @@
     padding: $l-size;
     display: flex;
     margin: 0 $m-size $m-size 0;
+    justify-content: space-between;
+    
+}
+
+.cartItem__item {
+    display: flex;
+    cursor: pointer;
+    flex-grow: 2;
 }
 
 .cartItem__img {
@@ -28,7 +36,7 @@
 }
 
 .cartItem__description-price {
-    font-weight: 700;
+    font-weight: 300;
 }
 
 .cartItem__description-brand {
