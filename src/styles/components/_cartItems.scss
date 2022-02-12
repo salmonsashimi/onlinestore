@@ -1,0 +1,11 @@
+.cartItems {
+    flex-grow: 2;
+    margin-right: $m-size;
+}
+
+.cartItems__header {
+    font-size: $xl-size;
+    background-color: $off-white;
+    padding: $m-size;
+    margin: 0 0 $m-size 0;
+}

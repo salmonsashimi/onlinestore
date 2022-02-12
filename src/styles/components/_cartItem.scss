@@ -1,12 +1,8 @@
-.cartItems {
-    flex-grow: 2;
-}
-
 .cartItem {
     background-color: $off-white;
     padding: $l-size;
     display: flex;
-    margin: 0 $m-size $m-size 0;
+    margin-bottom: $m-size;
     justify-content: space-between;
     
 }
