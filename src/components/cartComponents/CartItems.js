@@ -6,6 +6,7 @@ const CartItems = () => {
     const cartContext = useContext(CartContext);
     const items = cartContext.cart;
     const removeItem = cartContext.removeItem;
+    console.log(cartContext);
     return (
         <div className='cartItems'>
             <h3 className='cartItems__header'>MY CART</h3>
