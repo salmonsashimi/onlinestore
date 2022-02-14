@@ -1,4 +1,8 @@
 .searchResults {
+    background-color: white;
     position: absolute;
-    left: 10%
+    left: 11%;
+    min-width: 70%;
+    padding: $s-size;
+    z-index: 5;
 }

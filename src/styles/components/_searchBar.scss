@@ -1,18 +1,17 @@
 .searchBar {
-    min-width: 80%;
     position: relative;
+    min-width: 60%;
 }
 
 .searchBar__form {
     display: flex;
-    justify-content: center;
 }
 
 
 .searchBar__input {
     border: none;
     padding: $s-size;
-    min-width: 70%;
+    width: 90%;
 }
 
 .searchBar__input:focus {
@@ -25,6 +24,7 @@
     border: none;
     padding: $xs-size $m-size;
     color: white;
+    width: 10%;
     &:hover {
         cursor: pointer;
     }
