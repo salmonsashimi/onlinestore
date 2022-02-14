@@ -1,7 +1,11 @@
 .searchBar {
+    min-width: 80%;
+    position: relative;
+}
+
+.searchBar__form {
     display: flex;
     justify-content: center;
-    min-width: 80%;
 }
 
 
@@ -25,4 +29,3 @@
         cursor: pointer;
     }
 }
-
