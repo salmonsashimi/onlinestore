@@ -1,6 +1,6 @@
 const SearchResults = () => (
     <div className='searchResults'>
-        hello
+        <p>hello</p>
     </div>
 )
 
