@@ -1,6 +1,9 @@
+import SearchResult from './SearchResult';
+
 const SearchResults = () => (
     <div className='searchResults'>
-        <p>hello</p>
+        <SearchResult />
+        <SearchResult />
     </div>
 )
 
