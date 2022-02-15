@@ -1,17 +1,15 @@
 .filterCategoryItem {
-    padding: $xs-size;
-    margin: 0;
+    margin: $xs-size;
     display: flex;
 
 }
 
 .filterCateogryItem__checkbox {
     align-items: center;
+    margin-right: $xs-size;
 }
 
 
 .filterCateogryItem__label {
-    padding: 0 $s-size;
-
     font-size: $s-size;
 }
