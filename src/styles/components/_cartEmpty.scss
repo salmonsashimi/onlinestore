@@ -1,0 +1,21 @@
+.cartEmpty {
+    margin: 40px auto;
+    padding: auto;
+    text-align: center;
+    font-weight: 300;
+    font-size: $l-size;
+}
+
+.cartEmpty__header {
+    padding: $m-size;
+}
+.cartEmpty__button {
+    background-color: $dark-green;
+    color: white;
+    text-decoration: none;
+    padding: $s-size;
+
+    &:hover {
+        background-color: $green;
+    }
+}
