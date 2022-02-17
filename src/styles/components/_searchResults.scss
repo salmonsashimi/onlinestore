@@ -1,6 +1,7 @@
 .searchResults {
-    background-color: black;
+    background-color: white;
     position: absolute;
     width: 90%;
     z-index: 5;
+    border: 1px solid $silver;
 }

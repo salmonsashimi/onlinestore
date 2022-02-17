@@ -1,3 +1,10 @@
 .searchResult {
-    margin: $s-size;
+    margin: 0;
+    padding: $s-size;
+    color: black;
+    
+    &:hover {
+        background-color: $off-white;
+        cursor: pointer;
+    }
 }

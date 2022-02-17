@@ -4,6 +4,7 @@ const SearchResults = () => (
     <div className='searchResults'>
         <SearchResult />
         <SearchResult />
+        <SearchResult />
     </div>
 )
 
