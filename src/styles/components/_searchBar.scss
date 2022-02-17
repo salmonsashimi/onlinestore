@@ -1,6 +1,7 @@
 .searchBar {
     position: relative;
     min-width: 60%;
+
 }
 
 .searchBar__form {
@@ -12,6 +13,11 @@
     border: none;
     padding: $s-size;
     width: 90%;
+
+
+    &:focus {
+        border: 1px solid $silver;
+    }
 }
 
 .searchBar__input:focus {
