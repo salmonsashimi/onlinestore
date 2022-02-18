@@ -27,7 +27,7 @@ export default async function (req, res) {
 
     }]
 
-    console.log('this is runned');
+    console.log('data added');
 
     // Insert a single document, wait for promise so we can read it back
     const p = await col.insertMany(itemDocument);
