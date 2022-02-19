@@ -1,4 +1,4 @@
-import clientPromise from '../../../lib/mongodb';
+// import clientPromise from '../../../lib/mongodb';
 
 export default async function (req, res) {
     const data = await (await fetch(`http://localhost:3000/api/retrieveItems`)).json()
@@ -13,7 +13,7 @@ export default async function (req, res) {
         return item.name.includes(pid) || item.brand.includes(pid)
     })
 
-    console.log('results', results)
+    // console.log('results', results)
 
     res.json(results)
 
