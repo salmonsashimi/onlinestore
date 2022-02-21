@@ -4,16 +4,23 @@ import { FiSearch } from 'react-icons/fi';
 import useTextInput from '../hooks/useFormState';
 import SearchResults from './SearchResults';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     const [text, setText] = useTextInput();
     const [resultsVisibility, setResultsVisibility] = useState(false);
     const router = useRouter();
+    console.log('props from searchbar', props)
+
 
     const onSearchClick = (e) => {
         e.preventDefault();
         router.push(`/search/${e.target[0].value}`);
     }
 
+    const onSearchFocus = () => {
+        setResultsVisibility(true)
+
+
+    }
 
     return (
         <div className='searchBar'>
@@ -22,9 +29,7 @@ const SearchBar = () => {
                     className='searchBar__input'
                     value={text}
                     onChange={setText}
-                    onFocus={e => {
-                        setResultsVisibility(true)
-                    }}
+                    onFocus={onSearchFocus}
                     onBlur={e => {
                         setResultsVisibility(false)
                     }}

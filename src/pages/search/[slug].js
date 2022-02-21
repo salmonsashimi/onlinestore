@@ -21,6 +21,7 @@ const SearchPage = (props) => {
 export async function getServerSideProps(context) {
     const { slug } = context.query
     const res = await fetch(`http://localhost:3000/api/search/${slug}`)
+    console.log('search page', res)
     const data = await res.json()
 
     if (!data) {
