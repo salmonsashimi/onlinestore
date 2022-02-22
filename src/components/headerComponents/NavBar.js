@@ -7,10 +7,7 @@ const NavBar = (props) => {
 
     useEffect(() => {
         fetch('http://localhost:3000/api/retrieveItems')
-            .then((res) => {
-                res.json()
-                console.log(res)
-            })
+            .then((res) => res.json())
             .then((data) => {
                 console.log('data', data)
             })
