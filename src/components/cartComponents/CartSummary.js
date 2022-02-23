@@ -20,7 +20,7 @@ const CartSummary = () => {
                 </select>
             </div>
             <div className='cartSummary__buttonDiv'>
-                <button className='cartSummary__button'>CHECKOUT</button>
+                <button className='cartSummary__button' onClick={(e) => e.preventDefault()}>CHECKOUT</button>
             </div>
         </form>
     )
