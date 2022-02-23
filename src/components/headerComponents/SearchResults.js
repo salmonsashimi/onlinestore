@@ -1,12 +1,12 @@
 import SearchResult from './SearchResult';
 
 const SearchResults = (props) => {
-    const { results } = props;
-    console.log('search results', results)
+    const { results, onResultClick } = props;
+
     return (
         <div className='searchResults'>
             {
-                results.map(result => <SearchResult result={result} />)
+                results.map(result => <SearchResult result={result} onResultClick={onResultClick} />)
             }
         </div>
     )

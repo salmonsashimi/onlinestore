@@ -6,23 +6,25 @@ import SearchResults from './SearchResults';
 
 const SearchBar = (props) => {
     const router = useRouter();
+    const [results, setResults] = useState([])
+    const [text, setText] = useState();
+    const [resultsVisibility, setResultsVisibility] = useState(false);
 
     const { allItems } = props;
 
     console.log('items', allItems)
-    const [results, setResults] = useState([])
     console.log('results from searchbar', results)
 
-    const [text, setText] = useState();
-    const [resultsVisibility, setResultsVisibility] = useState(false);
+    const expand = () => {
+        setResultsVisibility(true);
+    }
 
-    const onSearchClick = (e) => {
-        e.preventDefault();
-        router.push(`/search/${e.target[0].value}`);
+    const close = () => {
+        setResultsVisibility(false);
     }
 
     const onSearchFocus = () => {
-        setResultsVisibility(true)
+        expand();
         if (text) {
 
             const filteredItems = allItems.filter(function (item) {
@@ -53,6 +55,16 @@ const SearchBar = (props) => {
         setResults([...filteredItems])
     }
 
+    const onResultClick = (id) => {
+        console.log(id)
+        router.push(`/item/${id}`);
+    }
+
+    const onSearchClick = (e) => {
+        e.preventDefault();
+        router.push(`/search/${e.target[0].value}`);
+    }
+
     return (
         <div className='searchBar'>
             <form className='searchBar__form' onSubmit={onSearchClick}>
@@ -61,14 +73,12 @@ const SearchBar = (props) => {
                     value={text}
                     onChange={onTextChange}
                     onFocus={onSearchFocus}
-                    onBlur={() => {
-                        setResultsVisibility(false)
-                    }}
+                    onBlur={close}
                     placeholder='Seach for items and brands'
                 />
                 <button className='searchBar__button' ><FiSearch size='1.5em' /></button>
             </form>
-            {(resultsVisibility && results.length !== 0) && <SearchResults results={results} />}
+            {(resultsVisibility && results.length !== 0) && <SearchResults results={results} onResultClick={onResultClick} />}
 
         </div>
 

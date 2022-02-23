@@ -1,11 +1,11 @@
 const SearchResult = (props) => {
-    const { result } = props;
+    const { result, onResultClick } = props;
     console.log(result)
 
     return (
-        <p className='searchResult'>
-            {result.name}
-        </p>
+        <p className='searchResult' onMouseDown={() => onResultClick(result.id)}>
+            { result.name}
+        </p >
     )
 }
 
