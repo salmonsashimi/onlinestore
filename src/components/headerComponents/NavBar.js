@@ -6,22 +6,21 @@ import { useEffect } from 'react';
 
 const NavBar = (props) => {
 
-    const [results, setResults] = useState([]);
+    const [items, setItems] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:3000/api/retrieveItems')
             .then((res) => res.json())
             .then((data) => {
-                console.log('data', data)
-                setResults(data);
-            })
+                setItems(data);
+            });
     }, [])
 
     return (
         <div className='navbar'>
             <div className='container navbar__content'>
                 <Link href='/'><h1 className='navbar__logo'>NAVY</h1></Link>
-                <SearchBar results={results} />
+                <SearchBar items={items} />
                 <CartIcon />
             </div>
         </div>

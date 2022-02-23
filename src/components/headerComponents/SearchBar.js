@@ -5,11 +5,15 @@ import useTextInput from '../hooks/useFormState';
 import SearchResults from './SearchResults';
 
 const SearchBar = (props) => {
+    const { items } = props;
+
+    console.log('items', items)
+    const [results, setResults] = useState([])
+    console.log('results from searchbar', results)
+
     const [text, setText] = useTextInput();
     const [resultsVisibility, setResultsVisibility] = useState(false);
     const router = useRouter();
-    console.log('props from searchbar', props)
-
 
     const onSearchClick = (e) => {
         e.preventDefault();
@@ -18,8 +22,7 @@ const SearchBar = (props) => {
 
     const onSearchFocus = () => {
         setResultsVisibility(true)
-
-
+        setResults([...items])
     }
 
     return (
@@ -37,7 +40,7 @@ const SearchBar = (props) => {
                 />
                 <button className='searchBar__button' ><FiSearch size='1.5em' /></button>
             </form>
-            {resultsVisibility && <SearchResults />}
+            {resultsVisibility && <SearchResults results={results} />}
 
         </div>
 
