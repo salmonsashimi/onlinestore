@@ -25,22 +25,31 @@ const SearchBar = (props) => {
         setResultsVisibility(true)
         if (text) {
 
-            let filteredItems = allItems.filter(item => {
-                return item.name.includes(text)
-            })
+            const filteredItems = allItems.filter(function (item) {
+                if (item.name.includes(text) && this.count < 5) {
+                    this.count++;
+                    return true;
+                }
+
+            }, { count: 0 })
 
             setResults([...filteredItems])
         } else {
-            setResults([...allItems])
+            const initialResults = allItems.slice(0, 5);
+            setResults([...initialResults])
         }
 
     }
 
     const onTextChange = (e) => {
         setText(e.target.value)
-        let filteredItems = allItems.filter(item => {
-            return item.name.includes(text)
-        })
+        const filteredItems = allItems.filter(function (item) {
+            if (item.name.includes(text) && this.count < 5) {
+                this.count++;
+                return true;
+            }
+
+        }, { count: 0 })
         setResults([...filteredItems])
     }
 
