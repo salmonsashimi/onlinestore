@@ -1,7 +1,8 @@
+import Layout from '../../components/Layout';
 import ItemImageBox from '../../components/itemComponents/ItemImageBox';
 import ItemDescriptionBox from '../../components/itemComponents/ItemDescriptionBox';
 
-const ItemPage = ({ data }) => {
+const Item = ({ data }) => {
     return (
         <div className='itemPage'>
             <ItemImageBox img={data.imgUrl} />
@@ -30,6 +31,14 @@ export async function getServerSideProps(context) {
     return {
         props: { data }, // will be passed to the page component as props
     }
+}
+
+Item.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
 }
 
 export default ItemPage;

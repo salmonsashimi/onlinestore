@@ -5,11 +5,14 @@ import 'normalize.css';
 import '../styles/styles.scss';
 
 function MyApp({ Component, pageProps }) {
+    const getLayout = Component.getLayout || ((page) => page)
+
     return (
         <CartProvider>
-            <Layout>
-                <Component {...pageProps} />
-            </Layout>
+            {getLayout(<Component {...pageProps} />)
+
+            }
+
         </CartProvider>
     )
 

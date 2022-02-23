@@ -1,9 +1,10 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import Layout from '../../components/Layout';
 import SearchSortingBar from '../../components/searchComponents/SearchSortingBar';
 import ItemBoxes from '../../components/searchComponents/ItemBoxes';
 import SearchFilterColumn from '../../components/searchComponents/SearchfilterColumn';
 
-const SearchPage = (props) => {
+const Search = (props) => {
     const router = useRouter();
     const { slug } = router.query;
 
@@ -39,4 +40,13 @@ export async function getServerSideProps(context) {
 }
 
 
-export default SearchPage;
+Search.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+
+    )
+}
+
+export default Search;

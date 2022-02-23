@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext';
+import Layout from '../components/Layout';
 import CartFilled from '../components/cartComponents/CartFilled'
 import CartEmpty from '../components/cartComponents/CartEmpty'
 
@@ -13,6 +14,14 @@ const Cart = () => {
         </div>
     )
 
+}
+
+Cart.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
 }
 
 

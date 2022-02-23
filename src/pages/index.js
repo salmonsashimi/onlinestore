@@ -1,3 +1,4 @@
+import Layout from '../components/Layout';
 import IndexCarousel from '../components/indexComponents/IndexCarousel';
 import IndexPromosBanner from '../components/indexComponents/IndexPromosBanner';
 import IndexCategories from '../components/indexComponents/IndexCategories';
@@ -16,5 +17,13 @@ const Index = () => (
         <InfoBar />
     </>
 );
+
+Index.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
+}
 
 export default Index;
