@@ -20,7 +20,7 @@ const NavBar = (props) => {
         <div className='navbar'>
             <div className='container navbar__content'>
                 <Link href='/'><h1 className='navbar__logo'>NAVY</h1></Link>
-                <SearchBar items={items} />
+                <SearchBar allItems={items} />
                 <CartIcon />
             </div>
         </div>

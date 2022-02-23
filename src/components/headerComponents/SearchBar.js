@@ -5,15 +5,16 @@ import useTextInput from '../hooks/useFormState';
 import SearchResults from './SearchResults';
 
 const SearchBar = (props) => {
-    const { items } = props;
+    const router = useRouter();
 
-    console.log('items', items)
+    const { allItems } = props;
+
+    console.log('items', allItems)
     const [results, setResults] = useState([])
     console.log('results from searchbar', results)
 
-    const [text, setText] = useTextInput();
+    const [text, setText] = useState();
     const [resultsVisibility, setResultsVisibility] = useState(false);
-    const router = useRouter();
 
     const onSearchClick = (e) => {
         e.preventDefault();
@@ -22,7 +23,25 @@ const SearchBar = (props) => {
 
     const onSearchFocus = () => {
         setResultsVisibility(true)
-        setResults([...items])
+        if (text) {
+
+            let filteredItems = allItems.filter(item => {
+                return item.name.includes(text)
+            })
+
+            setResults([...filteredItems])
+        } else {
+            setResults([...allItems])
+        }
+
+    }
+
+    const onTextChange = (e) => {
+        setText(e.target.value)
+        let filteredItems = allItems.filter(item => {
+            return item.name.includes(text)
+        })
+        setResults([...filteredItems])
     }
 
     return (
@@ -31,16 +50,16 @@ const SearchBar = (props) => {
                 <input
                     className='searchBar__input'
                     value={text}
-                    onChange={setText}
+                    onChange={onTextChange}
                     onFocus={onSearchFocus}
-                    onBlur={e => {
+                    onBlur={() => {
                         setResultsVisibility(false)
                     }}
                     placeholder='Seach for items and brands'
                 />
                 <button className='searchBar__button' ><FiSearch size='1.5em' /></button>
             </form>
-            {resultsVisibility && <SearchResults results={results} />}
+            {(resultsVisibility && results.length !== 0) && <SearchResults results={results} />}
 
         </div>
 
