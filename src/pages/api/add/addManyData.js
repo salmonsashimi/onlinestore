@@ -1,10 +1,10 @@
-// import clientPromise from '../../../lib/mongodb';
+import clientPromise from '../../../lib/mongodb';
 
 //inset one item
 export default async function (req, res) {
-    // const client = await clientPromise;
-    // const db = client.db('online-store');
-    // const col = db.collection("items");
+    const client = await clientPromise;
+    const db = client.db('online-store');
+    const col = db.collection("items");
 
     let color = ['black', 'green', 'blue', 'yellow', 'white', 'orange', 'purple', 'grey', 'red', 'violet']
     let product = ['shoes', 'socks', 'sneakers', 'sunglasses', 'shorts', 'shirt', 't-shirt', 'pants', 'jeans', 'bandana']
@@ -59,7 +59,7 @@ export default async function (req, res) {
     console.log('data added');
 
     // Insert a single document, wait for promise so we can read it back
-    // const p = await col.insertMany(itemDocument);
+    const p = await col.insertMany(itemDocument);
     // Find one document
     // const myDoc = await col.find();
     // Print to the console
