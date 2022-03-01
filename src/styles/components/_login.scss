@@ -1,7 +1,26 @@
 .login {
     text-align: center;
     max-width: 550px;
-    margin: auto;
+    margin: 50px auto;
+    border: 1px solid black;
+}
+
+.login__links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.login__links-login, .login__links-signUp {
+    font-size: $l-size;
+    padding: $m-size;
+    cursor: pointer;
+    width: 100%;
+    
+    &:hover {
+        // background-color: $dark-blue;
+        background-color: $light-grey;
+    }
+
 }
 
 .login__logo {
@@ -25,11 +44,31 @@
 .login__email-header, .login__password-header {
     text-align: left;
     font-weight: 700;
+    margin-bottom: 5px;
 
 }
 
 .login__email-input, .login__password-input {
     padding: $s-size;
     font-size: $m-size;
+    width: 92%;
+}
+
+.login__button {
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    margin: $m-size 0;
+    padding: $s-size;
     width: 100%;
+    &:hover {
+        background-color: $dark-blue;
+    }
+}
+
+.login__forgotPassword {
+    cursor: pointer;
 }
