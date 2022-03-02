@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index page render unchanged 1`] = `
+<div>
+  <div
+    class="indexCarousel container"
+  >
+    <div
+      class="indexCarousel__inner"
+      style="transform: translate(-0%);"
+    >
+      <div
+        class="indexCarouselItem"
+      >
+        <img
+          src="https://picsum.photos/id/1011/1200/600"
+        />
+      </div>
+      <div
+        class="indexCarouselItem"
+      >
+        <img
+          src="https://picsum.photos/id/590/1200/600"
+        />
+      </div>
+      <div
+        class="indexCarouselItem"
+      >
+        <img
+          src="https://picsum.photos/id/177/1200/600"
+        />
+      </div>
+    </div>
+    <div
+      class="indexCarousel__bannerButtons"
+    >
+      <button
+        class="indexCarousel__bannerButton indexCarousel__bannerButton-active"
+        num="1"
+      />
+      <button
+        class="indexCarousel__bannerButton "
+        num="2"
+      />
+      <button
+        class="indexCarousel__bannerButton "
+        num="3"
+      />
+    </div>
+    <button
+      class="indexCarousel__buttonLeft"
+    >
+      &lt;
+    </button>
+    <button
+      class="indexCarousel__buttonRight"
+    >
+      &gt; 
+    </button>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="indexPromosBanner"
+    >
+      <div
+        class="promo"
+      >
+        <img
+          src="https://picsum.photos/id/342/350/300"
+        />
+        <h3
+          class="promo__title"
+        >
+          GOING OUT?
+        </h3>
+        <p
+          class="promo__text"
+        >
+          Fancy plans, fancy fits!
+        </p>
+      </div>
+      <div
+        class="promo"
+      >
+        <img
+          src="https://picsum.photos/id/343/350/300"
+        />
+        <h3
+          class="promo__title"
+        >
+          Streetwear brands
+        </h3>
+        <p
+          class="promo__text"
+        >
+          Logo lovers unite!
+        </p>
+      </div>
+      <div
+        class="promo"
+      >
+        <img
+          src="https://picsum.photos/id/341/350/300"
+        />
+        <h3
+          class="promo__title"
+        >
+          Bling up
+        </h3>
+        <p
+          class="promo__text"
+        >
+          Style it up!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="indexLargeBanner"
+    >
+      <h3
+        class="indexLargeBanner__title"
+      >
+        Chinese New Year Sale!
+      </h3>
+      <p
+        class="indexLargeBanner__text"
+      >
+        Red hot sale at 70% off!
+      </p>
+      <button
+        class="indexLargeBanner__button"
+      >
+        SHOP NOW
+      </button>
+    </div>
+  </div>
+  <div
+    class="container indexTrendingBanners"
+  >
+    <div
+      class="indexTrendingBanner"
+    >
+      <img
+        src="https://picsum.photos/id/116/450/600"
+      />
+      <h3
+        class="indexTrendingBanner__title"
+      >
+        BEST NAVY BRANDS
+      </h3>
+      <p
+        class="indexTrendingBanner__text"
+      >
+        Up to 70% off!
+      </p>
+      <button
+        class="indexTrendingBanner__button"
+      >
+        SHOP NOW
+      </button>
+    </div>
+    <div
+      class="indexTrendingBanner"
+    >
+      <img
+        src="https://picsum.photos/id/106/450/600"
+      />
+      <h3
+        class="indexTrendingBanner__title"
+      >
+        FLOWER POWER
+      </h3>
+      <p
+        class="indexTrendingBanner__text"
+      >
+        Clothing made from recyclable materials
+      </p>
+      <button
+        class="indexTrendingBanner__button"
+      >
+        SHOP NOW
+      </button>
+    </div>
+  </div>
+  <div
+    class="indexCategories"
+  >
+    <div
+      class="indexCategoriesBanner"
+    >
+      <h1
+        class="indexCategoriesBanner__header"
+      >
+        SHOP SEASONAL CATALOGS
+      </h1>
+    </div>
+    <div
+      class="indexCategories__options container"
+    >
+      <div
+        class="indexCategory"
+      >
+        <img
+          class="indexCategory__image"
+          src="https://picsum.photos/id/468/280/280"
+        />
+        <h1
+          class="indexCategory__name"
+        >
+          Spring
+        </h1>
+      </div>
+      <div
+        class="indexCategory"
+      >
+        <img
+          class="indexCategory__image"
+          src="https://picsum.photos/id/199/280/280"
+        />
+        <h1
+          class="indexCategory__name"
+        >
+          Summer
+        </h1>
+      </div>
+      <div
+        class="indexCategory"
+      >
+        <img
+          class="indexCategory__image"
+          src="https://picsum.photos/id/413/280/280"
+        />
+        <h1
+          class="indexCategory__name"
+        >
+          Autumn
+        </h1>
+      </div>
+      <div
+        class="indexCategory"
+      >
+        <img
+          class="indexCategory__image"
+          src="https://picsum.photos/id/260/280/280"
+        />
+        <h1
+          class="indexCategory__name"
+        >
+          Winter
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div
+    class="infoBar"
+  >
+    <div
+      class="container infoBar__content"
+    >
+      <h3
+        class="infoBar__text"
+      >
+        DISCOVER OVER 500 BRANDS
+      </h3>
+      <h3
+        class="infoBar__text"
+      >
+        EASY DELIVERY WORDLWIDE
+      </h3>
+    </div>
+  </div>
+</div>
+`;
