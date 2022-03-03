@@ -14,6 +14,7 @@ const Item = ({ data }) => {
 
 export async function getServerSideProps(context) {
     const { pid } = context.query;
+    console.log('context', context.query)
 
     const res = await fetch(`http://localhost:3000/api/item/${pid}`)
     const data = await res.json()
@@ -41,4 +42,4 @@ Item.getLayout = function getLayout(page) {
     )
 }
 
-export default ItemPage;
+export default Item;

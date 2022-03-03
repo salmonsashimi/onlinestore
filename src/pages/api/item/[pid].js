@@ -18,13 +18,15 @@ export default async function (req, res) {
     const client = await clientPromise;
     const db = client.db('online-store');
     const col = db.collection("items");
+    console.log('col', col)
     const { pid } = req.query;
 
     if (req.method === 'POST') {
         // Process a POST request
     } else {
         // Handle any other HTTP method
-        const item = await col.findOne({ "id": parseInt(pid) });
+        const item = await col.findOne({ "id": pid });
+        console.log(item)
         res.json(item)
 
     }
