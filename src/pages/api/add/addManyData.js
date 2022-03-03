@@ -21,7 +21,7 @@ export default async function (req, res) {
                 id: newItemId,
                 "brand": newItemBrand,
                 "name": newItemName,
-                "price": 10 * i,
+                "price": 12 * i + j + 9,
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nulla aliquet porttitor lacus luctus accumsan tortor.",
                 "stock": 10,
                 "imgUrl": newItemUrl
