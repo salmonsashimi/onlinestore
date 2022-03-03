@@ -12,9 +12,6 @@ const SearchBar = (props) => {
 
     const { allItems } = props;
 
-    console.log('items', allItems)
-    console.log('results from searchbar', results)
-
     const expand = () => {
         setResultsVisibility(true);
     }
@@ -74,7 +71,7 @@ const SearchBar = (props) => {
                     onChange={onTextChange}
                     onFocus={onSearchFocus}
                     onBlur={close}
-                    placeholder='Seach for items and brands'
+                    placeholder='Search for items and brands'
                 />
                 <button className='searchBar__button' ><FiSearch size='1.5em' /></button>
             </form>
