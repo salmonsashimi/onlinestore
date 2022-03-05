@@ -16,6 +16,13 @@
     justify-content: space-around;
 }
 
+.login__header {
+    padding: 20px 0;
+}
+
+.login__header-text {
+    margin: 0;
+}
 .login__links-login, .login__links-signUp {
     font-size: $l-size;
     padding: $m-size;
@@ -29,12 +36,12 @@
 
 }
 
-.login__logo {
+.login__header-logo {
     display: flex;
     justify-content: center;
 }
 
-.login__logo-text {
+.login__header-logo-text {
     border: 3px solid black;
     border-radius: 25%;
     font-weight: 700;

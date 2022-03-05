@@ -2,15 +2,18 @@ const LoginPage = () => {
     return (
         <div className='login'>
             <div className='login__component'>
+                <div className='login__header'>
+                    <h1 className='login__header-text'>WELCOME TO</h1>
+                    <div className='login__header-logo'>
+                        <h1 className='login__header-logo-text'>NAVY</h1>
+                    </div>
+                </div>
                 <div className='login__links'>
                     <a className='login__links-login'>LOGIN</a>
                     <a className='login__links-signUp'>SIGN UP</a>
                 </div>
                 <div>
-                    <h1 className='login__header'>WELCOME TO</h1>
-                    <div className='login__logo'>
-                        <h1 className='login__logo-text'>NAVY</h1>
-                    </div>
+
                     <form className='login__form'>
                         <div className='login__email'>
                             <p className='login__email-header'>EMAIL ADDRESS:</p>
