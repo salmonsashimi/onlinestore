@@ -1,8 +1,14 @@
 .login {
+    height: 100vh;
+    width: 100vw;
+    background-color: $off-white;
+}
+
+.login__component {
     text-align: center;
     max-width: 550px;
-    margin: 50px auto;
-    border: 1px solid black;
+    margin: auto;
+    background-color: white
 }
 
 .login__links {
