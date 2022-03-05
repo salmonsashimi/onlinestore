@@ -1,10 +1,11 @@
 .login {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     background-color: $off-white;
 }
 
 .login__component {
+    height: 100vh;
     text-align: center;
     max-width: 550px;
     margin: auto;
@@ -16,13 +17,7 @@
     justify-content: space-around;
 }
 
-.login__header {
-    padding: 20px 0;
-}
 
-.login__header-text {
-    margin: 0;
-}
 .login__links-login, .login__links-signUp {
     font-size: $l-size;
     padding: $m-size;
@@ -35,8 +30,17 @@
     }
 
 }
+.login__header {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.login__header-text {
+    margin: 0;
+}
 
 .login__header-logo {
+    padding-top: 15px;
     display: flex;
     justify-content: center;
 }

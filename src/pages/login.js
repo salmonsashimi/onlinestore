@@ -1,13 +1,14 @@
 const LoginPage = () => {
     return (
         <div className='login'>
-            <div className='login__component'>
-                <div className='login__header'>
-                    <h1 className='login__header-text'>WELCOME TO</h1>
-                    <div className='login__header-logo'>
-                        <h1 className='login__header-logo-text'>NAVY</h1>
-                    </div>
+            <div className='login__header'>
+                <h1 className='login__header-text'>WELCOME TO</h1>
+                <div className='login__header-logo'>
+                    <h1 className='login__header-logo-text'>NAVY</h1>
                 </div>
+            </div>
+            <div className='login__component'>
+
                 <div className='login__links'>
                     <a className='login__links-login'>LOGIN</a>
                     <a className='login__links-signUp'>SIGN UP</a>
@@ -27,7 +28,6 @@ const LoginPage = () => {
                         <p className='login__forgotPassword'>FORGOT PASSWORD?</p>
 
                     </form>
-                    <p>or sign in with...</p>
                 </div >
             </div>
         </div>
