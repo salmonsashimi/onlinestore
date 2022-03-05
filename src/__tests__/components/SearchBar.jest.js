@@ -12,16 +12,15 @@ describe('searchbar ', () => {
         screen.debug();
     })
 
-    test('should render input element correctly', () => {
+    test('should render input element correctly', async () => {
         render(<SearchBar allItems={[]} />);
-        const inputElement = screen.getByPlaceholderText(/Search for items and brands/)
+        const inputElement = await screen.getByPlaceholderText(/Search for items and brands/)
         expect(inputElement).toBeInTheDocument();
     })
 
     test('should be able to type in input', async () => {
-        render(<SearchBar allItems={[]} />);
+        render(<SearchBar allItems={[{ name: 'test' }]} />);
         const inputElement = await screen.findByPlaceholderText(/Search for items and brands/)
-        console.log(inputElement)
         fireEvent.change(inputElement, { target: { value: 'test' } })
         expect(inputElement.value).toBe('test')
     })
