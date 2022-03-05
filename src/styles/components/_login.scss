@@ -5,31 +5,39 @@
 }
 
 .login__component {
-    height: 100vh;
     text-align: center;
     max-width: 550px;
     margin: auto;
     background-color: white
 }
 
-.login__links {
-    display: flex;
-    justify-content: space-around;
+.login__email-header, .login__password-header {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 5px;
+
+}
+
+.login__email-input, .login__password-input {
+    padding: $s-size;
+    font-size: $m-size;
+    width: 92%;
 }
 
 
-.login__links-login, .login__links-signUp {
-    font-size: $l-size;
-    padding: $m-size;
+
+.login__forgotPassword {
     cursor: pointer;
-    width: 100%;
-    
-    &:hover {
-        // background-color: $dark-blue;
-        background-color: $light-grey;
-    }
-
+    margin: none;
+    padding: $m-size;
 }
+
+.login__form {
+    max-width: 400px;
+    margin: auto;
+}
+
+
 .login__header {
     padding: 50px 0;
     text-align: center;
@@ -53,24 +61,6 @@
     padding: 5px 15px;
 }
 
-.login__form {
-    max-width: 400px;
-    margin: auto;
-}
-
-.login__email-header, .login__password-header {
-    text-align: left;
-    font-weight: 700;
-    margin-bottom: 5px;
-
-}
-
-.login__email-input, .login__password-input {
-    padding: $s-size;
-    font-size: $m-size;
-    width: 92%;
-}
-
 .login__button {
     background-color: black;
     border: none;
@@ -84,8 +74,22 @@
     &:hover {
         background-color: $dark-blue;
     }
+} 
+
+.login__links {
+    display: flex;
+    justify-content: space-around;
 }
 
-.login__forgotPassword {
+
+.login__links-login, .login__links-signUp {
+    font-size: $l-size;
+    padding: $m-size;
     cursor: pointer;
+    width: 100%;
+    
+    &:hover {
+        // background-color: $dark-blue;
+        background-color: $light-grey;
+    }
 }
