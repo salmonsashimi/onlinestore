@@ -1,0 +1,95 @@
+.login {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: $off-white;
+}
+
+.login__component {
+    text-align: center;
+    max-width: 550px;
+    margin: auto;
+    background-color: white
+}
+
+.login__email-header, .login__password-header {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 5px;
+
+}
+
+.login__email-input, .login__password-input {
+    padding: $s-size;
+    font-size: $m-size;
+    width: 92%;
+}
+
+
+
+.login__forgotPassword {
+    cursor: pointer;
+    margin: none;
+    padding: $m-size;
+}
+
+.login__form {
+    max-width: 400px;
+    margin: auto;
+}
+
+
+.login__header {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.login__header-text {
+    margin: 0;
+}
+
+.login__header-logo {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.login__header-logo-text {
+    border: 3px solid black;
+    border-radius: 25%;
+    font-weight: 700;
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.login__button {
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    margin: $m-size 0;
+    padding: $s-size;
+    width: 100%;
+    &:hover {
+        background-color: $dark-blue;
+    }
+} 
+
+.login__links {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.login__links-login, .login__links-signUp {
+    font-size: $l-size;
+    padding: $m-size;
+    cursor: pointer;
+    width: 100%;
+    
+    &:hover {
+        // background-color: $dark-blue;
+        background-color: $light-grey;
+    }
+}
