@@ -3,7 +3,7 @@
 export default async function (req, res) {
     const data = await (await fetch(`http://localhost:3000/api/retrieveItems`)).json()
 
-    // console.log('data', data);
+    console.log('data', data);
 
     //retrieve search query
     const { pid } = req.query;

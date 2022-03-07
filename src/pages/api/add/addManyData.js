@@ -16,7 +16,7 @@ export default async function (req, res) {
             let newItemId = j.toString() + i.toString()
             let newItemBrand = brand[i];
             let newItemName = `${color[i]} ${product[j]}`;
-            let newItemUrl = `https://picsum.photos/id/005/400/2${newItemId}`
+            let newItemUrl = `https://picsum.photos/id/2${newItemId}/400/550`
             let newItem = {
                 id: newItemId,
                 "brand": newItemBrand,
