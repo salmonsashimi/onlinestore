@@ -1,6 +1,11 @@
+import Head from 'next/head'
+
 const LoginPage = () => {
     return (
         <div className='login'>
+            <Head>
+                <title>NAVY | Sign In</title>
+            </Head>
             <div className='login__header'>
                 <h1 className='login__header-text'>WELCOME TO</h1>
                 <div className='login__header-logo'>
@@ -11,7 +16,7 @@ const LoginPage = () => {
 
                 <div className='login__links'>
                     <a className='login__links-login'>LOGIN</a>
-                    <a className='login__links-signUp'>SIGN UP</a>
+                    <a className='login__links-signUp'>SIGN IN</a>
                 </div>
                 <div>
 
