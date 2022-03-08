@@ -1,21 +1,24 @@
 .login {
     min-height: 100vh;
     min-width: 100vw;
-    background-color: $off-white;
+    background-color: $silver;
 }
 
 .login__component {
     text-align: center;
-    max-width: 550px;
+    max-width: 600px;
     margin: auto;
     background-color: white
 }
 
+.login__email, .login__password{
+    padding: $s-size 0;
+}
 .login__email-header, .login__password-header {
     text-align: left;
     font-weight: 700;
-    margin-bottom: 5px;
-
+    margin: 0;
+    padding-bottom: $xs-size;
 }
 
 .login__email-input, .login__password-input {
@@ -24,22 +27,21 @@
     width: 92%;
 }
 
-
-
 .login__forgotPassword {
     cursor: pointer;
-    margin: none;
+    margin: 0;
     padding: $m-size;
 }
 
 .login__form {
+    padding: $l-size 0;
     max-width: 400px;
     margin: auto;
 }
 
 
 .login__header {
-    padding: 50px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
