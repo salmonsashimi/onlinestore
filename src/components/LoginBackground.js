@@ -12,13 +12,10 @@ const LoginBackground = ({ page }) => {
                 </div>
             </div>
             <div className='login__component'>
-
                 <div className='login__links'>
                     <a className='login__links-login'>LOGIN</a>
                     <a className='login__links-signUp'>SIGN IN</a>
                 </div>
-
-
                 <form className='login__form'>
                     <div className='login__email'>
                         <p className='login__email-header'>EMAIL ADDRESS:</p>
