@@ -11,7 +11,7 @@
     background-color: white
 }
 
-.login__email, .login__password{
+.login__email, .login__password, .login__options{
     padding: $s-size 0;
 }
 .login__input-header{
@@ -25,6 +25,10 @@
     padding: $s-size;
     font-size: $m-size;
     width: 92%;
+}
+
+.login__input-options {
+    display: flex;
 }
 
 .login__forgotPassword {
