@@ -15,19 +15,19 @@ const RegisterPage = () => {
                 <LoginLinks />
 
                 <form className='login__form'>
-                    <div className='login__email'>
+                    <div className='login__input'>
                         <p className='login__input-header'>EMAIL ADDRESS:</p>
                         <input type='text' className='login__input-input' />
                     </div>
-                    <div className='login__email'>
+                    <div className='login__input'>
                         <p className='login__input-header'>NAME:</p>
                         <input type='text' className='login__input-input' />
                     </div>
-                    <div className='login__password'>
+                    <div className='login__input'>
                         <p className='login__input-header'>PASSWORD:</p>
                         <input type='password' className='login__input-input' />
                     </div>
-                    <div className='login__options'>
+                    <div className='login__input'>
                         <p className='login__input-header'>CONTACT PREFERENCES:</p>
                         <div className='login__input-options'>
                             <label for='discounts'>DISCOUNTS AND SALES</label>
