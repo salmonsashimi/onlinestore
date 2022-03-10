@@ -13,12 +13,12 @@ const LoginPage = () => {
                 <LoginLinks />
                 <form className='login__form'>
                     <div className='login__email'>
-                        <p className='login__email-header'>EMAIL ADDRESS:</p>
-                        <input type='text' className='login__email-input' />
+                        <p className='login__input-header'>EMAIL ADDRESS:</p>
+                        <input type='text' className='login__input-input' />
                     </div>
                     <div className='login__password'>
-                        <p className='login__password-header'>PASSWORD:</p>
-                        <input type='password' className='login__password-input' />
+                        <p className='login__input-header'>NAME:</p>
+                        <input type='password' className='login__input-input' />
                     </div>
                     <button className='login__button'>SIGN IN</button>
                     <p className='login__forgotPassword'>FORGOT PASSWORD?</p>

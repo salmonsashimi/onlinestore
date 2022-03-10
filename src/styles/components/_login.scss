@@ -14,14 +14,14 @@
 .login__email, .login__password{
     padding: $s-size 0;
 }
-.login__email-header, .login__password-header {
+.login__input-header{
     text-align: left;
     font-weight: 700;
     margin: 0;
     padding-bottom: $xs-size;
 }
 
-.login__email-input, .login__password-input {
+.login__input-input {
     padding: $s-size;
     font-size: $m-size;
     width: 92%;
