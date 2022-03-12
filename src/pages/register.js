@@ -12,7 +12,7 @@ const RegisterPage = () => {
             </Head>
             <LoginHeader />
             <div className='login__component'>
-                <LoginLinks />
+                <LoginLinks page='register' />
 
                 <form className='login__form'>
                     <div className='login__input'>

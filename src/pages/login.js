@@ -10,7 +10,7 @@ const LoginPage = () => {
             </Head>
             <LoginHeader />
             <div className='login__component'>
-                <LoginLinks />
+                <LoginLinks page='login' />
                 <form className='login__form'>
                     <div className='login__input'>
                         <p className='login__input-header'>EMAIL ADDRESS:</p>
