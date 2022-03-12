@@ -3,16 +3,25 @@
     justify-content: space-around;
 }
 
+.loginLinks__container {
+    flex-grow: 1;
+    padding: $m-size 0;
+}
 
 .loginLinks__login, .loginLinks__signUp {
     cursor: pointer;
-    font-size: $l-size;
+    font-size: $m-size;
+    font-weight: 700;
     margin: 0;
-    padding: $m-size;
     width: 100%;
-    // &:hover {
-    //     background-color: $light-grey;
-    // }
+
+    &:hover {
+        color: $grey;
+    }
+}
+
+.loginLinks__signUp {
+    border-right: 1px solid grey;
 }
 
 .loginLinks__active {
@@ -20,11 +29,4 @@
     &:hover {
         background-color: none;
     }
-}
-
-.loginLinks__hover {
-    &:hover { 
-            background-color: $light-grey;
-    }
-
 }
