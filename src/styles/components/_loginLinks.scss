@@ -10,11 +10,21 @@
     margin: 0;
     padding: $m-size;
     width: 100%;
-    &:hover {
-        background-color: $light-grey;
-    }
+    // &:hover {
+    //     background-color: $light-grey;
+    // }
 }
 
 .loginLinks__active {
     border-bottom: 2px solid blue;
+    &:hover {
+        background-color: none;
+    }
+}
+
+.loginLinks__hover {
+    &:hover { 
+            background-color: $light-grey;
+    }
+
 }
