@@ -81,21 +81,3 @@
         background-color: $dark-blue;
     }
 } 
-
-.login__links {
-    display: flex;
-    justify-content: space-around;
-}
-
-
-.login__links-login, .login__links-signUp {
-    font-size: $l-size;
-    padding: $m-size;
-    cursor: pointer;
-    width: 100%;
-    
-    &:hover {
-        // background-color: $dark-blue;
-        background-color: $light-grey;
-    }
-}

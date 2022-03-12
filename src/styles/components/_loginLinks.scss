@@ -1,0 +1,16 @@
+.loginLinks {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.loginLinks__login, .loginLinks__signUp {
+    cursor: pointer;
+    font-size: $l-size;
+    margin: 0;
+    padding: $m-size;
+    width: 100%;
+    &:hover {
+        background-color: $light-grey;
+    }
+}
