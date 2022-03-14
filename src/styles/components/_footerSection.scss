@@ -1,3 +1,12 @@
+.footerSection__app{
+    background-color: black;
+    color: $off-white;
+    cursor: pointer;
+    text-align: center;
+    padding: $s-size 0;
+
+}
+
 .footerSection__name {
     color: $dark-blue;
     margin: $s-size 0;
@@ -25,6 +34,5 @@
     color: white;
     font-size: $m-size;
     padding: 7px 10px;
-
 }
 

@@ -5,7 +5,7 @@ const FooterSocialMedia = () => {
 
     return (
         <div>
-            <p>Download mobile app here</p>
+            <p className='footerSection__app'>Download mobile app here</p>
 
             <h3 className='footerSection__name'>Subscribe to our mailing list</h3>
             <form>

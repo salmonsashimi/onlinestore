@@ -30,16 +30,16 @@ const RegisterPage = () => {
                     <div className='login__input'>
                         <p className='login__input-header'>CONTACT PREFERENCES:</p>
                         <div className='login__input-options'>
-                            <label for='discounts'>DISCOUNTS AND SALES</label>
-                            <input type='checkbox' id='discounts' name='discounts'></input>
+                            <label for='discounts' className='login__input-options-header'>DISCOUNTS AND SALES</label>
+                            <input type='checkbox' id='discounts' name='discounts' className='login__input-options-checkbox' />
                         </div>
                         <div className='login__input-options'>
-                            <label for='newStuff'>NEW STUFF</label>
-                            <input type='checkbox' id='newStuff' name='newStuff'></input>
+                            <label for='newStuff' className='login__input-options-header'>NEW STUFF</label>
+                            <input type='checkbox' id='newStuff' name='newStuff' className='login__input-options-checkbox' />
                         </div>
                         <div className='login__input-options'>
-                            <label for='exclusives'>YOUR EXCLUSIVES</label>
-                            <input type='checkbox' id='exclusives' name='exclusives'></input>
+                            <label for='exclusives' className='login__input-options-header'>YOUR EXCLUSIVES</label>
+                            <input type='checkbox' id='exclusives' name='exclusives' className='login__input-options-checkbox' />
                         </div>
                     </div>
 

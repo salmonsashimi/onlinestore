@@ -29,6 +29,18 @@
 
 .login__input-options {
     display: flex;
+    justify-content: space-between;
+    padding: $xs-size 0;
+}
+
+.login__input-options-checkbox {
+    padding: $s-size;
+    cursor: pointer;
+    font-size: $l-size;
+}
+
+.login__input-options-header {
+    font-weight: 700;
 }
 
 .login__forgotPassword {
