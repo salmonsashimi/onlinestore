@@ -18,6 +18,8 @@ const RegisterPage = () => {
                     <div className='login__input'>
                         <p className='login__input-header'>EMAIL ADDRESS:</p>
                         <input type='text' className='login__input-input' />
+                        <p className='login__input-displayText'>We'll send your order confirmation here.</p>
+
                     </div>
                     <div className='login__input'>
                         <p className='login__input-header'>NAME:</p>
@@ -26,6 +28,7 @@ const RegisterPage = () => {
                     <div className='login__input'>
                         <p className='login__input-header'>PASSWORD:</p>
                         <input type='password' className='login__input-input' />
+                        <p className='login__input-displayText'>Must be 10 or more characters.</p>
                     </div>
                     <div className='login__input'>
                         <p className='login__input-header'>CONTACT PREFERENCES:</p>
