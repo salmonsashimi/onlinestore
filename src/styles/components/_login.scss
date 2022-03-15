@@ -33,6 +33,11 @@
     padding: $s-size;
     font-size: $m-size;
     width: 92%;
+    border: 1px solid black;
+    &:focus {
+        outline: 2px solid $blue;
+        border: none;
+    }
 }
 
 .login__input-passwordWrapper {
