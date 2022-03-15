@@ -1,3 +1,4 @@
+import Link from 'next/link'
 const SignInBar = () => (
     <div className='signInBar'>
         <div className='container signInBar__content'>
@@ -8,8 +9,8 @@ const SignInBar = () => (
             </div>
             <div className='signInBar__right'>
                 <p className='signInBar__link'>TRACK MY ORDER</p>
-                <p className='signInBar__link'>SIGN UP</p>
-                <p className='signInBar__link'>LOG IN</p>
+                <Link href='/register'><p className='signInBar__link'>SIGN UP</p></Link>
+                <Link href='/login'><p className='signInBar__link'>LOG IN</p></Link>
             </div>
         </div>
     </div>
