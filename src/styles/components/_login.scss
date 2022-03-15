@@ -14,6 +14,14 @@
 .login__input{
     padding: $s-size 0;
 }
+
+.login__input-displayText {
+    color: $grey;
+    font-size: $s-size;
+    margin: $xs-size 0 0 0;
+    text-align: left;
+}
+
 .login__input-header{
     text-align: left;
     font-weight: 700;
@@ -25,6 +33,24 @@
     padding: $s-size;
     font-size: $m-size;
     width: 92%;
+}
+
+.login__input-passwordWrapper {
+    border: 1px solid black;
+    display: flex;
+}
+.login__input-passwordInput {
+    border: none;
+}
+
+.login__input-passwordShow {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: $s-size;
+    padding: 0 $xs-size;
 }
 
 .login__input-options {
@@ -43,12 +69,6 @@
     font-weight: 700;
 }
 
-.login__input-displayText {
-    color: $grey;
-    font-size: $s-size;
-    margin: $xs-size 0 0 0;
-    text-align: left;
-}
 
 
 .login__forgotPassword {

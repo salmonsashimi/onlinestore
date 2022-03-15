@@ -27,7 +27,10 @@ const RegisterPage = () => {
                     </div>
                     <div className='login__input'>
                         <p className='login__input-header'>PASSWORD:</p>
-                        <input type='password' className='login__input-input' />
+                        <div className='login__input-passwordWrapper'>
+                            <input type='password' className='login__input-input login__input-passwordInput' />
+                            <button className='login__input-passwordShow'>SHOW</button>
+                        </div>
                         <p className='login__input-displayText'>Must be 10 or more characters.</p>
                     </div>
                     <div className='login__input'>
