@@ -26,9 +26,13 @@ export default async function (req, res) {
     } else {
         // Handle any other HTTP method
         const item = await col.findOne({ "id": pid });
-        console.log(item)
-        res.json(item)
 
+        //capitalise item name
+        item.name = item.name.split(" ")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+
+        res.json(item)
     }
 }
 
