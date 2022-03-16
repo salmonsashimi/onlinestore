@@ -14,7 +14,8 @@ class CartProvider extends Component {
                 price: 23412.21,
                 quantity: 1
             }],
-            isCartVisible: false
+            isCartVisible: false,
+            price: 0
         }
         this.removeItem = this.removeItem.bind(this);
         this.addItem = this.addItem.bind(this);
@@ -22,13 +23,24 @@ class CartProvider extends Component {
         this.showCart = this.showCart.bind(this);
     }
 
-    addItem(item) {
-        this.setState({ cart: [...this.state.cart, item] })
+    calculatePrice() {
+        let price = 0;
+        this.state.cart.forEach((item) => {
+            price += item.price
+        })
+        this.setState({ price })
     }
 
-    removeItem(id) {
+
+    async addItem(item) {
+        await this.setState({ cart: [...this.state.cart, item] })
+        this.calculatePrice();
+    }
+
+    async removeItem(id) {
         const remainderItems = this.state.cart.filter(item => item.id !== id)
-        this.setState({ cart: remainderItems })
+        await this.setState({ cart: remainderItems })
+        this.calculatePrice();
     }
 
     showCart() {
@@ -38,6 +50,7 @@ class CartProvider extends Component {
     hideCart() {
         this.setState({ isCartVisible: false });
     }
+
 
     render() {
         return (
