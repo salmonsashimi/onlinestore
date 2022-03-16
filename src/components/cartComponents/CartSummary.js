@@ -1,16 +1,18 @@
+import { useContext } from 'react';
+import { CartContext } from '../../contexts/CartContext';
 
 const CartSummary = () => {
 
-    const formSubmit = (e) => {
-        e.preventDefault();
-    }
+    const context = useContext(CartContext);
+    let price = context.price;
+
 
     return (
         <form className='cartSummary'>
             <h1 className='cartSummary__header'>Total</h1>
             <div className='cartSummary__subtotal'>
                 <h3 className='cartSummary__subtotal-title'>Sub-total</h3>
-                <h3 className='cartSummary__subtotal-price'>SGD$10000.00</h3>
+                <h3 className='cartSummary__subtotal-price'>SGD${price}</h3>
             </div>
             <div className='cartSummary__delivery'>
                 <h3 className='cartSummary__delivery-title'>Delivery</h3>
