@@ -3,6 +3,16 @@
     position: relative;
 }
 
+.cartDropdownItem__delete {
+    position: absolute;
+    right: 20px;
+    z-index: 2;
+    bottom: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 .cartDropdownItem__item {
     padding: $s-size;
     display: flex;
@@ -21,12 +31,4 @@
 .cartDropdownItem__desc-brand {
     text-transform: uppercase;
     font-weight: 700;
-}
-
-
-.cartDropdownItem__delete {
-    position: absolute;
-    right: 20px;
-    z-index: 2;
-    bottom: 12px;
 }

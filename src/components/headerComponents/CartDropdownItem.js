@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { IoTrashBinOutline } from 'react-icons/io5';
 
 const CartDropdownItem = (props) => {
 
@@ -17,7 +18,8 @@ const CartDropdownItem = (props) => {
                     </div>
                 </div>
             </Link>
-            <button className='cartDropdownItem__delete' onClick={() => removeItem(id)}>remove</button>
+            <button className='cartDropdownItem__delete' onClick={() => removeItem(id)}><IoTrashBinOutline size='1.5em' /></button>
+
 
         </div>
 
