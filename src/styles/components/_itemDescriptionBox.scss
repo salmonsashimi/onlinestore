@@ -13,6 +13,7 @@
 .itemDescriptionBox__itemName {
     font-size: $l-size;
     font-weight: 300;
+    text-transform: capitalize;
 }
 
 .itemDescriptionBox__price {

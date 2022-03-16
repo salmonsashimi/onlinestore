@@ -11,7 +11,7 @@ const CartItem = (props) => {
                 <div className='cartItem__item'>
                     <img src={imgUrl} className='cartItem__img' />
                     <div className='cartItem__description'>
-                        <p><span className='cartItem__description-brand'>{brand}</span> {name}</p>
+                        <p className='cartItem__description-name'><span className='cartItem__description-brand'>{brand}</span> {name}</p>
                         <p className='cartItem__description-price'>SGD${price}</p>
                         <p>Qty: {quantity}</p>
                     </div>
