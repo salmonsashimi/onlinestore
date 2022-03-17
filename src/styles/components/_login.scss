@@ -51,21 +51,27 @@
 }
 
 
+
 .login__input-passwordInput {
     border: none;
     
     &:focus {
         outline: none;
         border: none;
+    }
 
+    &:focus + .login__input-passwordShow {
+        display: block;
     }
 }
+
 
 .login__input-passwordShow {
     background: none;
     border: none;
     color: black;
     cursor: pointer;
+    display: none;
     font-weight: 700;
     font-size: $s-size;
     padding: 0 $xs-size;
