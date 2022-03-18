@@ -60,13 +60,11 @@
         border: none;
     }
 
-    &:focus + .login__input-passwordShow {
-        display: block;
-    }
 }
 
 
-.login__input-passwordShow {
+
+.login__input-passwordButton {
     background: none;
     border: none;
     color: black;
@@ -75,6 +73,10 @@
     font-weight: 700;
     font-size: $s-size;
     padding: 0 $xs-size;
+}
+
+.login__input-passwordButtonShow {
+    display: block;
 }
 
 .login__input-options {

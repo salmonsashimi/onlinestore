@@ -20,7 +20,7 @@ const LoginPage = () => {
                         <p className='login__input-header'>PASSWORD:</p>
                         <div className='login__input-passwordWrapper'>
                             <input type='password' className='login__input-input login__input-passwordInput' />
-                            <button className='login__input-passwordShow'>SHOW</button>
+                            <button className='login__input-passwordButton'>SHOW</button>
                         </div>
                     </div>
                     <button className='login__button'>SIGN IN</button>
