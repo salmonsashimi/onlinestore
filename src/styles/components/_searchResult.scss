@@ -2,6 +2,7 @@
     margin: 0;
     padding: $s-size;
     color: black;
+    text-transform: capitalize;
     
     &:hover {
         background-color: $off-white;

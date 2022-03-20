@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { FiSearch } from 'react-icons/fi';
 import useTextInput from '../hooks/useFormState';
@@ -40,8 +40,7 @@ const SearchBar = (props) => {
 
     }
 
-    const onTextChange = (e) => {
-        setText(e.target.value)
+    useEffect(() => {
         const filteredItems = allItems.filter(function (item) {
             if (item.name.includes(text) && this.count < 5) {
                 this.count++;
@@ -50,7 +49,7 @@ const SearchBar = (props) => {
 
         }, { count: 0 })
         setResults([...filteredItems])
-    }
+    }, [text])
 
     const onResultClick = (id) => {
         console.log(id)
@@ -68,7 +67,7 @@ const SearchBar = (props) => {
                 <input
                     className='searchBar__input'
                     value={text}
-                    onChange={onTextChange}
+                    onChange={(e) => setText(e.target.value)}
                     onFocus={onSearchFocus}
                     onBlur={close}
                     placeholder='Search for items and brands'
