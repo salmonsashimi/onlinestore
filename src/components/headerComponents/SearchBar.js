@@ -20,26 +20,6 @@ const SearchBar = (props) => {
         setResultsVisibility(false);
     }
 
-    const onSearchFocus = () => {
-        expand();
-        if (text) {
-
-            const filteredItems = allItems.filter(function (item) {
-                if (item.name.includes(text) && this.count < 5) {
-                    this.count++;
-                    return true;
-                }
-
-            }, { count: 0 })
-
-            setResults([...filteredItems])
-        } else {
-            const initialResults = allItems.slice(0, 5);
-            setResults([...initialResults])
-        }
-
-    }
-
     useEffect(() => {
         const filteredItems = allItems.filter(function (item) {
             if (item.name.includes(text) && this.count < 5) {
@@ -52,7 +32,6 @@ const SearchBar = (props) => {
     }, [text])
 
     const onResultClick = (id) => {
-        console.log(id)
         router.push(`/item/${id}`);
     }
 
@@ -68,7 +47,7 @@ const SearchBar = (props) => {
                     className='searchBar__input'
                     value={text}
                     onChange={(e) => setText(e.target.value)}
-                    onFocus={onSearchFocus}
+                    onFocus={expand}
                     onBlur={close}
                     placeholder='Search for items and brands'
                 />
