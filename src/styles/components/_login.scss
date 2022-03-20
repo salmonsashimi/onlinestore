@@ -40,45 +40,6 @@
     }
 }
 
-.login__input-passwordWrapper {
-    border: 1px solid black;
-    display: flex;
-
-    &:focus-within {
-        border: 1px solid $blue;
-        outline: 1px solid $blue;
-    }
-}
-
-
-
-.login__input-passwordInput {
-    border: none;
-    
-    &:focus {
-        outline: none;
-        border: none;
-    }
-
-}
-
-
-
-.login__input-passwordButton {
-    background: none;
-    border: none;
-    color: black;
-    cursor: pointer;
-    display: none;
-    font-weight: 700;
-    font-size: $s-size;
-    padding: 0 $xs-size;
-}
-
-.login__input-passwordButtonShow {
-    display: block;
-}
-
 .login__input-options {
     display: flex;
     justify-content: space-between;
