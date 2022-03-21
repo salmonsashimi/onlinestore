@@ -11,8 +11,19 @@ const LoginPage = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
+        const loginInfo = {
+            email,
+            password
+        }
         console.log('email: ', email)
         console.log('password: ', password)
+        fetch('http://localhost:3000/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(loginInfo)
+        }).then(data => data.json())
     }
 
 
