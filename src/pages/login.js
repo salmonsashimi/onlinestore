@@ -9,7 +9,7 @@ const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         const loginInfo = {
             email,
@@ -17,13 +17,15 @@ const LoginPage = () => {
         }
         console.log('email: ', email)
         console.log('password: ', password)
-        fetch('http://localhost:3000/api/login', {
+        const res = await fetch('http://localhost:3000/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(loginInfo)
-        }).then(data => data.json())
+        })
+        const userInfo = await res.json();
+        console.log('userInfo', userInfo)
     }
 
 
