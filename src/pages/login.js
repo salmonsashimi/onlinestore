@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Router from 'next/router';
 import Head from 'next/head';
 import LoginHeader from '../components/loginComponents/LoginHeader';
 import LoginLinks from '../components/loginComponents/LoginLinks';
@@ -24,8 +25,14 @@ const LoginPage = () => {
             },
             body: JSON.stringify(loginInfo)
         })
-        const userInfo = await res.json();
-        console.log('userInfo', userInfo)
+        const userToken = await res.json();
+        console.log('userToken', userToken)
+        sessionStorage.setItem('token', JSON.stringify(userToken))
+        // const tokenString = sessionStorage.getItem('token')
+        // const token = JSON.parse(tokenString)
+        // if (userInfo) {
+        //     Router.push('/')
+        // }
     }
 
 
