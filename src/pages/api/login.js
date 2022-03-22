@@ -26,15 +26,5 @@ export default async function (req, res) {
         } else {
             return res.json('null')
         }
-
-
-
-
-
-
-
-
-
     }
-
 }

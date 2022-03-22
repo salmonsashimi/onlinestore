@@ -16,7 +16,7 @@ class CartProvider extends Component {
             }],
             isCartVisible: false,
             price: 0,
-            token: 'asdf'
+            token: ''
         }
         this.removeItem = this.removeItem.bind(this);
         this.addItem = this.addItem.bind(this);

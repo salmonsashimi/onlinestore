@@ -10,9 +10,6 @@ const LoginPage = () => {
     const context = useContext(CartContext);
     const { token, setToken } = context;
 
-    console.log('currenttoken', token)
-    console.log(setToken)
-
     //redirect user if token exists.
     useEffect(() => {
         if (token) {
@@ -29,24 +26,32 @@ const LoginPage = () => {
             email,
             password
         }
-        console.log('email: ', email)
-        console.log('password: ', password)
-        const res = await fetch('http://localhost:3000/api/login', {
+
+        //fetching login info 
+        fetch('http://localhost:3000/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(loginInfo)
         })
-        const userToken = await res.json();
-        console.log('userToken', userToken)
-        sessionStorage.setItem('token', JSON.stringify(userToken))
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok')
+                }
+                return res.json();
+            })
+            .then(userToken => {
+                sessionStorage.setItem('token', JSON.stringify(userToken))
+                setToken(userToken.token)
+            })
+            .catch(error => {
+                console.error('Error in login fetch', error)
+            })
 
-        await setToken(userToken.token)
         // const tokenString = sessionStorage.getItem('token')
         // const token = JSON.parse(tokenString)
     }
-
 
     return (
         <div className='login'>
@@ -68,7 +73,6 @@ const LoginPage = () => {
                     <button type='submit' className='login__button'>SIGN IN</button>
                     <p className='login__forgotPassword'>FORGOT PASSWORD?</p>
                 </form>
-
             </div>
         </div>)
 }
