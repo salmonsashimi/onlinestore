@@ -15,12 +15,14 @@ class CartProvider extends Component {
                 quantity: 1
             }],
             isCartVisible: false,
-            price: 0
+            price: 0,
+            token: 'asdf'
         }
         this.removeItem = this.removeItem.bind(this);
         this.addItem = this.addItem.bind(this);
         this.hideCart = this.hideCart.bind(this);
         this.showCart = this.showCart.bind(this);
+        this.setToken = this.setToken.bind(this);
     }
 
     calculatePrice() {
@@ -51,10 +53,21 @@ class CartProvider extends Component {
         this.setState({ isCartVisible: false });
     }
 
+    setToken(token) {
+        this.setState({ token })
+    }
 
     render() {
         return (
-            <CartContext.Provider value={{ ...this.state, removeItem: this.removeItem, addItem: this.addItem, showCart: this.showCart, hideCart: this.hideCart }}>
+            <CartContext.Provider
+                value={{
+                    ...this.state,
+                    removeItem: this.removeItem,
+                    addItem: this.addItem,
+                    showCart: this.showCart,
+                    hideCart: this.hideCart,
+                    setToken: this.setToken
+                }}>
                 {this.props.children}
             </CartContext.Provider>
         )
