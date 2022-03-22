@@ -4,9 +4,30 @@ import LoginHeader from '../components/loginComponents/LoginHeader';
 import LoginLinks from '../components/loginComponents/LoginLinks';
 import PasswordInput from '../components/loginComponents/PasswordInput';
 
-
 const RegisterPage = () => {
-    const [password, setPassword] = useState('')
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+
+    const handleRegister = async (e) => {
+        e.preventDefault();
+
+        const registerInfo = {
+            name,
+            email,
+            password
+
+        }
+        const res = await fetch('http://localhost:3000/api/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(registerInfo)
+        })
+        console.log(res)
+    }
 
     return (
         <div className='login'>
@@ -17,20 +38,20 @@ const RegisterPage = () => {
             <div className='login__component'>
                 <LoginLinks page='register' />
 
-                <form className='login__form'>
+                <form className='login__form' onSubmit={handleRegister}>
                     <div className='login__input'>
                         <p className='login__input-header'>EMAIL ADDRESS:</p>
-                        <input type='text' className='login__input-input' />
+                        <input type='text' className='login__input-input' value={email} onChange={(e) => setEmail(e.target.value)} />
                         <p className='login__input-displayText'>We'll send your order confirmation here.</p>
 
                     </div>
                     <div className='login__input'>
                         <p className='login__input-header'>NAME:</p>
-                        <input type='text' className='login__input-input' />
+                        <input type='text' className='login__input-input' value={name} onChange={(e) => setName(e.target.value)} />
                     </div>
                     <div className='login__input'>
                         <p className='login__input-header'>PASSWORD:</p>
-                        <PasswordInput />
+                        <PasswordInput password={password} setPassword={setPassword} />
                         <p className='login__input-displayText'>Must be 10 or more characters.</p>
                     </div>
                     <div className='login__input'>

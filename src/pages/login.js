@@ -45,7 +45,6 @@ const LoginPage = () => {
         await setToken(userToken.token)
         // const tokenString = sessionStorage.getItem('token')
         // const token = JSON.parse(tokenString)
-
     }
 
 
