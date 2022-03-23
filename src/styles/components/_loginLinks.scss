@@ -25,7 +25,7 @@
 }
 
 .loginLinks__active {
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid $blue;
     &:hover {
         background-color: none;
     }
