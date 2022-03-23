@@ -1,10 +1,22 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
+import { CartContext } from '../contexts/CartContext';
 import Head from 'next/head';
+import Router from 'next/router';
 import LoginHeader from '../components/loginComponents/LoginHeader';
 import LoginLinks from '../components/loginComponents/LoginLinks';
 import PasswordInput from '../components/loginComponents/PasswordInput';
 
 const RegisterPage = () => {
+    const context = useContext(CartContext);
+    const { token, setToken } = context;
+
+    //redirect user if token exists.
+    useEffect(() => {
+        if (token) {
+            Router.push('/')
+        }
+    }, [token])
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,16 +29,28 @@ const RegisterPage = () => {
             name,
             email,
             password
-
         }
-        const res = await fetch('http://localhost:3000/api/register', {
+
+        fetch('http://localhost:3000/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(registerInfo)
         })
-        console.log(res)
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok')
+                }
+                return res.json()
+            })
+            .then((userToken) => {
+                sessionStorage.setItem('token', JSON.stringify(userToken))
+                setToken(userToken.token)
+            })
+            .catch(error => {
+                console.error('Error in register fetch', error)
+            })
     }
 
     return (

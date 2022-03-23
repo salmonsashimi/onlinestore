@@ -16,13 +16,12 @@ export default async function (req, res) {
         console.log(userDocument)
 
         const user = await col.findOne({ email })
-        console.log(user)
+
         //check if user exists
         if (user) {
             console.log('email already exists user')
-            return res.json('email already exists')
+            return res.status(404).send({ error: 'Email already exists' })
         }
-
 
         const p = await col.insertOne(userDocument);
         return res.send({ token: 'test123' })
