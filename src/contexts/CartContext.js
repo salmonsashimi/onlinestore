@@ -14,14 +14,11 @@ class CartProvider extends Component {
                 price: 23412.21,
                 quantity: 1
             }],
-            isCartVisible: false,
             price: 0,
             token: ''
         }
         this.removeItem = this.removeItem.bind(this);
         this.addItem = this.addItem.bind(this);
-        this.hideCart = this.hideCart.bind(this);
-        this.showCart = this.showCart.bind(this);
         this.setToken = this.setToken.bind(this);
     }
 
@@ -45,14 +42,6 @@ class CartProvider extends Component {
         this.calculatePrice();
     }
 
-    showCart() {
-        this.setState({ isCartVisible: true });
-    }
-
-    hideCart() {
-        this.setState({ isCartVisible: false });
-    }
-
     setToken(token) {
         this.setState({ token })
     }
@@ -64,8 +53,6 @@ class CartProvider extends Component {
                     ...this.state,
                     removeItem: this.removeItem,
                     addItem: this.addItem,
-                    showCart: this.showCart,
-                    hideCart: this.hideCart,
                     setToken: this.setToken
                 }}>
                 {this.props.children}
