@@ -17,22 +17,12 @@
   min-width: 150px;
   position: absolute;
   right: -20px;
-  visibility: hidden;
   z-index: 1;
+  transition-delay: 0.5s;
 
   p {
     padding: 0 $m-size;
   }
-}
-
-.cartIcon__showDropdown {
-  transition-delay: 0.5s;
-  visibility: visible;
-}
-
-.cartIcon__hideDropdown {
-  transition-delay: 0.5s;
-  visibility: hidden;
 }
 
 .cartIcon__dropdown-header {
@@ -102,4 +92,13 @@
   max-height: 350px;
   overflow: scroll;
   overflow-x: hidden;
+}
+
+.cartIcon__showDropdown {
+  visibility: visible;
+}
+
+.cartIcon__hideDropdown {
+  visibility: hidden;
+  
 }
