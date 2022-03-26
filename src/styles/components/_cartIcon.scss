@@ -18,11 +18,17 @@
   position: absolute;
   right: -20px;
   z-index: 1;
-  transition-delay: 0.5s;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
 
   p {
     padding: 0 $m-size;
   }
+}
+
+.cartIcon__showDropdown {
+  max-height: 100vh;
+  
 }
 
 .cartIcon__dropdown-header {
@@ -38,6 +44,9 @@
     font-weight: 500;
   }
 }
+
+
+
 
 .cartIcon__dropdown-itemNo{
   font-weight: 300;
@@ -92,13 +101,4 @@
   max-height: 350px;
   overflow: scroll;
   overflow-x: hidden;
-}
-
-.cartIcon__showDropdown {
-  visibility: visible;
-}
-
-.cartIcon__hideDropdown {
-  visibility: hidden;
-  
 }

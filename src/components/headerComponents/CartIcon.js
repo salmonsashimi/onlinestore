@@ -25,7 +25,7 @@ const CartIcon = () => {
             </Link>
 
             <div className={`
-            cartIcon__dropdown ${showCart ? 'cartIcon__shopDropdown' : 'cartIcon__hideDropdown'}`}>
+            cartIcon__dropdown ${showCart && 'cartIcon__showDropdown'}`}>
                 <h3 className='cartIcon__dropdown-header'>My Cart, <span className='cartItem__dropdown-itemNo'>{cartItems.length} item(s)</span></h3>
                 <div className='cartIcon__cartDropdownItems'>
                     {cartItems.length !== 0 ?
