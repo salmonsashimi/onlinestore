@@ -12,27 +12,24 @@
 
 .cartIcon__dropdown {
   background-color: white;
-  border: 1px solid $silver;
   color: black;
   min-width: 150px;
   position: absolute;
-  right: -20px;
-  visibility: hidden;
+  right: 0px;
   z-index: 1;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
 
   p {
     padding: 0 $m-size;
   }
 }
 
-.cartIcon__showDropdown {
-  transition-delay: 0.5s;
-  visibility: visible;
-}
 
-.cartIcon__hideDropdown {
-  transition-delay: 0.5s;
-  visibility: hidden;
+.cartIcon__showDropdown {
+  max-height: 100vh;
+  
 }
 
 .cartIcon__dropdown-header {
@@ -43,11 +40,13 @@
   margin: 0;
   padding: $m-size;
   width: 300px;
-
   span {
     font-weight: 500;
   }
 }
+
+
+
 
 .cartIcon__dropdown-itemNo{
   font-weight: 300;
@@ -103,3 +102,4 @@
   overflow: scroll;
   overflow-x: hidden;
 }
+
