@@ -1,8 +1,12 @@
 import Layout from '../components/Layout';
 
 const UserPage = () => (
-    <div>
-        user page
+    <div className='user container'>
+        <div className='user__menu'>
+
+
+        </div>
+        <div className='user__content'></div>
     </div>
 )
 
