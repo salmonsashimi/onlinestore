@@ -1,6 +1,7 @@
-// .user {
-//     margin-top: $standard-margin;
-// }
+.user {
+    margin-top: $standard-margin;
+    margin-bottom: $standard-margin;
+}
 
 .user__header {
     font-size: $xl-size;
@@ -10,4 +11,23 @@
 .user__main {
     display: flex;
     justify-content: space-between;
+}
+
+.user__menu {
+    min-width: 30%;
+    border: 1px solid black;
+    border-bottom: none;
+    
+}
+
+.user__menu-header {
+    background-color: $silver;
+    font-size: $l-size;
+    font-weight: 300;
+    padding: $m-size;
+    margin: 0;
+    span {
+        display: block;
+        font-weight: 700;
+    }
 }

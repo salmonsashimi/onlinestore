@@ -1,7 +1,7 @@
 const UserCategory = ({ name }) => (
-    <div>
+    <button className='userCategory'>
         {name}
-    </div>
+    </button>
 )
 
 export default UserCategory;
