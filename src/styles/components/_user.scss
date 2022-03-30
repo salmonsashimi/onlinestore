@@ -1,3 +1,13 @@
-.user {
-    margin: auto;
+// .user {
+//     margin-top: $standard-margin;
+// }
+
+.user__header {
+    font-size: $xl-size;
+    text-align: center;
+}
+
+.user__main {
+    display: flex;
+    justify-content: space-between;
 }

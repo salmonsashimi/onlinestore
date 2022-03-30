@@ -1,12 +1,17 @@
 import Layout from '../components/Layout';
+import UserCategory from '../components/userComponents/UserCategory';
 
 const UserPage = () => (
     <div className='user container'>
-        <div className='user__menu'>
-
-
+        <h1 className='user__header'>YOUR ACCOUNT</h1>
+        <div className='user__main'>
+            <div className='user__menu'>
+                <UserCategory name='Account Overview' />
+            </div>
+            <div className='user__content'>
+                hi
         </div>
-        <div className='user__content'></div>
+        </div>
     </div>
 )
 
