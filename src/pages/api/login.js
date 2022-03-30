@@ -16,7 +16,7 @@ export default async function (req, res) {
         //check if user exists
         if (!user) {
             console.log('null user')
-            return res.status(500).json({ error: 'User not found' })
+            return res.status(200).json({ error: 'User not found' })
         }
 
         //verify user password

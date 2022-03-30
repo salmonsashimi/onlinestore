@@ -18,7 +18,8 @@ const LoginPage = () => {
     }, [token])
 
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('')
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -35,19 +36,27 @@ const LoginPage = () => {
             },
             body: JSON.stringify(loginInfo)
         })
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error('Network response was not ok')
+            .then(res =>
+                res.json()
+            )
+            .then(data => {
+                console.log(data.error)
+                if (data.error) {
+                    console.log('user not found')
+                    // if (!res.ok) {
+                    //     throw new Error('Network response was not ok')
+                    // }
+                } else {
+
+                    sessionStorage.setItem('token', JSON.stringify(data))
+                    setToken(data.token)
                 }
-                return res.json();
-            })
-            .then(userToken => {
-                sessionStorage.setItem('token', JSON.stringify(userToken))
-                setToken(userToken.token)
+
             })
             .catch(error => {
                 console.error('Error in login fetch', error)
             })
+
 
         // const tokenString = sessionStorage.getItem('token')
         // const token = JSON.parse(tokenString)
