@@ -40,9 +40,10 @@ const LoginPage = () => {
                 res.json()
             )
             .then(data => {
-                console.log(data.error)
+
                 if (data.error) {
-                    console.log('user not found')
+                    console.log(data.error)
+                    setError(data.error)
                     // if (!res.ok) {
                     //     throw new Error('Network response was not ok')
                     // }
@@ -71,6 +72,7 @@ const LoginPage = () => {
             <div className='login__component'>
                 <LoginLinks page='login' />
                 <form className='login__form' onSubmit={handleLogin}>
+                    {error && <p>{error}</p>}
                     <div className='login__input'>
                         <p className='login__input-header'>EMAIL ADDRESS:</p>
                         <input name='email' type='text' className='login__input-input' value={email} onChange={(e) => setEmail(e.target.value)} />
