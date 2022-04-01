@@ -70,6 +70,23 @@
     margin: auto;
 }
 
+.login__form-error{
+    background-color: $light-red;
+    padding: $m-size; 
+    margin: $s-size 0;
+    text-align: left;
+    font-size: $m-size;
+    display: flex;
+    align-items: center;
+}
+
+.login__form-errorIcon {
+    padding-right: $s-size;
+}
+
+.login__form-errorText {
+    margin: 0;
+}
 
 .login__header {
     padding: 40px 0;

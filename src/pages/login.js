@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from 'react';
 import Router from 'next/router';
 import { CartContext } from '../contexts/CartContext';
+import { GrCircleAlert } from 'react-icons/gr';
 import Head from 'next/head';
 import LoginHeader from '../components/loginComponents/LoginHeader';
 import LoginLinks from '../components/loginComponents/LoginLinks';
@@ -72,7 +73,8 @@ const LoginPage = () => {
             <div className='login__component'>
                 <LoginLinks page='login' />
                 <form className='login__form' onSubmit={handleLogin}>
-                    {error && <p>{error}</p>}
+                    {error && <div className='login__form-error'><GrCircleAlert className='login__form-errorIcon' /><p className='login__form-errorText'>{error}</p></div>}
+
                     <div className='login__input'>
                         <p className='login__input-header'>EMAIL ADDRESS:</p>
                         <input name='email' type='text' className='login__input-input' value={email} onChange={(e) => setEmail(e.target.value)} />
