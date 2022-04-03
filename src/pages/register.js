@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import { CartContext } from '../contexts/CartContext';
+import { GrCircleAlert } from 'react-icons/gr';
 import Head from 'next/head';
 import Router from 'next/router';
 import LoginHeader from '../components/loginComponents/LoginHeader';
