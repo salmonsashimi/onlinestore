@@ -20,6 +20,7 @@ const RegisterPage = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
 
     const handleRegister = async (e) => {
@@ -38,15 +39,17 @@ const RegisterPage = () => {
             },
             body: JSON.stringify(registerInfo)
         })
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error('Network response was not ok')
-                }
+            .then(res => {
                 return res.json()
             })
-            .then((userToken) => {
-                sessionStorage.setItem('token', JSON.stringify(userToken))
-                setToken(userToken.token)
+            .then(data => {
+
+                if (data.error) {
+                    setError(data.error)
+                } else {
+                    sessionStorage.setItem('token', JSON.stringify(userToken))
+                    setToken(userToken.token)
+                }
             })
             .catch(error => {
                 console.error('Error in register fetch', error)
@@ -63,6 +66,8 @@ const RegisterPage = () => {
                 <LoginLinks page='register' />
 
                 <form className='login__form' onSubmit={handleRegister}>
+                    {error && <div className='login__form-error'><GrCircleAlert className='login__form-errorIcon' /><p className='login__form-errorText'>{error}</p></div>}
+
                     <div className='login__input'>
                         <p className='login__input-header'>EMAIL ADDRESS:</p>
                         <input type='text' className='login__input-input' value={email} onChange={(e) => setEmail(e.target.value)} />

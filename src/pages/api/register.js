@@ -19,8 +19,7 @@ export default async function (req, res) {
 
         //check if user exists
         if (user) {
-            console.log('email already exists user')
-            return res.status(404).send({ error: 'Email already exists' })
+            return res.status(404).json({ error: 'Email has already been registered with NAVY. Please use another email.' })
         }
 
         const p = await col.insertOne(userDocument);
