@@ -31,3 +31,19 @@
         font-weight: 700;
     }
 }
+
+.user__category {
+    display:block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border:none;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    padding: $s-size;
+
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
