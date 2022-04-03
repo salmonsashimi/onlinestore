@@ -14,14 +14,14 @@ export default async function (req, res) {
 
         //check if user exists
         if (!user) {
-            return res.status(500).json({ error: 'User does not exist.' })
+            return res.status(404).json({ error: 'User does not exist.' })
         }
 
         //verify user password
         if (user.password === password) {
             return res.send({ token: 'test123' })
         } else {
-            return res.status(500).json({ error: 'Incorrect password, please try again.' })
+            return res.status(404).json({ error: 'Incorrect password, please try again.' })
         }
     }
 }
