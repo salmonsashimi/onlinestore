@@ -8,6 +8,8 @@ const UserPage = () => {
     const [currentPage, setCurrentPage] = useState('default')
 
     const links = ['Account Overview', 'My Orders', 'My Details', 'Payment Methods', 'Contact Preferences']
+
+    const item = { name: 'account overview', page: <AccountOverview /> }
     return (
         <div className='user container'>
             <h1 className='user__header'>YOUR ACCOUNT</h1>
@@ -16,7 +18,7 @@ const UserPage = () => {
                     <h3 className='user__menu-header'>Hi, <span>name</span></h3>
                     {links.map(link => <button className='user__category' onClick={() => setCurrentPage(link)}><FiUser /> {link} </button>)}
 
-
+                    <button className='user__category' onClick={() => setCurrentPage(item.page)}>{item.name} </button>
                 </div>
                 <div className='user__content'>
                     {currentPage}
