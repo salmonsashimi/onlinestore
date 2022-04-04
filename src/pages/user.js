@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import { FiUser } from 'react-icons/fi';
 
 const UserPage = () => {
     const links = ['Account Overview', 'My Orders', 'My Details', 'Payment Methods', 'Contact Preferences']
@@ -8,7 +9,7 @@ const UserPage = () => {
             <div className='user__main'>
                 <div className='user__menu'>
                     <h3 className='user__menu-header'>Hi, <span>name</span></h3>
-                    <button className='user__category'>Account Overview</button>
+                    <button className='user__category'><FiUser />  Account Overview</button>
 
                 </div>
                 <div className='user__content'>
