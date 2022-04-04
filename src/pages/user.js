@@ -1,7 +1,11 @@
-import Layout from '../components/Layout';
+import { useState } from 'react';
 import { FiUser } from 'react-icons/fi';
+import Layout from '../components/Layout';
+
 
 const UserPage = () => {
+    const [currentPage, setCurrentPage] = useState('default')
+
     const links = ['Account Overview', 'My Orders', 'My Details', 'Payment Methods', 'Contact Preferences']
     return (
         <div className='user container'>
@@ -9,12 +13,13 @@ const UserPage = () => {
             <div className='user__main'>
                 <div className='user__menu'>
                     <h3 className='user__menu-header'>Hi, <span>name</span></h3>
-                    <button className='user__category'><FiUser />  Account Overview</button>
+                    {links.map(link => <button className='user__category' onClick={() => setCurrentPage(link)}><FiUser /> {link}</button>)}
+
 
                 </div>
                 <div className='user__content'>
-                    hi
-        </div>
+                    {currentPage}
+                </div>
             </div>
         </div >
     )
