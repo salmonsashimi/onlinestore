@@ -7,18 +7,23 @@ import AccountOverview from '../components/userComponents/AccountOverview';
 const UserPage = () => {
     const [currentPage, setCurrentPage] = useState('default')
 
-    const links = ['Account Overview', 'My Orders', 'My Details', 'Payment Methods', 'Contact Preferences']
+    // const links = ['Account Overview', 'My Orders', 'My Details', 'Payment Methods', 'Contact Preferences']
 
-    const item = { name: 'account overview', page: <AccountOverview /> }
+    const links = [
+        {
+            name: 'Account Overview',
+            page: <AccountOverview />,
+            icon: <FiUser />
+        }
+    ]
     return (
         <div className='user container'>
             <h1 className='user__header'>YOUR ACCOUNT</h1>
             <div className='user__main'>
                 <div className='user__menu'>
                     <h3 className='user__menu-header'>Hi, <span>name</span></h3>
-                    {links.map(link => <button className='user__category' onClick={() => setCurrentPage(link)}><FiUser /> {link} </button>)}
+                    {links.map(link => <button className='user__category' onClick={() => setCurrentPage(link.page)}>{link.icon} {link.name} </button>)}
 
-                    <button className='user__category' onClick={() => setCurrentPage(item.page)}>{item.name} </button>
                 </div>
                 <div className='user__content'>
                     {currentPage}
