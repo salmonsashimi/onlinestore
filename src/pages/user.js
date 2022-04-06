@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { FiUser } from 'react-icons/fi';
+import { GrDeliver } from 'react-icons/gr';
 import Layout from '../components/Layout';
 import AccountOverview from '../components/userComponents/AccountOverview';
+import MyOrders from '../components/userComponents/MyOrders';
 
 
 const UserPage = () => {
@@ -14,7 +16,13 @@ const UserPage = () => {
             name: 'Account Overview',
             page: <AccountOverview />,
             icon: <FiUser />
-        }
+        },
+        {
+            name: 'My Orders',
+            page: <MyOrders />,
+            icon: <GrDeliver />
+        },
+
     ]
     return (
         <div className='user container'>
