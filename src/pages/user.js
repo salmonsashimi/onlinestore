@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { FiUser } from 'react-icons/fi';
+import { FiUser, FiCreditCard } from 'react-icons/fi';
 import { GrDeliver } from 'react-icons/gr';
 import Layout from '../components/Layout';
 import AccountOverview from '../components/userComponents/AccountOverview';
 import MyOrders from '../components/userComponents/MyOrders';
+import PaymentMethods from '../components/userComponents/PaymentMethods';
 
 
 const UserPage = () => {
@@ -22,6 +23,11 @@ const UserPage = () => {
             page: <MyOrders />,
             icon: <GrDeliver />
         },
+        {
+            name: 'Payment Methods',
+            page: <PaymentMethods />,
+            icon: <FiCreditCard />
+        }
 
     ]
     return (
