@@ -7,7 +7,7 @@ import AccountOverview from '../components/userComponents/AccountOverview';
 const UserPage = () => {
     const [currentPage, setCurrentPage] = useState('default')
 
-    // const links = ['Account Overview', 'My Orders', 'My Details', 'Payment Methods', 'Contact Preferences']
+    // const links = ['Account Overview', 'My Orders', 'Payment Methods', 'Contact Preferences']
 
     const links = [
         {
