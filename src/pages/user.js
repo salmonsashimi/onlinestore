@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import { FiUser, FiCreditCard } from 'react-icons/fi';
-import { GrDeliver } from 'react-icons/gr';
+import { GrDeliver, GrChat } from 'react-icons/gr';
 import Layout from '../components/Layout';
 import AccountOverview from '../components/userComponents/AccountOverview';
 import MyOrders from '../components/userComponents/MyOrders';
 import PaymentMethods from '../components/userComponents/PaymentMethods';
+import ContactPreferences from '../components/userComponents/ContactPreferences';
 
 
 const UserPage = () => {
     const [currentPage, setCurrentPage] = useState('default')
-
-    // const links = ['Account Overview', 'My Orders', 'Payment Methods', 'Contact Preferences']
 
     const links = [
         {
@@ -27,6 +26,11 @@ const UserPage = () => {
             name: 'Payment Methods',
             page: <PaymentMethods />,
             icon: <FiCreditCard />
+        },
+        {
+            name: 'Contact Preferences',
+            page: <ContactPreferences />,
+            icon: <GrChat />
         }
 
     ]
