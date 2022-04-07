@@ -1,10 +1,8 @@
 const AccountOverview = () => (
-    <div>
-        This is account overview
-        name
-        email
-        change password
-        address
+    <div className='accountOverview'>
+        <p>name</p>
+        <p>email</p>
+        <p>address</p>
     </div>
 )
 
