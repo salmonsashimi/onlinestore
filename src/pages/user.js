@@ -9,7 +9,9 @@ import ContactPreferences from '../components/userComponents/ContactPreferences'
 
 
 const UserPage = () => {
-    const [currentPage, setCurrentPage] = useState('default')
+    const [currentPage, setCurrentPage] = useState('default');
+    const [currentIcon, setCurrentIcon] = useState(null);
+    const [currentTitle, setCurrentTitle] = useState(null);
 
     const links = [
         {
@@ -32,18 +34,28 @@ const UserPage = () => {
             page: <ContactPreferences />,
             icon: <GrChat />
         }
-
     ]
+
+    const onMenuClick = (link) => {
+        setCurrentPage(link.page)
+        setCurrentIcon(link.icon)
+        setCurrentTitle(link.name)
+    }
+
     return (
         <div className='user container'>
             <h1 className='user__header'>YOUR ACCOUNT</h1>
             <div className='user__main'>
                 <div className='user__menu'>
                     <h3 className='user__menu-header'>Hi, <span>name</span></h3>
-                    {links.map(link => <button className='user__category' onClick={() => setCurrentPage(link.page)}>{link.icon} {link.name} </button>)}
+                    {links.map(link => <button className='user__category' onClick={() => onMenuClick(link)}>{link.icon} {link.name} </button>)}
 
                 </div>
                 <div className='user__content'>
+                    <div className='user__content-header'>
+                        <h1 className='user__content-header-icon'>{currentIcon}</h1>
+                        <h1 className='user__content-header-text'>{currentTitle}</h1>
+                    </div>
                     {currentPage}
                 </div>
             </div>

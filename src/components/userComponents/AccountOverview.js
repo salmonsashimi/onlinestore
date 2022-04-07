@@ -4,6 +4,7 @@ const AccountOverview = () => (
         name
         email
         change password
+        address
     </div>
 )
 

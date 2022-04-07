@@ -17,6 +17,7 @@
     min-width: 30%;
     border: 1px solid black;
     border-bottom: none;
+    margin-right: $xl-size;
     
 }
 
@@ -46,4 +47,24 @@
     &:hover {
         text-decoration: underline;
     }
+}
+
+.user__content {
+    flex-grow: 1;
+}
+
+.user__content-header {
+    background-color: $silver;
+    padding: $xl-size;
+
+}
+
+.user__content-header-icon {
+    margin: 0;
+    margin-bottom: $m-size;
+}
+
+.user__content-header-text {
+    font-size: $xl-size;
+    margin: 0;
 }
