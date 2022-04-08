@@ -26,7 +26,6 @@
     font-size: $l-size;
     font-weight: 300;
     padding: $m-size;
-    margin: 0;
     span {
         display: block;
         font-weight: 700;
@@ -56,7 +55,7 @@
 .user__content-header {
     background-color: $silver;
     padding: $xl-size;
-
+    margin-bottom: $l-size;
 }
 
 .user__content-header-icon {
