@@ -1,0 +1,28 @@
+.myOrders__order {
+    background-color: $silver;
+    display: flex;
+    justify-content: space-between;
+    padding: $xl-size;
+}
+
+.myOrders__order-header {
+    margin: 0 0 $s-size 0;
+}
+
+.myOrders__order-buttons {
+    margin: auto 0;
+}
+
+.myOrders__order-button {
+    background-color: white;
+    border: 2px solid $grey;
+    font-weight: 700;
+    margin: $s-size;
+    padding: $s-size;
+    width: 100%;
+    
+    &:hover {
+        cursor: pointer;
+        background-color: $light-grey;
+    }
+}
