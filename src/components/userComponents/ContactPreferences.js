@@ -6,8 +6,8 @@ const ContactPreferences = () => (
         <h3 className='contactPreferences__header'>Content Types</h3>
         <p>Select the options below to update your contact preferences.</p>
         <div className='contactPreferences__option'>
+            <AiOutlineTag className='contactPreferences__icon' />
             <div className='contactPreferences__option-text'>
-                <AiOutlineTag />
                 <h3>Discounts and Sales</h3>
                 <p>Be first in line to know the latest offers!</p>
             </div>
@@ -21,8 +21,9 @@ const ContactPreferences = () => (
             </div>
         </div>
         <div className='contactPreferences__option'>
+            <BsMegaphone className='contactPreferences__icon' />
             <div className='contactPreferences__option-text'>
-                <BsMegaphone />
+
                 <h3>New Stuff</h3>
                 <p>Get up to date with the latest trends and newest drops.</p>
             </div>
@@ -36,8 +37,8 @@ const ContactPreferences = () => (
             </div>
         </div>
         <div className='contactPreferences__option'>
+            <AiOutlineStar className='contactPreferences__icon' />
             <div className='contactPreferences__option-text'>
-                <AiOutlineStar />
                 <h3>Your Exclusives</h3>
                 <p>Get an exclusive catalog unique to your fashion sense.</p>
             </div>

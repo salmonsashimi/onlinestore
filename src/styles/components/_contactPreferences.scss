@@ -6,17 +6,23 @@
 .contactPreferences__option{
     border-top: 1px solid white;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     padding: $m-size 0;
 }
 
+.contactPreferences__option-text {
+    flex-grow: 1;
+}
+
 .contactPreferences__option-checkboxes {
-    // display: flex;
-    // align-items: center;
     margin: auto 0;
 }
 
 .contactPreferneces__option-checkbox {
     display: block;
     margin: $s-size;
+}
+.contactPreferences__icon{
+    font-size: $xl-size;
+    margin: auto $l-size;
 }
