@@ -17,22 +17,22 @@ const UserPage = () => {
         {
             name: 'Account Overview',
             page: <AccountOverview />,
-            icon: <FiUser />
+            icon: <FiUser className='user__category-icon' />
         },
         {
             name: 'My Orders',
             page: <MyOrders />,
-            icon: <GrDeliver />
+            icon: <GrDeliver className='user__category-icon' />
         },
         {
             name: 'Payment Methods',
             page: <PaymentMethods />,
-            icon: <FiCreditCard />
+            icon: <FiCreditCard className='user__category-icon' />
         },
         {
             name: 'Contact Preferences',
             page: <ContactPreferences />,
-            icon: <GrChat />
+            icon: <GrChat className='user__category-icon' />
         }
     ]
 
@@ -48,7 +48,7 @@ const UserPage = () => {
             <div className='user__main'>
                 <div className='user__menu'>
                     <h3 className='user__menu-header'>Hi, <span>name</span></h3>
-                    {links.map(link => <button className='user__category' onClick={() => onMenuClick(link)}>{link.icon} {link.name} </button>)}
+                    {links.map(link => <button className='user__category' onClick={() => onMenuClick(link)}>{link.icon}{link.name} </button>)}
 
                 </div>
                 <div className='user__content'>
