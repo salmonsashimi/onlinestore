@@ -48,7 +48,7 @@ const UserPage = () => {
             <div className='user__main'>
                 <div className='user__menu'>
                     <h3 className='user__menu-header'>Hi, <span>name</span></h3>
-                    {links.map(link => <button className='user__category' onClick={() => onMenuClick(link)}>{link.icon}{link.name} </button>)}
+                    {links.map(link => <button className='user__category' onClick={() => onMenuClick(link)}>{link.icon}{link.name}</button>)}
 
                 </div>
                 <div className='user__content'>
