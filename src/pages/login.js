@@ -50,7 +50,7 @@ const LoginPage = () => {
                     // }
                 } else {
 
-                    sessionStorage.setItem('token', JSON.stringify(data))
+                    sessionStorage.setItem('token', JSON.stringify(data.token))
                     setToken(data.token)
                 }
 

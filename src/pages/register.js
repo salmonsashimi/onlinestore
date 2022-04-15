@@ -48,8 +48,9 @@ const RegisterPage = () => {
                 if (data.error) {
                     setError(data.error)
                 } else {
-                    sessionStorage.setItem('token', JSON.stringify(userToken))
-                    setToken(userToken.token)
+                    console.log('token', data.token)
+                    sessionStorage.setItem('token', JSON.stringify(data.token))
+                    setToken(data.token)
                 }
             })
             .catch(error => {
