@@ -36,7 +36,6 @@ const RegisterPage = () => {
         e.preventDefault();
 
 
-
         const registerInfo = {
             name,
             email,
@@ -75,7 +74,6 @@ const RegisterPage = () => {
             <LoginHeader />
             <div className='login__component'>
                 <LoginLinks page='register' />
-
                 <form className='login__form' onSubmit={handleRegister}>
                     {error && <div className='login__form-error'><GrCircleAlert className='login__form-errorIcon' /><p className='login__form-errorText'>{error}</p></div>}
 
@@ -109,10 +107,7 @@ const RegisterPage = () => {
                             <input type='checkbox' id='exclusives' name='exclusives' className='login__input-options-checkbox' onChange={e => setExclusives(e.target.checked)} checked={exclusives} />
                         </div>
                     </div>
-
                     <button className='login__button'>JOIN NAVY</button>
-
-
                 </form>
             </div>
         </div >
