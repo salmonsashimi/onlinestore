@@ -30,37 +30,25 @@ const LoginPage = () => {
         }
 
         //fetching login info 
-        fetch('http://localhost:3000/api/login', {
+        const response = await fetch('http://localhost:3000/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(loginInfo)
         })
-            .then(res =>
-                res.json()
-            )
-            .then(data => {
 
-                if (data.error) {
-                    console.log(data.error)
-                    setError(data.error)
-                    // if (!res.ok) {
-                    //     throw new Error('Network response was not ok')
-                    // }
-                } else {
+        const data = await response.json();
 
-                    sessionStorage.setItem('token', JSON.stringify(data.token))
-                    setToken(data.token)
-                }
+        if (data.error) {
+            console.log(data.error)
+            setError(data.error)
+        } else {
+            sessionStorage.setItem('token', JSON.stringify(data.token))
+            setToken(data.token)
+        }
 
-            })
-            .catch(error => {
-                console.error('Error in login fetch', error)
-            })
-
-
-        // const tokenString = sessionStorage.getItem('token')
+        // // const tokenString = sessionStorage.getItem('token')
         // const token = JSON.parse(tokenString)
     }
 

@@ -33,29 +33,23 @@ const RegisterPage = () => {
             password
         }
 
-        fetch('http://localhost:3000/api/register', {
+        const response = await fetch('http://localhost:3000/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(registerInfo)
         })
-            .then(res => {
-                return res.json()
-            })
-            .then(data => {
+        const data = await response.json()
+        console.log(data)
 
-                if (data.error) {
-                    setError(data.error)
-                } else {
-                    console.log('token', data.token)
-                    sessionStorage.setItem('token', JSON.stringify(data.token))
-                    setToken(data.token)
-                }
-            })
-            .catch(error => {
-                console.error('Error in register fetch', error)
-            })
+        if (data.error) {
+            setError(data.error)
+        } else {
+            console.log('token', data.token)
+            sessionStorage.setItem('token', JSON.stringify(data.token))
+            setToken(data.token)
+        }
     }
 
     return (
