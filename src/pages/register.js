@@ -18,19 +18,34 @@ const RegisterPage = () => {
         }
     }, [token])
 
+
+    const [input, setInput] = useState('');
+
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [discount, setDiscount] = useState(false);
+    const [newStuff, setNewStuff] = useState(false);
+    const [exclusives, setExclusives] = useState(false);
+
     const [error, setError] = useState('');
 
 
     const handleRegister = async (e) => {
         e.preventDefault();
 
+
+
         const registerInfo = {
             name,
             email,
-            password
+            password,
+            contactPref: {
+                discount,
+                newStuff,
+                exclusives
+            }
         }
 
         const response = await fetch('http://localhost:3000/api/register', {
@@ -66,7 +81,7 @@ const RegisterPage = () => {
 
                     <div className='login__input'>
                         <p className='login__input-header'>EMAIL ADDRESS:</p>
-                        <input type='text' className='login__input-input' value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input type='text' className='login__input-input' value={email} onChange={e => setEmail(e.target.value)} />
                         <p className='login__input-displayText'>We'll send your order confirmation here.</p>
 
                     </div>
@@ -83,15 +98,15 @@ const RegisterPage = () => {
                         <p className='login__input-header'>CONTACT PREFERENCES:</p>
                         <div className='login__input-options'>
                             <label for='discounts' className='login__input-options-header'>DISCOUNTS AND SALES</label>
-                            <input type='checkbox' id='discounts' name='discounts' className='login__input-options-checkbox' />
+                            <input type='checkbox' id='discounts' name='discounts' className='login__input-options-checkbox' onChange={e => setDiscount(e.target.checked)} checked={discount} />
                         </div>
                         <div className='login__input-options'>
                             <label for='newStuff' className='login__input-options-header'>NEW STUFF</label>
-                            <input type='checkbox' id='newStuff' name='newStuff' className='login__input-options-checkbox' />
+                            <input type='checkbox' id='newStuff' name='newStuff' className='login__input-options-checkbox' onChange={e => setNewStuff(e.target.checked)} checked={newStuff} />
                         </div>
                         <div className='login__input-options'>
                             <label for='exclusives' className='login__input-options-header'>YOUR EXCLUSIVES</label>
-                            <input type='checkbox' id='exclusives' name='exclusives' className='login__input-options-checkbox' />
+                            <input type='checkbox' id='exclusives' name='exclusives' className='login__input-options-checkbox' onChange={e => setExclusives(e.target.checked)} checked={exclusives} />
                         </div>
                     </div>
 

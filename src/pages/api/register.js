@@ -6,12 +6,13 @@ export default async function (req, res) {
     const col = db.collection('users');
     if (req.method === 'POST') {
 
-        const { name, email, password } = req.body
+        const { name, email, password, contactPref } = req.body
 
         let userDocument = {
             name,
             email,
-            password
+            password,
+            contactPref
         }
         console.log(userDocument)
 
