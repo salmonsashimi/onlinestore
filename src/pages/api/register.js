@@ -23,7 +23,7 @@ export default async function (req, res) {
             return res.status(404).json({ error: 'Email has already been registered with NAVY. Please use another email.' })
         }
 
-        const p = await col.insertOne(userDocument);
-        return res.send({ token: 'test123' })
+        const newUser = await col.insertOne(userDocument);
+        return res.send({ token: newUser.insertedId })
     }
 }

@@ -19,7 +19,7 @@ export default async function (req, res) {
 
         //verify user password
         if (user.password === password) {
-            return res.send({ token: 'test123' })
+            return res.send({ token: user._id })
         } else {
             return res.status(404).json({ error: 'Incorrect password, please try again.' })
         }
