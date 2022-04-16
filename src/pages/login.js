@@ -13,6 +13,9 @@ const LoginPage = () => {
 
     //redirect user if token exists.
     useEffect(() => {
+        const tokenString = sessionStorage.getItem('token');
+        setToken(JSON.parse(tokenString));
+
         if (token) {
             Router.push('/')
         }
@@ -48,8 +51,7 @@ const LoginPage = () => {
             setToken(data.token)
         }
 
-        // // const tokenString = sessionStorage.getItem('token')
-        // const token = JSON.parse(tokenString)
+
     }
 
     return (
