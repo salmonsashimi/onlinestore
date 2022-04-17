@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { FiUser, FiCreditCard } from 'react-icons/fi';
 import { GrDeliver, GrChat } from 'react-icons/gr';
+import { CartContext } from '../contexts/CartContext';
 import Layout from '../components/Layout';
 import AccountOverview from '../components/userComponents/AccountOverview';
 import MyOrders from '../components/userComponents/MyOrders';
@@ -9,9 +10,24 @@ import ContactPreferences from '../components/userComponents/ContactPreferences'
 
 
 const UserPage = () => {
+    const context = useContext(CartContext);
+    const { token, setToken } = context;
+
+    useEffect(() => {
+        const tokenString = sessionStorage.getItem('token');
+        setToken(JSON.parse(tokenString));
+
+    }, [])
+
     const [currentPage, setCurrentPage] = useState('default');
     const [currentIcon, setCurrentIcon] = useState(null);
     const [currentTitle, setCurrentTitle] = useState(null);
+
+    const onMenuClick = (link) => {
+        setCurrentPage(link.page)
+        setCurrentIcon(link.icon)
+        setCurrentTitle(link.name)
+    }
 
     const links = [
         {
@@ -36,11 +52,6 @@ const UserPage = () => {
         }
     ]
 
-    const onMenuClick = (link) => {
-        setCurrentPage(link.page)
-        setCurrentIcon(link.icon)
-        setCurrentTitle(link.name)
-    }
 
     return (
         <div className='user container'>
