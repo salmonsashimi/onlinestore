@@ -13,9 +13,6 @@ const RegisterPage = () => {
 
     //redirect user if token exists.
     useEffect(() => {
-        const tokenString = sessionStorage.getItem('token');
-        setToken(JSON.parse(tokenString));
-
         if (token) {
             Router.push('/')
         }

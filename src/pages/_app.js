@@ -1,6 +1,7 @@
-// import App from 'next/app'
-import Layout from '../components/Layout';
+import { useContext, useEffect } from 'react';
 import { CartProvider } from '../contexts/CartContext';
+import { CartContext } from '../contexts/CartContext';
+
 import 'normalize.css';
 import '../styles/styles.scss';
 
@@ -9,13 +10,25 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <CartProvider>
-            {getLayout(<Component {...pageProps} />)
-
+            <TokenHandler />
+            {
+                getLayout(<Component {...pageProps} />)
             }
-
         </CartProvider>
     )
 
+}
+
+const TokenHandler = () => {
+
+    const context = useContext(CartContext);
+    const { setToken } = context
+    useEffect(() => {
+        const tokenString = sessionStorage.getItem('token');
+        setToken(JSON.parse(tokenString));
+    }, [])
+
+    return null;
 }
 
 // Only uncomment this method if you have blocking data requirements for

@@ -19,6 +19,8 @@ const UserPage = () => {
 
     }, [])
 
+    //see if can extract the token function in every page, and extract the context.
+
     const [currentPage, setCurrentPage] = useState('default');
     const [currentIcon, setCurrentIcon] = useState(null);
     const [currentTitle, setCurrentTitle] = useState(null);
