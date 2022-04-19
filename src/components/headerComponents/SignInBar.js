@@ -23,7 +23,13 @@ const SignInBar = () => {
                             <Link href='/login'><p className='signInBar__link'>LOG IN</p></Link>
                         </>
                         :
-                        <Link href='/user'><p className='signInBar__link'>USER PAGE</p></Link>}
+                        <>
+                            <Link href='/user'><p className='signInBar__link'>USER PAGE</p></Link>
+                            <Link href='/logout'><p className='signInBar__link'>LOG OUT</p></Link>
+                        </>
+
+                    }
+
                 </div>
             </div>
         </div>
