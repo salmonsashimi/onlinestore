@@ -5,7 +5,6 @@ import Link from 'next/link'
 const SignInBar = () => {
     const context = useContext(CartContext);
     const { token } = context;
-    console.log(token)
 
     return (
         <div className='signInBar'>
@@ -18,7 +17,7 @@ const SignInBar = () => {
                 <div className='signInBar__right'>
                     <p className='signInBar__link'>TRACK MY ORDER</p>
 
-                    {token.length === 0 ?
+                    {!token ?
                         <>
                             <Link href='/register'><p className='signInBar__link'>SIGN UP</p></Link>
                             <Link href='/login'><p className='signInBar__link'>LOG IN</p></Link>
