@@ -1,10 +1,17 @@
 import { useContext } from 'react';
 import { CartContext } from '../../contexts/CartContext';
-import Link from 'next/link'
+import Link from 'next/link';
+import Router from 'next/router';
 
 const SignInBar = () => {
     const context = useContext(CartContext);
-    const { token } = context;
+    const { token, setToken } = context;
+
+    const signOutHandler = () => {
+        setToken(null)
+        sessionStorage.removeItem('token')
+        Router.push('/')
+    }
 
     return (
         <div className='signInBar'>
@@ -25,7 +32,7 @@ const SignInBar = () => {
                         :
                         <>
                             <Link href='/user'><p className='signInBar__link'>USER PAGE</p></Link>
-                            <Link href='/logout'><p className='signInBar__link'>LOG OUT</p></Link>
+                            <p className='signInBar__link' onClick={signOutHandler}>LOG OUT</p>
                         </>
 
                     }

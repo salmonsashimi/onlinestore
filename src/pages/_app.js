@@ -25,7 +25,12 @@ const TokenHandler = () => {
     const { setToken } = context
     useEffect(() => {
         const tokenString = sessionStorage.getItem('token');
-        setToken(JSON.parse(tokenString));
+        const token = JSON.parse(tokenString)
+        if (token) {
+            setToken(token)
+        } else {
+            setToken(null)
+        };
     }, [])
 
     return null;
