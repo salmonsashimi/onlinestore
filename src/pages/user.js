@@ -13,18 +13,19 @@ const UserPage = () => {
     const context = useContext(CartContext);
     const { token, setToken } = context;
 
-    const retrieveUserInfo = async (id) => {
-        const userInfo = await (await fetch(`http://localhost:3000/api/user/${id}`)).json()
-        const { name } = userInfo;
-        setUserName(name)
-    }
-
-    //see if can extract the token function in every page, and extract the context.
-
     const [currentPage, setCurrentPage] = useState('default');
     const [currentIcon, setCurrentIcon] = useState(null);
     const [currentTitle, setCurrentTitle] = useState(null);
     const [userName, setUserName] = useState('')
+
+
+    const retrieveUserInfo = async (id) => {
+        const userInfoStr = await fetch(`http://localhost:3000/api/user/${id}`);
+        console.log('done')
+        const userInfo = await userInfoStr.json();
+        const { name } = userInfo;
+        setUserName(name);
+    }
 
     const onMenuClick = (link) => {
         setCurrentPage(link.page)

@@ -1,20 +1,15 @@
-import clientPromise from '../../lib/mongodb';
+import clientPromise from '../../../lib/mongodb';
+import { ObjectId } from 'mongodb';
 
 export default async function (req, res) {
 
     const client = await clientPromise;
     const db = client.db('online-store');
     const col = db.collection("users");
+    const { pid } = req.query;
 
-
-    if (req.method === 'POST') {
-        // Process a POST request
-    } else {
-        // Handle any other HTTP method
-        const user = await col.findOne({ "id": 1 });
-        res.json(user)
-
-    }
+    const user = await col.findOne({ "_id": ObjectId(pid) });
+    res.json(user)
 }
 
 // const getDatabase = async () => {
