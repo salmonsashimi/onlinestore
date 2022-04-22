@@ -16,14 +16,21 @@ const UserPage = () => {
     useEffect(() => {
         const tokenString = sessionStorage.getItem('token');
         setToken(JSON.parse(tokenString));
-
+        retrieveUserInfo()
     }, [])
+
+    const retrieveUserInfo = async () => {
+        const userInfo = await (await fetch('http://localhost:3000/api/user')).json()
+        const { name } = userInfo;
+        setUserName(name)
+    }
 
     //see if can extract the token function in every page, and extract the context.
 
     const [currentPage, setCurrentPage] = useState('default');
     const [currentIcon, setCurrentIcon] = useState(null);
     const [currentTitle, setCurrentTitle] = useState(null);
+    const [userName, setUserName] = useState('')
 
     const onMenuClick = (link) => {
         setCurrentPage(link.page)
@@ -60,7 +67,7 @@ const UserPage = () => {
             <h1 className='user__header'>YOUR ACCOUNT</h1>
             <div className='user__main'>
                 <div className='user__menu'>
-                    <h3 className='user__menu-header'>Hi, <span>name</span></h3>
+                    <h3 className='user__menu-header'>Hi, <span>{userName}</span></h3>
                     {links.map(link => <button className='user__category' onClick={() => onMenuClick(link)}>{link.icon}{link.name}</button>)}
 
                 </div>
