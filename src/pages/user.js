@@ -13,14 +13,8 @@ const UserPage = () => {
     const context = useContext(CartContext);
     const { token, setToken } = context;
 
-    useEffect(() => {
-        const tokenString = sessionStorage.getItem('token');
-        setToken(JSON.parse(tokenString));
-        retrieveUserInfo()
-    }, [])
-
-    const retrieveUserInfo = async () => {
-        const userInfo = await (await fetch('http://localhost:3000/api/user')).json()
+    const retrieveUserInfo = async (id) => {
+        const userInfo = await (await fetch(`http://localhost:3000/api/user/${id}`)).json()
         const { name } = userInfo;
         setUserName(name)
     }
@@ -37,6 +31,13 @@ const UserPage = () => {
         setCurrentIcon(link.icon)
         setCurrentTitle(link.name)
     }
+
+    useEffect(() => {
+        const tokenString = sessionStorage.getItem('token');
+        setToken(JSON.parse(tokenString));
+        retrieveUserInfo(token)
+    }, [])
+
 
     const links = [
         {
