@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
+import Router from 'next/router';
 import { FiUser, FiCreditCard } from 'react-icons/fi';
 import { GrDeliver, GrChat } from 'react-icons/gr';
 import { CartContext } from '../contexts/CartContext';
@@ -8,7 +9,7 @@ import MyOrders from '../components/userComponents/MyOrders';
 import PaymentMethods from '../components/userComponents/PaymentMethods';
 import ContactPreferences from '../components/userComponents/ContactPreferences';
 
-
+//create separate if not logged in page
 const UserPage = () => {
     const context = useContext(CartContext);
     const { token, setToken } = context;
@@ -21,7 +22,6 @@ const UserPage = () => {
 
     const retrieveUserInfo = async (id) => {
         const userInfoStr = await fetch(`http://localhost:3000/api/user/${id}`);
-        console.log('done')
         const userInfo = await userInfoStr.json();
         const { name } = userInfo;
         setUserName(name);
@@ -34,8 +34,9 @@ const UserPage = () => {
     }
 
     useEffect(() => {
-        const tokenString = sessionStorage.getItem('token');
-        setToken(JSON.parse(tokenString));
+        if (!token) {
+            Router.push('/')
+        }
         retrieveUserInfo(token)
     }, [])
 
