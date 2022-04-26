@@ -3,6 +3,7 @@ import Router from 'next/router';
 import { FiUser, FiCreditCard } from 'react-icons/fi';
 import { GrDeliver, GrChat } from 'react-icons/gr';
 import { CartContext } from '../contexts/CartContext';
+import fetchUserInfo from '../lib/fetchUserInfo';
 import Layout from '../components/Layout';
 import AccountOverview from '../components/userComponents/AccountOverview';
 import MyOrders from '../components/userComponents/MyOrders';
@@ -19,14 +20,6 @@ const UserPage = () => {
     const [currentTitle, setCurrentTitle] = useState(null);
     const [userName, setUserName] = useState('')
 
-
-    const retrieveUserInfo = async (id) => {
-        const userInfoStr = await fetch(`http://localhost:3000/api/user/${id}`);
-        const userInfo = await userInfoStr.json();
-        const { name } = userInfo;
-        setUserName(name);
-    }
-
     const onMenuClick = (link) => {
         setCurrentPage(link.page)
         setCurrentIcon(link.icon)
@@ -37,7 +30,13 @@ const UserPage = () => {
         if (!token) {
             Router.push('/')
         }
-        retrieveUserInfo(token)
+        const retrieveUserInfo = async () => {
+            const userInfo = await fetchUserInfo(token);
+            const { name } = userInfo;
+            setUserName(name)
+        }
+
+        retrieveUserInfo();
     }, [])
 
 
