@@ -23,9 +23,9 @@ const AccountOverview = () => {
 
     return (
         <div className='accountOverview'>
-            <p>{name}</p>
-            <p>{email}</p>
-            <p>address</p>
+            <p className='user__content-text'>NAME: <span className='user__content-textSpan'>{name}</span></p>
+            <p className='user__content-text'>EMAIL ADDRESS: <span className='user__content-textSpan'>{email}</span></p>
+            <p className='user__content-text'>ADDRESS: <span className='user__content-textSpan'>address</span></p>
         </div>
     )
 }
