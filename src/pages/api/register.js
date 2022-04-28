@@ -12,7 +12,8 @@ export default async function (req, res) {
             name,
             email,
             password,
-            contactPref
+            contactPref,
+            cart: {}
         }
         console.log(userDocument)
 
