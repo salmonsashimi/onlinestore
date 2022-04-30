@@ -30,8 +30,8 @@ const ItemDescriptionBox = (props) => {
 
         if (!containedInCart) {
             addItem(item);
-            setShowCart()
-            setTimeout(setShowCart, 3500)
+            setShowCart(true)
+            setTimeout(setShowCart, 3000, false)
         }
     }
 
