@@ -15,11 +15,13 @@ class CartProvider extends Component {
                 quantity: 1
             }],
             price: 0,
-            token: ''
+            token: '',
+            showCart: false
         }
         this.removeItem = this.removeItem.bind(this);
         this.addItem = this.addItem.bind(this);
         this.setToken = this.setToken.bind(this);
+        this.setShowCart = this.setShowCart.bind(this);
     }
 
     calculatePrice() {
@@ -44,6 +46,10 @@ class CartProvider extends Component {
 
     setToken(token) {
         this.setState({ token })
+    }
+
+    setShowCart() {
+        this.setState({ showCart: !showCart })
     }
 
     render() {

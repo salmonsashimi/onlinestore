@@ -4,11 +4,11 @@ import { CartContext } from '../../contexts/CartContext';
 const ItemDescriptionBox = (props) => {
 
     const context = useContext(CartContext);
-    const addItem = context.addItem;
     const cart = context.cart;
-
+    const addItem = context.addItem;
     const showCart = context.showCart;
     const hideCart = context.hideCart;
+    console.log(context)
 
 
     const { id, imgUrl, brand, name, price, description } = props.data;
