@@ -6,8 +6,7 @@ const ItemDescriptionBox = (props) => {
     const context = useContext(CartContext);
     const cart = context.cart;
     const addItem = context.addItem;
-    const showCart = context.showCart;
-    const hideCart = context.hideCart;
+    const setShowCart = context.setShowCart;
     console.log(context)
 
 
@@ -31,8 +30,8 @@ const ItemDescriptionBox = (props) => {
 
         if (!containedInCart) {
             addItem(item);
-            showCart()
-            setTimeout(hideCart, 3500)
+            setShowCart()
+            setTimeout(setShowCart, 3500)
         }
     }
 

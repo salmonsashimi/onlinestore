@@ -49,7 +49,7 @@ class CartProvider extends Component {
     }
 
     setShowCart() {
-        this.setState({ showCart: !showCart })
+        this.setState({ showCart: !this.showCart })
     }
 
     render() {
@@ -59,7 +59,8 @@ class CartProvider extends Component {
                     ...this.state,
                     removeItem: this.removeItem,
                     addItem: this.addItem,
-                    setToken: this.setToken
+                    setToken: this.setToken,
+                    setShowCart: this.setShowCart
                 }}>
                 {this.props.children}
             </CartContext.Provider>
