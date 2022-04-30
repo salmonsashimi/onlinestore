@@ -5,11 +5,13 @@ import { CartContext } from '../../contexts/CartContext';
 import CartDropdownItem from './CartDropdownItem';
 
 const CartIcon = () => {
-    const [showCart, setShowCart] = useState(false);
+    // const [showCart, setShowCart] = useState(false);
 
     const context = useContext(CartContext);
     const cartItems = context.cart;
     const removeItem = context.removeItem;
+    const showCart = context.showCart;
+    const setShowCart = context.setShowCart;
 
     let totalPrice = 0;
 

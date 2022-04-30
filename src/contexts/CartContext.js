@@ -48,8 +48,8 @@ class CartProvider extends Component {
         this.setState({ token })
     }
 
-    setShowCart() {
-        this.setState({ showCart: !this.showCart })
+    setShowCart(setting) {
+        this.setState({ showCart: setting })
     }
 
     render() {
