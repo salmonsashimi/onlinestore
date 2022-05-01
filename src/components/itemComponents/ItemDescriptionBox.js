@@ -4,11 +4,7 @@ import { CartContext } from '../../contexts/CartContext';
 const ItemDescriptionBox = (props) => {
 
     const context = useContext(CartContext);
-    const cart = context.cart;
-    const addItem = context.addItem;
-    const setShowCart = context.setShowCart;
-    console.log(context)
-
+    const { cart, addItem, setShowCart } = context.cart;
 
     const { id, imgUrl, brand, name, price, description } = props.data;
 
@@ -34,8 +30,6 @@ const ItemDescriptionBox = (props) => {
             setTimeout(setShowCart, 3000, false)
         }
     }
-
-
 
     return (
 
