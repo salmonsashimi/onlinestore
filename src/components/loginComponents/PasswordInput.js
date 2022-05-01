@@ -17,13 +17,13 @@ const PasswordInput = (props) => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
             />
-            <button
+            <p
                 name='password'
                 onClick={onPasswordButtonClick}
                 className={`passwordInput__button ${password && 'passwordInput__button-show'}`}
             >
                 {showPassword ? 'SHOW' : 'HIDE'}
-            </button>
+            </p>
         </div>
     )
 }
