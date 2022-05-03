@@ -5,14 +5,8 @@ import { CartContext } from '../../contexts/CartContext';
 import CartDropdownItem from './CartDropdownItem';
 
 const CartIcon = () => {
-    // const [showCart, setShowCart] = useState(false);
-
     const context = useContext(CartContext);
-    const cartItems = context.cart;
-    const removeItem = context.removeItem;
-    const showCart = context.showCart;
-    const setShowCart = context.setShowCart;
-
+    const { cart, removeItem, showCart, setShowCart } = context;
     let totalPrice = 0;
 
     return (
@@ -21,17 +15,16 @@ const CartIcon = () => {
             onMouseOver={() => { setShowCart(true) }}
             onMouseLeave={() => { setShowCart(false) }}
         >
-
             <Link href='/cart'>
                 <FaShoppingCart size='1.5em' className='cartIcon__button' />
             </Link>
 
             <div className={`
             cartIcon__dropdown ${showCart && 'cartIcon__showDropdown'}`}>
-                <h3 className='cartIcon__dropdown-header'>My Cart, <span className='cartItem__dropdown-itemNo'>{cartItems.length} item(s)</span></h3>
+                <h3 className='cartIcon__dropdown-header'>My Cart, <span className='cartItem__dropdown-itemNo'>{cart.length} item(s)</span></h3>
                 <div className='cartIcon__cartDropdownItems'>
-                    {cartItems.length !== 0 ?
-                        cartItems.map(item => {
+                    {cart.length !== 0 ?
+                        cart.map(item => {
                             totalPrice += item.price;
                             return (
                                 <CartDropdownItem item={item} removeItem={removeItem} />
