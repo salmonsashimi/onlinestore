@@ -28,7 +28,11 @@ const UserPage = () => {
     }
 
     useEffect(() => {
-        console.log('in user page', tokenChanged)
+        //for navigation from other pages
+        if (token) {
+            isMounted.current = true;
+        }
+
         if (isMounted.current) {
             if (!token) {
                 Router.push('/')
@@ -42,6 +46,7 @@ const UserPage = () => {
 
             retrieveUserInfo();
         } else {
+            //for fresh load into page
             isMounted.current = true;
         }
 
