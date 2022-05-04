@@ -20,17 +20,19 @@ function MyApp({ Component, pageProps }) {
 }
 
 const TokenHandler = () => {
-
     const context = useContext(CartContext);
-    const { setToken } = context
+    const { setToken, setTokenChanged, tokenChanged } = context;
     useEffect(() => {
         const tokenString = sessionStorage.getItem('token');
         const token = JSON.parse(tokenString)
+        console.log('retrieving token')
+        console.log(token)
         if (token) {
             setToken(token)
         } else {
             setToken(null)
         };
+        setTokenChanged(!tokenChanged)
     }, [])
 
     return null;

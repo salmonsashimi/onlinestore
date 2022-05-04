@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect, useRef } from 'react';
 import Router from 'next/router';
 import { FiUser, FiCreditCard } from 'react-icons/fi';
 import { GrDeliver, GrChat } from 'react-icons/gr';
@@ -13,12 +13,13 @@ import ContactPreferences from '../components/userComponents/ContactPreferences'
 //create separate if not logged in page
 const UserPage = () => {
     const context = useContext(CartContext);
-    const { token, setToken } = context;
+    const { token, setToken, tokenChanged } = context;
 
     const [currentPage, setCurrentPage] = useState('default');
     const [currentIcon, setCurrentIcon] = useState(null);
     const [currentTitle, setCurrentTitle] = useState(null);
     const [userName, setUserName] = useState('')
+    const isMounted = useRef(false);
 
     const onMenuClick = (link) => {
         setCurrentPage(link.page)
@@ -27,17 +28,24 @@ const UserPage = () => {
     }
 
     useEffect(() => {
-        if (!token) {
-            Router.push('/')
-        }
-        const retrieveUserInfo = async () => {
-            const userInfo = await fetchUserInfo(token);
-            const { name } = userInfo;
-            setUserName(name)
+        console.log('in user page', tokenChanged)
+        if (isMounted.current) {
+            if (!token) {
+                Router.push('/')
+            }
+            const retrieveUserInfo = async () => {
+                const userInfo = await fetchUserInfo(token);
+                const { name } = userInfo;
+                setUserName(name)
+                console.log(name)
+            }
+
+            retrieveUserInfo();
+        } else {
+            isMounted.current = true;
         }
 
-        retrieveUserInfo();
-    }, [])
+    }, [tokenChanged])
 
 
     const links = [

@@ -16,12 +16,14 @@ class CartProvider extends Component {
             }],
             price: 0,
             token: '',
-            showCart: false
+            showCart: false,
+            tokenChanged: false
         }
         this.removeItem = this.removeItem.bind(this);
         this.addItem = this.addItem.bind(this);
         this.setToken = this.setToken.bind(this);
         this.setShowCart = this.setShowCart.bind(this);
+        this.setTokenChanged = this.setTokenChanged.bind(this);
     }
 
     calculatePrice() {
@@ -52,6 +54,10 @@ class CartProvider extends Component {
         this.setState({ showCart: setting })
     }
 
+    setTokenChanged(setting) {
+        this.setState({ tokenChanged: setting })
+    }
+
     render() {
         return (
             <CartContext.Provider
@@ -60,7 +66,8 @@ class CartProvider extends Component {
                     removeItem: this.removeItem,
                     addItem: this.addItem,
                     setToken: this.setToken,
-                    setShowCart: this.setShowCart
+                    setShowCart: this.setShowCart,
+                    setTokenChanged: this.setTokenChanged
                 }}>
                 {this.props.children}
             </CartContext.Provider>
