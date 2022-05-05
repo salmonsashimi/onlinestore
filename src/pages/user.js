@@ -79,7 +79,6 @@ const UserPage = () => {
 
     return (
         <div className='user container'>
-            <h1 className='user__header'>YOUR ACCOUNT</h1>
             <div className='user__main'>
                 <div className='user__menu'>
                     <h3 className='user__menu-header'>Hi, <span>{userName}</span></h3>
