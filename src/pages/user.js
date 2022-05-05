@@ -15,9 +15,9 @@ const UserPage = () => {
     const context = useContext(CartContext);
     const { token, setToken, tokenChanged } = context;
 
-    const [currentPage, setCurrentPage] = useState('default');
-    const [currentIcon, setCurrentIcon] = useState(null);
-    const [currentTitle, setCurrentTitle] = useState(null);
+    const [currentPage, setCurrentPage] = useState(<AccountOverview />);
+    const [currentIcon, setCurrentIcon] = useState(<FiUser className='user__category-icon' />);
+    const [currentTitle, setCurrentTitle] = useState('Account Overview');
     const [userName, setUserName] = useState('')
     const isMounted = useRef(false);
 
