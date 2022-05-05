@@ -1,6 +1,6 @@
 const PaymentMethods = () => (
-    <div>
-        this is payment methods
+    <div className='paymentMethods'>
+        <p>You currently do not have any payment methods.</p>
     </div>
 )
 
