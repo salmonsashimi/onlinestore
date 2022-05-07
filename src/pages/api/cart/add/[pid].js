@@ -3,14 +3,25 @@ import clientPromise from '../../../../lib/mongodb';
 export default async (req, res) => {
     const client = await clientPromise;
     const db = client.db('online-store');
-    const col = db.collection('cart');
+    const col = db.collection('orders');
+
+    const orderInfo = req.body;
+    console.log(orderInfo)
 
 
-    // const cartItem = {
-    //     userId,
-    //     cartItems
-    // }
+    // Construct a document                                                                                                                                                              
+    let orderDocument = {
+        "userId": 1,
+        "orders": {
+        }
+    }
 
-    const currentCart = req.body;
-    console.log(currentCart)
+    console.log('data added');
+
+    // Insert a single document, wait for promise so we can read it back
+    const p = await col.insertOne(orderDocument);
+    // Find one document
+    const myDoc = await col.find();
+    // Print to the console
+
 }

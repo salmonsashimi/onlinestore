@@ -4,8 +4,27 @@ import { CartContext } from '../../contexts/CartContext';
 const CartSummary = () => {
 
     const context = useContext(CartContext);
-    let price = context.price;
+    console.log(CartContext)
+    let { cart, price, token } = context;
 
+    const onCheckout = async (e) => {
+        e.preventDefault()
+
+        const checkoutInfo = {
+            token,
+            cart
+        }
+
+        //fetching login info 
+        const response = await fetch('http://localhost:3000/api/orders/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(checkoutInfo)
+        })
+
+    }
 
     return (
         <form className='cartSummary'>
@@ -22,7 +41,7 @@ const CartSummary = () => {
                 </select>
             </div>
             <div className='cartSummary__buttonDiv'>
-                <button className='cartSummary__button' onClick={(e) => e.preventDefault()}>CHECKOUT</button>
+                <button className='cartSummary__button' onClick={onCheckout}>CHECKOUT</button>
             </div>
         </form>
     )
