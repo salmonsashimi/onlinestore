@@ -17,6 +17,6 @@ export default async function (req, res) {
     const p = await col.insertOne(orderDocument);
     // Find one document
     const myDoc = await col.find();
-    // Print to the console
 
+    res.redirect(307, '/checkout')
 }

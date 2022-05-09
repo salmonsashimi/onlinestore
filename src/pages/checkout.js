@@ -7,8 +7,6 @@ const CheckoutPage = () => {
             <p>order number</p>
             <h1>price</h1>
             <h1>items</h1>
-
-
             <button>Return to Main</button>
         </div>
     )

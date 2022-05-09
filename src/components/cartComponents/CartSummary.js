@@ -7,27 +7,27 @@ const CartSummary = () => {
     console.log(CartContext)
     let { cart, price, token } = context;
 
-    const onCheckout = async (e) => {
-        e.preventDefault()
+    // const onCheckout = async (e) => {
+    //     e.preventDefault()
 
-        const checkoutInfo = {
-            token,
-            cart
-        }
+    //     const checkoutInfo = {
+    //         token,
+    //         cart
+    //     }
 
-        //fetching login info 
-        const response = await fetch('http://localhost:3000/api/orders/add', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(checkoutInfo)
-        })
+    //     //fetching login info 
+    //     const response = await fetch('http://localhost:3000/api/orders/add', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(checkoutInfo)
+    //     })
 
-    }
+    // }
 
     return (
-        <form className='cartSummary'>
+        <form className='cartSummary' method='POST' action='/api/orders/add/'>
             <h1 className='cartSummary__header'>Total</h1>
             <div className='cartSummary__subtotal'>
                 <h3 className='cartSummary__subtotal-title'>Sub-total</h3>
@@ -41,7 +41,7 @@ const CartSummary = () => {
                 </select>
             </div>
             <div className='cartSummary__buttonDiv'>
-                <button className='cartSummary__button' onClick={onCheckout}>CHECKOUT</button>
+                <button className='cartSummary__button' >CHECKOUT</button>
             </div>
         </form>
     )
