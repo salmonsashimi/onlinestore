@@ -25,6 +25,7 @@ const CartSummary = () => {
     //     })
 
     // }
+    const items = JSON.stringify(cart)
 
     return (
         <form className='cartSummary' method='POST' action='/api/orders/add/'>
@@ -33,6 +34,8 @@ const CartSummary = () => {
                 <h3 className='cartSummary__subtotal-title'>Sub-total</h3>
                 <h3 className='cartSummary__subtotal-price'>SGD${price}</h3>
             </div>
+            <input type='hidden' name='items' value={items}></input>
+            <input type='hidden' name='userId' value={token}></input>
             <div className='cartSummary__delivery'>
                 <h3 className='cartSummary__delivery-title'>Delivery</h3>
                 <select className='cartSummary__delivery-options' name='delivery' id='delivery' >
