@@ -9,23 +9,29 @@ export default async function (req, res) {
     console.log('hi')
     console.log(req.body)
     const { deliveryMethod, items, userId } = req.body;
-    const orderItems = JSON.parse(items);
-    console.log(orderItems)
+    const itemList = JSON.parse(items);
+    console.log(itemList)
 
+    let totalPrice = 0;
+    for (let item of itemList) {
+        totalPrice += item.price;
+    }
 
+    if (deliveryMethod == 'Express') {
+        totalPrice += 50;
+    }
 
+    // Construct a document                                                                                                                                                              
+    let orderDocument = {
+        "userId": userId,
+        "items": itemList,
+        "totalPrice": totalPrice
+    }
 
-
-    // // Construct a document                                                                                                                                                              
-    // let orderDocument = {
-    //     "userId": token,
-    //     "items": cart
-    // }
-
-    // // Insert a single document, wait for promise so we can read it back
-    // const p = await col.insertOne(orderDocument);
-    // // Find one document
-    // const myDoc = await col.find();
+    // Insert a single document, wait for promise so we can read it back
+    const p = await col.insertOne(orderDocument);
+    // Find one document
+    const myDoc = await col.find();
 
     res.redirect(307, '/checkout')
 }
