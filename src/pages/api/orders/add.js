@@ -23,9 +23,10 @@ export default async function (req, res) {
 
     // Construct a document                                                                                                                                                              
     let orderDocument = {
-        "userId": userId,
+        userId,
         "items": itemList,
-        "totalPrice": totalPrice
+        totalPrice,
+        deliveryMethod
     }
 
     // Insert a single document, wait for promise so we can read it back
