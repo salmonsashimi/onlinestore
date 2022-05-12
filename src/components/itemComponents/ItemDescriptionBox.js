@@ -4,8 +4,7 @@ import { CartContext } from '../../contexts/CartContext';
 const ItemDescriptionBox = (props) => {
 
     const context = useContext(CartContext);
-    const { cart, addItem, setShowCart } = context.cart;
-
+    const { cart, addItem, setShowCart } = context;
     const { id, imgUrl, brand, name, price, description } = props.data;
 
     const onFormSubmit = (e) => {
@@ -39,7 +38,6 @@ const ItemDescriptionBox = (props) => {
                 <h3 className='itemDescriptionBox__itemName'>{name}</h3>
                 <h3 className='itemDescriptionBox__price'>${price}</h3>
                 <h3 className='itemDescriptionBox__description'>{description}</h3>
-
                 <div>
                     <label for='quantity'>Quantity: </label>
                     <select id='quantity' name='quantity'>
