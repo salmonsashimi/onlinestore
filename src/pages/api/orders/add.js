@@ -34,5 +34,5 @@ export default async function (req, res) {
     // Find one document
     const myDoc = await col.find();
 
-    res.redirect(307, '/checkout')
+    res.redirect(307, '/checkout').json({ error: 'iahsdfihasf' })
 }
