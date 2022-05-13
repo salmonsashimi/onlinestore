@@ -31,8 +31,7 @@ export default async function (req, res) {
 
     // Insert a single document, wait for promise so we can read it back
     const p = await col.insertOne(orderDocument);
-    // Find one document
-    const myDoc = await col.find();
+    const orderId = p.insertedId.toString()
 
-    res.redirect(307, '/checkout').json({ error: 'iahsdfihasf' })
+    res.redirect(307, `/order/${orderId}`)
 }
