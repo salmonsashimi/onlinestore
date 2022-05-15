@@ -1,4 +1,5 @@
 import clientPromise from '../../../../lib/mongodb';
+import { ObjectId } from 'mongodb';
 
 export default async function (req, res) {
     const client = await clientPromise;
@@ -6,6 +7,6 @@ export default async function (req, res) {
     const col = db.collection('orders');
 
     const { pid } = req.query
-    console.log(pid);
-
+    const order = await col.findOne({ "_id": ObjectId(pid) });
+    res.json(order)
 }
