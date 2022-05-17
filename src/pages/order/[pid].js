@@ -1,12 +1,15 @@
 import Layout from '../../components/Layout';
 
-const CheckoutPage = (infoc) => {
-    console.log('into', infoc)
+const CheckoutPage = ({ data }) => {
+    const { _id, items, totalPrice, deliveryMethod } = data;
+    console.log(data)
+    console.log(_id)
+
     return (
         <div>
             <h1>Order Summary header</h1>
-            <p>order number</p>
-            <h1>price</h1>
+            <p>ORDER NUMBER: {_id}</p>
+            <h1>Total Cost: ${totalPrice}</h1>
             <h1>items</h1>
             <button>Return to Main</button>
         </div>
