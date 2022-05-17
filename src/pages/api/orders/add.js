@@ -5,19 +5,15 @@ export default async function (req, res) {
     const db = client.db('online-store');
     const col = db.collection('orders');
 
-    // const { token, cart } = req.body
-    console.log('hi')
-    console.log(req.body)
-    const { deliveryMethod, items, userId } = req.body;
+    const { delivery, items, userId } = req.body;
     const itemList = JSON.parse(items);
-    console.log(itemList)
 
     let totalPrice = 0;
     for (let item of itemList) {
         totalPrice += item.price;
     }
 
-    if (deliveryMethod == 'Express') {
+    if (delivery == 'Express') {
         totalPrice += 50;
     }
 
@@ -26,7 +22,7 @@ export default async function (req, res) {
         userId,
         "items": itemList,
         totalPrice,
-        deliveryMethod
+        delivery
     }
 
     // Insert a single document, wait for promise so we can read it back
