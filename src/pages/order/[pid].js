@@ -7,10 +7,16 @@ const CheckoutPage = ({ data }) => {
 
     return (
         <div className='order container'>
-            <h1 className='order'>Order Summary header</h1>
-            <p>ORDER NUMBER: {_id}</p>
-            <h1>Total Cost: ${totalPrice}</h1>
-            <h1>items</h1>
+            <h1 className='order__header'>ORDER SUMMARY</h1>
+            <div>
+                <p>ORDER NUMBER: {_id}</p>
+                <h1>items</h1>
+            </div>
+            <div>
+                <h1>subtotal: ${totalPrice}</h1>
+                <h1>shipping</h1>
+                <h1>total cost</h1>
+            </div>
             <button>Return to Main</button>
         </div>
     )
