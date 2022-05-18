@@ -6,8 +6,8 @@ const CheckoutPage = ({ data }) => {
     console.log(_id)
 
     return (
-        <div>
-            <h1>Order Summary header</h1>
+        <div className='order container'>
+            <h1 className='order'>Order Summary header</h1>
             <p>ORDER NUMBER: {_id}</p>
             <h1>Total Cost: ${totalPrice}</h1>
             <h1>items</h1>
