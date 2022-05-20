@@ -7,3 +7,12 @@
 .order__header {
     text-align: center;
 }
+
+.order__components {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order__left {
+    flex-grow: 2;
+}
