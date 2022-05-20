@@ -11,14 +11,17 @@ const CheckoutPage = ({ data }) => {
             <div className='order__components'>
                 <div className='order__left'>
                     <p>ORDER REFERENCE: {_id}</p>
-                    <h1>ORDER ITEMS</h1>
+                    <h3>ORDER ITEMS</h3>
                     {items.map(item => <p>{item.name}</p>)}
 
                 </div>
                 <div className='right'>
-                    <h1>SUBTOTAL: ${totalPrice}</h1>
-                    <h1>SHIPPING: {delivery}</h1>
-                    <h1>TOTAL: ${totalPrice}</h1>
+                    <h3>SUBTOTAL:</h3>
+                    <h2>${totalPrice}</h2>
+                    <h3>SHIPPING:</h3>
+                    <h2>{delivery}</h2>
+                    <h3>TOTAL:</h3>
+                    <h2> ${totalPrice}</h2>
                 </div>
             </div>
             <button>Return to Main</button>
