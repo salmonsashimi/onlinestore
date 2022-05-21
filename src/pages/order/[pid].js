@@ -15,11 +15,11 @@ const CheckoutPage = ({ data }) => {
                     {items.map(item => <p>{item.name}</p>)}
 
                 </div>
-                <div className='right'>
+                <div className='order__right'>
                     <h3>SUBTOTAL:</h3>
                     <h2>${totalPrice}</h2>
-                    <h3>SHIPPING:</h3>
-                    <h2>{delivery}</h2>
+                    <h3>DELIVERY:</h3>
+                    <h2>{delivery === 'standard' ? 'Standard (Free)' : 'Express ($50.00'}</h2>
                     <h3>TOTAL:</h3>
                     <h2> ${totalPrice}</h2>
                 </div>
