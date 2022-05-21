@@ -9,21 +9,20 @@ const CheckoutPage = ({ data }) => {
         <div className='order container'>
             <h1 className='order__header'>ORDER SUMMARY</h1>
             <div className='order__components'>
-                <div className='order__left'>
-                    <p>ORDER REFERENCE: {_id}</p>
-                    <h3>ORDER ITEMS</h3>
-                    {items.map(item => <p>{item.name}</p>)}
 
-                </div>
-                <div className='order__right'>
-                    <h3>SUBTOTAL:</h3>
-                    <h2>${totalPrice}</h2>
-                    <h3>DELIVERY:</h3>
-                    <h2>{delivery === 'standard' ? 'Standard (Free)' : 'Express ($50.00'}</h2>
-                    <h3>TOTAL:</h3>
-                    <h2> ${totalPrice}</h2>
-                </div>
+                <p>ORDER REFERENCE: {_id}</p>
+                <h3>ORDER ITEMS</h3>
+                {items.map(item => <p>{item.name}</p>)}
+
+
+                <h3>SUBTOTAL:</h3>
+                <h2>${totalPrice}</h2>
+                <h3>DELIVERY:</h3>
+                <h2>{delivery === 'standard' ? 'Standard (Free)' : 'Express ($50.00'}</h2>
+                <h3>TOTAL:</h3>
+                <h2> ${totalPrice}</h2>
             </div>
+
             <button>Return to Main</button>
         </div>
     )

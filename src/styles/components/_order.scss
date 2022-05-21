@@ -2,17 +2,11 @@
     background-color: $light-grey;
     padding: $s-size;
     margin-top: $m-size;
+    max-width: 1000px;
 }
 
 .order__header {
     text-align: center;
 }
 
-.order__components {
-    display: flex;
-    justify-content: space-between;
-}
 
-.order__left {
-    flex-grow: 2;
-}
