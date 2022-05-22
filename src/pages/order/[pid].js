@@ -11,9 +11,10 @@ const CheckoutPage = ({ data }) => {
             <div className='order__components'>
 
                 <p>ORDER REFERENCE: {_id}</p>
-                <h3>ORDER ITEMS</h3>
-                {items.map(item => <p>{item.name}</p>)}
-
+                <p>TOTAL ITEMS: {items.length}</p>
+                <div className='order__items'>
+                    {items.map(item => <p>{item.name}</p>)}
+                </div>
 
                 <h3>SUBTOTAL:</h3>
                 <h2>${totalPrice}</h2>
