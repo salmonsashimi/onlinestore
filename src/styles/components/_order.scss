@@ -1,5 +1,4 @@
 .order {
-    background-color: $light-grey;
     padding: $s-size;
     margin-top: $m-size;
     max-width: 1000px;
@@ -7,6 +6,27 @@
 
 .order__header {
     text-align: center;
+    background-color: $light-grey;
+    margin-bottom: $xs-size;
+    padding: $m-size;
 }
 
+.order__components {
+    background-color: $light-grey;
+}
+
+.order__topComponents {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order__topComponents-reference {
+    margin: 0;
+    padding: $s-size;
+}
+
+.order__topComponents-itemNo {
+    margin: 0;
+    padding: $s-size;
+}
 
