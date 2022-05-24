@@ -21,7 +21,7 @@ const CheckoutPage = ({ data }) => {
                 <h3>SUBTOTAL:</h3>
                 <h2>${totalPrice}</h2>
                 <h3>DELIVERY:</h3>
-                <h2>{delivery === 'standard' ? 'Standard (Free)' : 'Express ($50.00'}</h2>
+                <h2>{delivery === 'standard' ? 'Standard (Free)' : 'Express ($50.00)'}</h2>
                 <h3>TOTAL:</h3>
                 <h2> ${totalPrice}</h2>
             </div>
