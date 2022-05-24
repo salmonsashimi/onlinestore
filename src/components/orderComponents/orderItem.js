@@ -1,7 +1,10 @@
-const orderItem = () => {
-    <div>
-        hi
-    </div>
-}
+const OrderItem = ({ item }) => {
+    console.log('item', item)
+    return (
+        <h1>
+            one item
+        </h1>
+    )
 
-export default orderItem;
+}
+export default OrderItem;

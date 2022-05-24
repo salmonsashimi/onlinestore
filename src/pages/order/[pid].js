@@ -1,4 +1,5 @@
 import Layout from '../../components/Layout';
+import OrderItem from '../../components/orderComponents/OrderItem';
 
 const CheckoutPage = ({ data }) => {
     const { _id, items, totalPrice, delivery } = data;
@@ -14,7 +15,8 @@ const CheckoutPage = ({ data }) => {
                     <p className='order__topComponents-itemNo'>TOTAL ITEMS: {items.length}</p>
                 </div>
                 <div className='order__items'>
-                    {items.map(item => <p>{item.name}</p>)}
+                    {items.map(item => <OrderItem item={item} />)}
+
                 </div>
                 <h3>SUBTOTAL:</h3>
                 <h2>${totalPrice}</h2>
