@@ -1,0 +1,12 @@
+.orderItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.orderItem__img {
+    max-height: 150px;
+}
+
+.orderItem__name {
+    flex-grow: 2;
+}
