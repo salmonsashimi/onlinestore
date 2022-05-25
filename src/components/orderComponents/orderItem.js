@@ -1,9 +1,12 @@
 const OrderItem = ({ item }) => {
-    console.log('item', item)
+    const { imgUrl, brand, name, price } = item;
     return (
-        <h1>
-            one item
-        </h1>
+        <div>
+            <img src={imgUrl} />
+            <h3>{brand} {name}</h3>
+            <h3>${price}</h3>
+        </div>
+
     )
 
 }
