@@ -30,3 +30,17 @@
     padding: $s-size;
 }
 
+.order__pricing {
+    display: flex;
+    justify-content: flex-end;
+    padding: $s-size 0;
+}
+
+.order__pricing-text {
+    margin: 0;
+}
+
+
+.order__pricing-textPrice {
+    margin: 0;
+}

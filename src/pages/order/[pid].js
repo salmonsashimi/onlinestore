@@ -18,12 +18,18 @@ const CheckoutPage = ({ data }) => {
                     {items.map(item => <OrderItem item={item} />)}
 
                 </div>
-                <h3>SUBTOTAL:</h3>
-                <h2>${totalPrice}</h2>
-                <h3>DELIVERY:</h3>
-                <h2>{delivery === 'standard' ? 'Standard (Free)' : 'Express ($50.00)'}</h2>
-                <h3>TOTAL:</h3>
-                <h2> ${totalPrice}</h2>
+                <div className='order__pricing'>
+                    <h3 className='order__pricing-text'>SUBTOTAL:</h3>
+                    <h3 className='order__pricing-textPrice'>${totalPrice}</h3>
+                </div>
+                <div className='order__pricing'>
+                    <h3 className='order__pricing-text'>DELIVERY:</h3>
+                    <h3 className='order__pricing-textPrice'>{delivery === 'standard' ? 'Standard (Free)' : 'Express ($50.00)'}</h3>
+                </div>
+                <div className='order__pricing'>
+                    <h3 className='order__pricing-text'>TOTAL:</h3>
+                    <h3 className='order__pricing-textPrice'>${totalPrice}</h3>
+                </div>
             </div>
 
             <button>Return to Main</button>
