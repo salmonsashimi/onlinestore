@@ -18,21 +18,24 @@ const CheckoutPage = ({ data }) => {
                     {items.map(item => <OrderItem item={item} />)}
 
                 </div>
-                <div className='order__pricing'>
-                    <h3 className='order__pricing-text'>SUBTOTAL:</h3>
-                    <h3 className='order__pricing-textPrice'>${totalPrice}</h3>
-                </div>
-                <div className='order__pricing'>
-                    <h3 className='order__pricing-text'>DELIVERY:</h3>
-                    <h3 className='order__pricing-textPrice'>{delivery === 'standard' ? 'Standard (Free)' : 'Express ($50.00)'}</h3>
-                </div>
-                <div className='order__pricing'>
-                    <h3 className='order__pricing-text'>TOTAL:</h3>
-                    <h3 className='order__pricing-textPrice'>${totalPrice}</h3>
+                <div className='order__prices'>
+
+                    <div className='order__pricing'>
+                        <h3 className='order__pricing-text'>SUBTOTAL:</h3>
+                        <h3 className='order__pricing-textPrice'>${totalPrice}</h3>
+                    </div>
+                    <div className='order__pricing'>
+                        <h3 className='order__pricing-text'>DELIVERY:</h3>
+                        <h3 className='order__pricing-textPrice'>{delivery === 'standard' ? 'Standard (Free)' : 'Express ($50.00)'}</h3>
+                    </div>
+                    <div className='order__pricing'>
+                        <h3 className='order__pricing-text'>TOTAL:</h3>
+                        <h3 className='order__pricing-textPrice'>${totalPrice}</h3>
+                    </div>
                 </div>
             </div>
 
-            <button>Return to Main</button>
+            <button className='order__button'>RETURN TO MAIN</button>
         </div>
     )
 }

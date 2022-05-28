@@ -44,3 +44,25 @@
 .order__pricing-textPrice {
     margin: 0;
 }
+
+.order__prices {
+    border-top: 1px solid white;
+
+}
+
+.order__button {
+    border: none;
+    background-color: $dark-green;
+    color: $off-white;
+    display: flex;
+    font-size: $l-size;
+    padding: $xs-size;
+    margin: auto;
+
+    &:hover{ 
+        background-color: $green;
+        cursor: pointer;
+    }
+
+    
+}
